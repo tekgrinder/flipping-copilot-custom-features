@@ -23,7 +23,8 @@ import java.nio.file.Paths;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.time.Instant;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Slf4j
 public class Persistance {
@@ -104,10 +105,8 @@ public class Persistance {
         List<Transaction> transactions = new ArrayList<>();
         File file = new File(PARENT_DIRECTORY, String.format(UN_ACKED_TRANSACTIONS_FILE_TEMPLATE, hashDisplayName(displayName)));
         if (!file.exists()) {
-            log.info("no existing un acked transactions file for {}", displayName);
             return new ArrayList<>();
         }
-        Set<UUID> added = new HashSet<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
             String line;
             while ((line = reader.readLine()) != null) {
@@ -116,12 +115,7 @@ public class Persistance {
                 }
                 try {
                     Transaction transaction = gson.fromJson(line, Transaction.class);
-                    // there was previously a bug where the same transaction was being added many times to the list
-                    // just clean things here to be safe
-                    if (!added.contains(transaction.getId())) {
-                        transactions.add(transaction);
-                        added.add(transaction.getId());
-                    }
+                    transactions.add(transaction);
                 } catch (JsonSyntaxException e) {
                     log.warn("error deserializing transaction line '{}' file {}", line, file, e);
                 }
@@ -133,8 +127,18 @@ public class Persistance {
             log.warn("error loading un acked transaction file {}", file, e);
             return new ArrayList<>();
         }
-        log.info("loaded {} stored transactions for {}", transactions.size(), displayName);
         return transactions;
+    }
+
+    public static void storeTransaction(Transaction t, String displayName) {
+        File allTransacitonsFile = new File(PARENT_DIRECTORY, String.format(ALL_TRANSACTIONS_FILE_TEMPLATE, hashDisplayName(displayName)));
+        try (BufferedWriter w = new BufferedWriter(new FileWriter(allTransacitonsFile, true))) {
+            String json = gson.toJson(t);
+            w.write(json);
+            w.newLine();
+        } catch (IOException e) {
+            log.warn("error storing un acked transactions to file {}", allTransacitonsFile, e);
+        }
     }
 
     public static void storeUnAckedTransactions(List<Transaction> transactions, String displayName) {

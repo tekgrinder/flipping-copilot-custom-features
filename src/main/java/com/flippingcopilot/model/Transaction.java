@@ -25,7 +25,6 @@ public class Transaction {
     private int amountSpent;
     private Instant timestamp;
     private boolean copilotPriceUsed;
-    private boolean wasCopilotSuggestion;
     private int offerTotalQuantity;
     private boolean login;
     private boolean consistent;
@@ -49,7 +48,6 @@ public class Transaction {
         jsonObject.addProperty("amount_spent", amountSpent);
         jsonObject.addProperty("time", timestamp.getEpochSecond());
         jsonObject.addProperty("copilot_price_used", copilotPriceUsed);
-        jsonObject.addProperty("was_copilot_suggestion", wasCopilotSuggestion);
         jsonObject.addProperty("consistent_previous_offer", consistent);
         jsonObject.addProperty("login", login);
         return jsonObject;

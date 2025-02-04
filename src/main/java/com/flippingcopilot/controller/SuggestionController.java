@@ -122,7 +122,6 @@ public class SuggestionController {
             showNotifications(oldSuggestion, newSuggestion, accountStatus);
         };
         Consumer<HttpResponseException> onFailure = (e) -> {
-            suggestionManager.setSuggestion(null);
             suggestionManager.setSuggestionError(e);
             suggestionManager.setSuggestionRequestInProgress(false);
             if (e.getResponseCode() == 401) {

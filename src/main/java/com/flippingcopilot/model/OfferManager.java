@@ -29,6 +29,7 @@ public class OfferManager {
     // dependencies
     private final Gson gson;
     private final ScheduledExecutorService executorService;
+    private final Client client;
 
     // state
     @Getter

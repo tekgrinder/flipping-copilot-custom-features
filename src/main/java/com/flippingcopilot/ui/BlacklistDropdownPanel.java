@@ -1,5 +1,6 @@
 package com.flippingcopilot.ui;
 
+import com.flippingcopilot.model.SuggestionPreferences;
 import com.flippingcopilot.model.SuggestionPreferencesManager;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
@@ -24,6 +25,7 @@ public class BlacklistDropdownPanel extends JPanel {
     private final JScrollPane scrollPane;
     private final JTextField searchField;
     private final ClientThread clientThread;
+    private final JToggleButton modeToggleButton;
 
     @Inject
     public BlacklistDropdownPanel(SuggestionPreferencesManager preferencesManager, ClientThread clientThread) {
@@ -39,28 +41,67 @@ public class BlacklistDropdownPanel extends JPanel {
         displayField.setPreferredSize(new Dimension(12, displayField.getPreferredSize().height));
         displayField.setForeground(Color.GRAY);
 
-        // Create label
-        JLabel label = new JLabel("Blocklist:");
+        // Setup dropdown components first
+        dropdownWindow = new JWindow();
+        searchField = new JTextField();
+
+        // Create mode toggle button
+        modeToggleButton = new JToggleButton("Blacklist");
+        modeToggleButton.setSelected(preferencesManager.isWhitelistMode());
+        updateModeToggleButton();
+        modeToggleButton.addActionListener(e -> {
+            preferencesManager.setWhitelistMode(modeToggleButton.isSelected());
+            updateModeToggleButton();
+            updateDropdown(searchField.getText());
+        });
+
+        // Create label panel with mode toggle
+        JPanel labelPanel = new JPanel(new BorderLayout(5, 0));
+        JLabel label = new JLabel("Filter:");
         label.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 5));
         label.setOpaque(true);
         label.setBackground(ColorScheme.DARKER_GRAY_COLOR);
+        labelPanel.add(label, BorderLayout.WEST);
+        labelPanel.add(modeToggleButton, BorderLayout.CENTER);
+        labelPanel.setOpaque(true);
+        labelPanel.setBackground(ColorScheme.DARKER_GRAY_COLOR);
 
-        // Setup display field panel
-        JPanel dropdownPanel = new JPanel(new BorderLayout());
-        dropdownPanel.add(displayField, BorderLayout.CENTER);
-        dropdownPanel.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY));
+        // Create search field panel
+        JPanel searchPanel = new JPanel(new BorderLayout());
+        searchPanel.add(displayField, BorderLayout.CENTER);
+        searchPanel.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY));
+        searchPanel.setOpaque(true);
+        searchPanel.setBackground(ColorScheme.DARKER_GRAY_COLOR);
+
+        // Create reset button
+        JButton resetButton = new JButton("Reset to Default");
+        resetButton.setToolTipText("Reset to default: Whitelist - block all items, Blacklist - allow all items");
+        resetButton.addActionListener(e -> {
+            preferencesManager.resetCurrentList();
+            updateDropdown(searchField.getText());
+        });
+        JPanel resetPanel = new JPanel(new BorderLayout());
+        resetPanel.add(resetButton, BorderLayout.CENTER);
+        resetPanel.setOpaque(true);
+        resetPanel.setBackground(ColorScheme.DARKER_GRAY_COLOR);
+
+        // Create vertical panel for toggle, search, and reset
+        JPanel verticalPanel = new JPanel();
+        verticalPanel.setLayout(new BoxLayout(verticalPanel, BoxLayout.Y_AXIS));
+        verticalPanel.add(labelPanel);
+        verticalPanel.add(Box.createRigidArea(new Dimension(0, 5))); // Add 5 pixels vertical spacing
+        verticalPanel.add(searchPanel);
+        verticalPanel.add(Box.createRigidArea(new Dimension(0, 5))); // Add 5 pixels vertical spacing
+        verticalPanel.add(resetPanel);
+        verticalPanel.setOpaque(true);
+        verticalPanel.setBackground(ColorScheme.DARKER_GRAY_COLOR);
 
         // Create container panel
-        JPanel containerPanel = new JPanel(new BorderLayout(5, 0));
-        containerPanel.add(label, BorderLayout.WEST);
-        containerPanel.add(dropdownPanel, BorderLayout.CENTER);
+        JPanel containerPanel = new JPanel(new BorderLayout());
+        containerPanel.add(verticalPanel, BorderLayout.CENTER);
         containerPanel.setOpaque(true);
         containerPanel.setBackground(ColorScheme.DARKER_GRAY_COLOR);
         add(containerPanel, BorderLayout.CENTER);
-
-        // Setup dropdown components
-        dropdownWindow = new JWindow();
-        searchField = new JTextField();
         resultsPanel = new JPanel();
         resultsPanel.setLayout(new BoxLayout(resultsPanel, BoxLayout.Y_AXIS));
 
@@ -82,14 +123,21 @@ public class BlacklistDropdownPanel extends JPanel {
         clientThread.invoke(() -> {
             // Get fresh data
             List<Pair<Integer, String>> searchResults = preferencesManager.search(searchText);
-            Set<Integer> blockedItems = new HashSet<>(preferencesManager.blockedItems());
+            SuggestionPreferences preferences = preferencesManager.getPreferences();
+            Set<Integer> filteredItems;
+            if (preferences.isWhitelistMode()) {
+                // In whitelist mode, pass the whitelist (items that are allowed)
+                filteredItems = new HashSet<>(preferences.getWhitelistedItemIds());
+            } else {
+                // In blacklist mode, pass the blacklist (items that are blocked)
+                filteredItems = new HashSet<>(preferences.getBlockedItemIds());
+            }
 
             SwingUtilities.invokeLater(() -> {
-
                 // Update results panel
                 resultsPanel.removeAll();
                 for (Pair<Integer, String> item : searchResults) {
-                    resultsPanel.add(createItemPanel(item, blockedItems));
+                    resultsPanel.add(createItemPanel(item, filteredItems));
                 }
                 // Calculate dimensions
                 Point location = getLocationOnScreen();
@@ -157,34 +205,47 @@ public class BlacklistDropdownPanel extends JPanel {
         });
     }
 
-    private JPanel createItemPanel(Pair<Integer, String> item, Set<Integer> blockedItemIds) {
+    private void updateModeToggleButton() {
+        boolean isWhitelistMode = modeToggleButton.isSelected();
+        modeToggleButton.setText(isWhitelistMode ? "Whitelist" : "Blacklist");
+        modeToggleButton.setToolTipText(isWhitelistMode ? 
+            "Only show suggestions for whitelisted items" : 
+            "Show suggestions for all items except blacklisted ones");
+    }
+
+    private JPanel createItemPanel(Pair<Integer, String> item, Set<Integer> filteredItems) {
         JPanel panel = new JPanel(new BorderLayout());
         panel.setBorder(BorderFactory.createEmptyBorder(1, 2, 1, 2));
 
         JLabel nameLabel = new JLabel(item.getValue());
         panel.add(nameLabel, BorderLayout.CENTER);
 
-        JButton toggleButton = new JButton(blockedItemIds.contains(item.getKey()) ? BlacklistIcons.createXIcon() : BlacklistIcons.createTickIcon());
+        boolean isFiltered = filteredItems.contains(item.getKey());
+        boolean isWhitelistMode = preferencesManager.isWhitelistMode();
+        
+        // For whitelist: check = whitelisted, X = not whitelisted
+        // For blacklist: check = not blacklisted, X = blacklisted
+        boolean showCheck = isWhitelistMode ? isFiltered : !isFiltered;
+        JButton toggleButton = new JButton(showCheck ? BlacklistIcons.createTickIcon() : BlacklistIcons.createXIcon());
         toggleButton.setBorderPainted(false);
         toggleButton.setContentAreaFilled(false);
         toggleButton.setPreferredSize(new Dimension(16, 16));
 
-         Runnable onClick = () -> {
-            if (blockedItemIds.contains(item.getKey())) {
-                preferencesManager.unblockItem(item.getKey());
-                blockedItemIds.remove(item.getKey());
-                toggleButton.setIcon(BlacklistIcons.createTickIcon());
+        Runnable onClick = () -> {
+            preferencesManager.toggleItem(item.getKey());
+            boolean newState = preferencesManager.isItemFiltered(item.getKey());
+            boolean showCheckNew = isWhitelistMode ? newState : !newState;
+            toggleButton.setIcon(showCheckNew ? BlacklistIcons.createTickIcon() : BlacklistIcons.createXIcon());
+            if (newState) {
+                filteredItems.add(item.getKey());
             } else {
-                preferencesManager.blockItem(item.getKey());
-                blockedItemIds.add(item.getKey());
-                toggleButton.setIcon(BlacklistIcons.createXIcon());
+                filteredItems.remove(item.getKey());
             }
             panel.revalidate();
             panel.repaint();
         };
 
         toggleButton.addActionListener(e -> onClick.run());
-
         panel.add(toggleButton, BorderLayout.EAST);
 
         panel.addMouseListener(new MouseAdapter() {

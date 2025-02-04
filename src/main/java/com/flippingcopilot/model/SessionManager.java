@@ -47,14 +47,12 @@ public class SessionManager {
         saveAsync(displayName);
     }
 
-    public synchronized boolean updateSessionStats(boolean currentlyFlipping, long cashStack) {
+    public synchronized void updateSessionStats(boolean currentlyFlipping, long cashStack) {
         String displayName = osrsLoginManager.getPlayerDisplayName();
         if (!currentlyFlipping || displayName == null) {
             lastSessionUpdateTime = null;
-            return false;
         } else if (lastSessionUpdateTime == null) {
             lastSessionUpdateTime = Instant.now();
-            return false;
         } else {
             SessionData sd = getSessionData(displayName);
             Instant now = Instant.now();
@@ -64,7 +62,6 @@ public class SessionManager {
             lastSessionUpdateTime = now;
             sd.averageCash = newAverageCashStack;
             saveAsync(displayName);
-            return true;
         }
     }
 

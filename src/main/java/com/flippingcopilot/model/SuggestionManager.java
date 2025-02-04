@@ -11,21 +11,13 @@ import java.time.Instant;
 @Setter
 public class SuggestionManager {
 
-    private volatile boolean suggestionNeeded;
-    private volatile boolean suggestionRequestInProgress;
+    private boolean suggestionNeeded;
+    private boolean suggestionRequestInProgress;
     private Instant lastFailureAt;
     private HttpResponseException suggestionError;
     private Suggestion suggestion;
     private Instant suggestionReceivedAt;
     private int lastOfferSubmittedTick = -1;
-
-    // these two variables get set based on the current suggestion when the confirm offer button is clicked.
-    // this allows us to track on the subsequent offer events whether the offer originates from a copilot suggestion
-    // this flag can then eventually be propagated onto each transaction and can be used by the server to
-    // determine which items in the inventory were bought based upon copilot suggestions and which are not
-    private int suggestionItemIdOnOfferSubmitted = -1;
-    private OfferStatus suggestionOfferStatusOnOfferSubmitted = null;
-
 
     public void setSuggestion(Suggestion suggestion) {
         this.suggestion = suggestion;
@@ -44,8 +36,6 @@ public class SuggestionManager {
         lastFailureAt = null;
         lastOfferSubmittedTick = -1;
         suggestionError = null;
-        suggestionItemIdOnOfferSubmitted = -1;
-        suggestionOfferStatusOnOfferSubmitted = null;
     }
 
     public boolean suggestionOutOfDate() {

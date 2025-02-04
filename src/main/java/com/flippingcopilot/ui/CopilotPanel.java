@@ -18,8 +18,8 @@ public class CopilotPanel extends JPanel {
         this.statsPanel = statsPanel;
         this.suggestionPanel = suggestionPanel;
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-        suggestionPanel.setMaximumSize(new Dimension(Integer.MAX_VALUE, suggestionPanel.getPreferredSize().height));
-        suggestionPanel.setMinimumSize(new Dimension(Integer.MIN_VALUE, suggestionPanel.getPreferredSize().height));
+        suggestionPanel.setMaximumSize(new Dimension(Integer.MAX_VALUE, 300));
+        suggestionPanel.setMinimumSize(new Dimension(Integer.MIN_VALUE, 300));
         add(suggestionPanel);
         add(Box.createRigidArea(new Dimension(0, 5)));
         add(Box.createVerticalGlue());

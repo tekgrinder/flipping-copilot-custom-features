@@ -61,41 +61,102 @@ public class SuggestionPreferencesManager {
         log.debug("F2p only mode is now: {}", f2pOnlyMode);
     }
 
-    public synchronized void blockItem(int itemId) {
+    public synchronized void setWhitelistMode(boolean whitelistMode) {
         Long accountHash = osrsLoginManager.getAccountHash();
         SuggestionPreferences preferences = cached.computeIfAbsent(accountHash, this::load);
-        List<Integer> blockedList = preferences.getBlockedItemIds();
-        if(blockedList == null) {
-            blockedList = new ArrayList<>();
+        
+        // If switching to whitelist mode for the first time and whitelist is empty,
+        // initialize it as empty (all items blocked by default)
+        if (whitelistMode && preferences.getWhitelistedItemIds() == null) {
+            preferences.setWhitelistedItemIds(new ArrayList<>());
         }
-        if(!blockedList.contains(itemId)) {
-            blockedList.add(itemId);
-        }
-        preferences.setBlockedItemIds(blockedList);
+        
+        preferences.setWhitelistMode(whitelistMode);
         saveAsync(accountHash);
-        log.debug("blocked item {}", itemId);
+        log.debug("Whitelist mode is now: {}", whitelistMode);
     }
 
-    public synchronized void unblockItem(int itemId) {
+    public synchronized void resetCurrentList() {
+        Long accountHash = osrsLoginManager.getAccountHash();
+        SuggestionPreferences preferences = cached.computeIfAbsent(accountHash, this::load);
+        
+        if (preferences.isWhitelistMode()) {
+            // Reset whitelist to empty (all items blocked)
+            preferences.setWhitelistedItemIds(new ArrayList<>());
+            log.debug("Reset whitelist to block all items");
+        } else {
+            // Reset blacklist to empty (all items allowed)
+            preferences.setBlockedItemIds(new ArrayList<>());
+            log.debug("Reset blacklist to allow all items");
+        }
+        
+        saveAsync(accountHash);
+    }
+
+    public synchronized boolean isWhitelistMode() {
+        return getPreferences().isWhitelistMode();
+    }
+
+    public synchronized void toggleItem(int itemId) {
+        if (isWhitelistMode()) {
+            toggleWhitelistedItem(itemId);
+        } else {
+            toggleBlockedItem(itemId);
+        }
+    }
+
+    private synchronized void toggleBlockedItem(int itemId) {
         Long accountHash = osrsLoginManager.getAccountHash();
         SuggestionPreferences preferences = cached.computeIfAbsent(accountHash, this::load);
         List<Integer> blockedList = preferences.getBlockedItemIds();
         if(blockedList == null) {
             blockedList = new ArrayList<>();
         }
-        blockedList.removeIf(i -> i==itemId);
+        if(blockedList.contains(itemId)) {
+            blockedList.removeIf(i -> i==itemId);
+            log.debug("unblocked item {}", itemId);
+        } else {
+            blockedList.add(itemId);
+            log.debug("blocked item {}", itemId);
+        }
         preferences.setBlockedItemIds(blockedList);
         saveAsync(accountHash);
-        log.debug("unblocked item {}", itemId);
+    }
+
+    private synchronized void toggleWhitelistedItem(int itemId) {
+        Long accountHash = osrsLoginManager.getAccountHash();
+        SuggestionPreferences preferences = cached.computeIfAbsent(accountHash, this::load);
+        List<Integer> whiteList = preferences.getWhitelistedItemIds();
+        if(whiteList == null) {
+            whiteList = new ArrayList<>();
+        }
+        if(whiteList.contains(itemId)) {
+            whiteList.removeIf(i -> i==itemId);
+            log.debug("removed item {} from whitelist", itemId);
+        } else {
+            whiteList.add(itemId);
+            log.debug("added item {} to whitelist", itemId);
+        }
+        preferences.setWhitelistedItemIds(whiteList);
+        saveAsync(accountHash);
     }
 
     public List<Pair<Integer, String>> search(String input) {
-        Set<Integer> blockedItems = new HashSet<>(blockedItems());
+        boolean isWhitelist = isWhitelistMode();
+        Set<Integer> filteredItems = new HashSet<>(isWhitelist ? 
+            getPreferences().getWhitelistedItemIds() : 
+            getPreferences().getBlockedItemIds());
+
         if(input == null || input.isBlank()) {
             return IntStream.range(0, client.getItemCount())
                     .mapToObj(itemManager::getItemComposition)
                     .filter(item -> item.isTradeable() && item.getNote() == -1)
-                    .sorted(Comparator.comparing((ItemComposition i) -> !blockedItems.contains(i.getId())).thenComparing(ItemComposition::getName))
+                    .sorted(Comparator.comparing((ItemComposition i) -> 
+                        // In whitelist mode, show whitelisted items first
+                        // In blacklist mode, show non-blacklisted items first
+                        isWhitelist ? filteredItems.contains(i.getId()) : !filteredItems.contains(i.getId()))
+                        .reversed()  // Reverse to show allowed items first
+                        .thenComparing(ItemComposition::getName))
                     .limit(250)
                     .map((i) -> Pair.of(i.getId(), trimName(i.getName())))
                     .collect(Collectors.toList());
@@ -106,15 +167,40 @@ public class SuggestionPreferencesManager {
             .mapToObj(itemManager::getItemComposition)
             .filter(item -> item.isTradeable() && item.getNote() == -1)
             .filter(item -> comparator.applyAsDouble(item) > 0)
-            .sorted(Comparator.comparing((ItemComposition i) -> !blockedItems.contains(i.getId())).thenComparing(Comparator.comparingDouble(comparator).reversed()
-                    .thenComparing(ItemComposition::getName)))
+            .sorted(Comparator.comparing((ItemComposition i) -> 
+                // In whitelist mode, show whitelisted items first
+                // In blacklist mode, show non-blacklisted items first
+                isWhitelist ? filteredItems.contains(i.getId()) : !filteredItems.contains(i.getId()))
+                .reversed()  // Reverse to show allowed items first
+                .thenComparing(Comparator.comparingDouble(comparator).reversed()
+                .thenComparing(ItemComposition::getName)))
             .limit(250)
             .map((i) -> Pair.of(i.getId(), trimName(i.getName())))
             .collect(Collectors.toList());
     }
 
+    public boolean isItemFiltered(int itemId) {
+        SuggestionPreferences preferences = getPreferences();
+        return preferences.isWhitelistMode() ? 
+            preferences.getWhitelistedItemIds().contains(itemId) : 
+            preferences.getBlockedItemIds().contains(itemId);
+    }
+
     public List<Integer> blockedItems() {
-        return getPreferences().getBlockedItemIds();
+        SuggestionPreferences preferences = getPreferences();
+        if (preferences.isWhitelistMode()) {
+            // In whitelist mode, all non-whitelisted items are effectively "blocked"
+            Set<Integer> whitelisted = new HashSet<>(preferences.getWhitelistedItemIds());
+            return IntStream.range(0, client.getItemCount())
+                .mapToObj(itemManager::getItemComposition)
+                .filter(item -> item.isTradeable() && item.getNote() == -1)
+                .map(ItemComposition::getId)
+                .filter(id -> !whitelisted.contains(id))
+                .collect(Collectors.toList());
+        } else {
+            // In blacklist mode, return the blocked items directly
+            return preferences.getBlockedItemIds();
+        }
     }
 
     private String trimName(String name) {
