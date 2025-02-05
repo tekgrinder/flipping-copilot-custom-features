@@ -4,7 +4,7 @@
 
 ----------------------------------------------------------------------------------
 ## THIS IS A JANKY FORK
-This fork is a mod of the Flipping Copilot OSRS client plugin. I made this fork because there were features I wanted and because I wanted a project for testing LLM coding capabilities. All changes to this project were made using Anthropic Claude-Sonnet 3.5 along with [Open Hands](https://github.com/All-Hands-AI/OpenHands). I HAVE NO IDEA WHAT I AM DOING. I WILL NOT HELP YOU. I WILL ALMOST CERTAINLY NOT FIX ANY BUGS YOU ENCOUNTER. 
+This fork is a mod of the Flipping Copilot OSRS client plugin. I made this fork because there were features I wanted and because I wanted a project for testing LLM coding capabilities. All changes to this project were made using Anthropic Claude-Sonnet 3.5 along with [Open Hands](https://github.com/All-Hands-AI/OpenHands). I HAVE NO IDEA WHAT I AM DOING. I WILL NOT HELP YOU. I WILL ALMOST CERTAINLY NOT FIX ANY BUGS YOU ENCOUNTER. Discord: .tekis
 
 DO NOT ASK THE DEVS OF THE FLIPPING COPILOT PLUGIN FOR HELP IF YOU CHOOSE TO USE THIS FORK.
 ----------------------------------------------------------------------------------
