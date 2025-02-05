@@ -1,0 +1,229 @@
+# Mode: whitelist
+item_id,name,is_filtered
+890,Adamant arrow,true
+43,Adamant arrowtips,true
+9143,Adamant bolts,true
+810,Adamant dart,true
+823,Adamant dart tip,true
+2361,Adamantite bar,true
+449,Adamantite ore,true
+1397,Air battlestaff,true
+573,Air orb,true
+556,Air rune,true
+21347,Amethyst,true
+21326,Amethyst arrow,true
+21350,Amethyst arrowtips,true
+25849,Amethyst dart,true
+25853,Amethyst dart tip,true
+12640,Amylase crystal,true
+27616,Ancient essence,true
+13441,Anglerfish,true
+52,Arrow shaft,true
+9075,Astral rune,true
+28991,Atlatl dart,true
+1759,Ball of wool,true
+5305,Barley seed,true
+1391,Battlestaff,true
+11959,Black chinchompa,true
+1747,Black dragonhide,true
+24607,Blighted ancient ice sack,true
+24592,Blighted anglerfish,true
+24613,Blighted entangle sack,true
+24595,Blighted karambwan,true
+24589,Blighted manta ray,true
+24621,Blighted vengeance sack,true
+565,Blood rune,true
+2505,Blue dragon leather,true
+559,Body rune,true
+4740,Bolt rack,true
+8882,Bone bolts,true
+1777,Bow string,true
+11875,Broad bolts,true
+882,Bronze arrow,true
+39,Bronze arrowtips,true
+1925,Bucket,true
+1783,Bucket of sand,true
+2,Cannonball,true
+562,Chaos rune,true
+453,Coal,true
+5974,Coconut,true
+3144,Cooked karambwan,true
+436,Copper ore,true
+564,Cosmic rune,true
+6693,Crushed nest,true
+11940,Dark fishing bait,true
+560,Death rune,true
+1601,Diamond,true
+9192,Diamond bolt tips,true
+9243,Diamond bolts (e),true
+9340,Diamond bolts,true
+21946,Diamond dragon bolts (e),true
+11212,Dragon arrow,true
+11237,Dragon arrowtips,true
+21930,Dragon bolts (unf),true
+21905,Dragon bolts,true
+536,Dragon bones,true
+11230,Dragon dart,true
+11232,Dragon dart tip,true
+19582,Dragon javelin heads,true
+9193,Dragonstone bolt tips,true
+9244,Dragonstone bolts (e),true
+9341,Dragonstone bolts,true
+4696,Dust rune,true
+109,Dwarf weed potion (unf),true
+13573,Dynamite,true
+575,Earth orb,true
+557,Earth rune,true
+1605,Emerald,true
+1658,Emerald necklace,true
+221,Eye of newt,true
+314,Feather,true
+554,Fire rune,true
+313,Fishing bait,true
+1779,Flax,true
+28157,Forester's ration,true
+2357,Gold bar,true
+1654,Gold necklace,true
+444,Gold ore,true
+1987,Grapes,true
+1745,Green dragon leather,true
+1753,Green dragonhide,true
+207,Grimy ranarr weed,true
+5307,Hammerstone seed,true
+10145,Harralander tar,true
+53,Headless arrow,true
+11260,Impling jar,true
+884,Iron arrow,true
+2351,Iron bar,true
+807,Iron dart,true
+820,Iron dart tip,true
+4820,Iron nails,true
+440,Iron ore,true
+19584,Javelin shaft,true
+1935,Jug,true
+1937,Jug of water,true
+1993,Jug of wine,true
+5306,Jute seed,true
+4542,Lantern lens,true
+4699,Lava rune,true
+563,Law rune,true
+225,Limpwurt root,true
+13391,Lizardman fang,true
+379,Lobster,true
+1511,Logs,true
+1513,Magic logs,true
+859,Magic longbow,true
+70,Magic longbow (u),true
+6332,Mahogany logs,true
+8782,Mahogany plank,true
+391,Manta ray,true
+1517,Maple logs,true
+851,Maple longbow,true
+62,Maple longbow (u),true
+558,Mind rune,true
+4695,Mist rune,true
+888,Mithril arrow,true
+42,Mithril arrowtips,true
+2359,Mithril bar,true
+9142,Mithril bolts,true
+809,Mithril dart,true
+822,Mithril dart tip,true
+447,Mithril ore,true
+1775,Molten glass,true
+7946,Monkfish,true
+28878,Moonlight antler bolts,true
+4698,Mud rune,true
+561,Nature rune,true
+21555,Numulite,true
+1521,Oak logs,true
+8778,Oak plank,true
+5319,Onion seed,true
+9245,Onyx bolts (e),true
+9342,Onyx bolts,true
+1931,Pot,true
+5318,Potato seed,true
+7936,Pure essence,true
+99,Ranarr potion (unf),true
+13439,Raw anglerfish,true
+363,Raw bass,true
+3142,Raw karambwan,true
+377,Raw lobster,true
+7944,Raw monkfish,true
+383,Raw shark,true
+371,Raw swordfish,true
+10034,Red chinchompa,true
+2507,Red dragon leather,true
+1749,Red dragonhide,true
+223,Red spiders' eggs,true
+19669,Redwood logs,true
+21820,Revenant ether,true
+2550,Ring of recoil,true
+1603,Ruby,true
+9191,Ruby bolt tips,true
+9242,Ruby bolts (e),true
+9339,Ruby bolts,true
+21944,Ruby dragon bolts (e),true
+1660,Ruby necklace,true
+892,Rune arrow,true
+811,Rune dart,true
+824,Rune dart tip,true
+1436,Rune essence,true
+830,Rune javelin,true
+19580,Rune javelin heads,true
+868,Rune knife,true
+2363,Runite bar,true
+9144,Runite bolts,true
+451,Runite ore,true
+13421,Saltpetre,true
+13431,Sandworms,true
+1607,Sapphire,true
+1656,Sapphire necklace,true
+1637,Sapphire ring,true
+385,Shark,true
+442,Silver ore,true
+4697,Smoke rune,true
+3004,Snapdragon potion (unf),true
+231,Snape grass,true
+1761,Soft clay,true
+566,Soul rune,true
+4694,Steam rune,true
+886,Steel arrow,true
+41,Steel arrowtips,true
+2353,Steel bar,true
+808,Steel dart,true
+821,Steel dart tip,true
+1539,Steel nails,true
+28924,Sunfire splinters,true
+6034,Supercompost,true
+1941,Swamp paste,true
+1939,Swamp tar,true
+373,Swordfish,true
+10144,Tarromin tar,true
+6333,Teak logs,true
+8780,Teak plank,true
+1734,Thread,true
+438,Tin ore,true
+3002,Toadflax potion (unf),true
+6306,Trading sticks,true
+21483,Ultracompost,true
+1617,Uncut diamond,true
+1621,Uncut emerald,true
+1619,Uncut ruby,true
+1623,Uncut sapphire,true
+567,Unpowered orb,true
+229,Vial,true
+227,Vial of water,true
+21622,Volcanic ash,true
+571,Water orb,true
+555,Water rune,true
+1519,Willow logs,true
+245,Wine of zamorak,true
+21880,Wrath rune,true
+1515,Yew logs,true
+855,Yew longbow,true
+66,Yew longbow (u),true
+12934,Zulrah's scales,true
+2434,Prayer potion(4),true
+6685,Saradomin brew(4),true
+3024,Super restore(4),true
+8013,Teleport to house (tablet),true

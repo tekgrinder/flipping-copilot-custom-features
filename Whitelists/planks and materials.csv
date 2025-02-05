@@ -1,0 +1,21 @@
+# Mode: whitelist
+item_id,name,is_filtered
+960,Plank,true
+8778,Oak plank,true
+8780,Teak plank,true
+8782,Mahogany plank,true
+4819,Bronze nails,true
+4820,Iron nails,true
+1539,Steel nails,true
+4821,Black nails,true
+4822,Mithril nails,true
+4823,Adamantite nails,true
+4824,Rune nails,true
+1761,Soft clay,true
+8790,Bolt of cloth,true
+2353,Steel bar,true
+3420,Limestone brick,true
+8784,Gold leaf,true
+8786,Marble block,true
+8788,Magic stone,true
+26266,Condensed gold,true

@@ -1,0 +1,17 @@
+# Mode: whitelist
+item_id,name,is_filtered
+1511,Logs,true
+2862,Achey tree logs,true
+1521,Oak logs,true
+1519,Willow logs,true
+6333,Teak logs,true
+1517,Maple logs,true
+3239,Bark,true
+6332,Mahogany logs,true
+10810,Arctic pine logs,true
+1515,Yew logs,true
+1513,Magic logs,true
+19669,Redwood logs,true
+21626,Sulliuscep cap,true
+2970,Mort myre fungus,true
+6004,Mushroom,true

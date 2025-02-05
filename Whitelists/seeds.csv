@@ -1,0 +1,63 @@
+# Mode: whitelist
+item_id,name,is_filtered
+5318,Potato seed,true
+5319,Onion seed,true
+5324,Cabbage seed,true
+5322,Tomato seed,true
+5320,Sweetcorn seed,true
+5323,Strawberry seed,true
+5321,Watermelon seed,true
+22879,Snape grass seed,true
+5096,Marigold seed,true
+5097,Rosemary seed,true
+5098,Nasturtium seed,true
+5099,Woad seed,true
+5100,Limpwurt seed,true
+22887,White lily seed,true
+5291,Guam seed,true
+5292,Marrentill seed,true
+5293,Tarromin seed,true
+5294,Harralander seed,true
+6311,Gout tuber,true
+5295,Ranarr seed,true
+5296,Toadflax seed,true
+5297,Irit seed,true
+5298,Avantoe seed,true
+5299,Kwuarm seed,true
+5300,Snapdragon seed,true
+30088,Huasca seed,true
+5301,Cadantine seed,true
+5302,Lantadyme seed,true
+5303,Dwarf weed seed,true
+5304,Torstol seed,true
+5305,Barley seed,true
+5307,Hammerstone seed,true
+5308,Asgarnian seed,true
+5306,Jute seed,true
+5309,Yanillian seed,true
+5310,Krandorian seed,true
+5311,Wildblood seed,true
+5101,Redberry seed,true
+5102,Cadavaberry seed,true
+5103,Dwellberry seed,true
+5104,Jangerberry seed,true
+5105,Whiteberry seed,true
+5106,Poison ivy seed,true
+5283,Apple tree seed,true
+5284,Banana tree seed,true
+5285,Orange tree seed,true
+5286,Curry tree seed,true
+5287,Pineapple seed,true
+5288,Papaya tree seed,true
+5289,Palm tree seed,true
+22877,Dragonfruit tree seed,true
+13657,Grape seed,true
+5282,Mushroom spore,true
+5281,Belladonna seed,true
+21486,Teak seed,true
+21488,Mahogany seed,true
+5290,Calquat tree seed,true
+22869,Celastrus seed,true
+22871,Redwood tree seed,true
+5280,Cactus seed,true
+22873,Potato cactus seed,true

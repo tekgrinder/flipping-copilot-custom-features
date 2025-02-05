@@ -1,0 +1,19 @@
+# Mode: whitelist
+item_id,name,is_filtered
+434,Clay,true
+1436,Rune essence,true
+436,Copper ore,true
+438,Tin ore,true
+3211,Limestone,true
+440,Iron ore,true
+442,Silver ore,true
+21622,Volcanic ash,true
+7936,Pure essence,true
+453,Coal,true
+444,Gold ore,true
+447,Mithril ore,true
+449,Adamantite ore,true
+1761,Soft clay,true
+27616,Ancient essence,true
+451,Runite ore,true
+21347,Amethyst,true

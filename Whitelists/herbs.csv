@@ -1,0 +1,32 @@
+# Mode: whitelist
+item_id,name,is_filtered
+199,Grimy guam leaf,true
+201,Grimy marrentill,true
+203,Grimy tarromin,true
+205,Grimy harralander,true
+207,Grimy ranarr weed,true
+3049,Grimy toadflax,true
+209,Grimy irit leaf,true
+211,Grimy avantoe,true
+213,Grimy kwuarm,true
+30094,Grimy huasca,true
+3051,Grimy snapdragon,true
+215,Grimy cadantine,true
+2485,Grimy lantadyme,true
+217,Grimy dwarf weed,true
+219,Grimy torstol,true
+249,Guam leaf,true
+251,Marrentill,true
+253,Tarromin,true
+255,Harralander,true
+257,Ranarr weed,true
+2998,Toadflax,true
+259,Irit leaf,true
+261,Avantoe,true
+263,Kwuarm,true
+30097,Huasca,true
+3000,Snapdragon,true
+265,Cadantine,true
+2481,Lantadyme,true
+267,Dwarf weed,true
+269,Torstol,true

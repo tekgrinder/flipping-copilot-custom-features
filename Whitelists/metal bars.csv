@@ -1,0 +1,10 @@
+# Mode: whitelist
+item_id,name,is_filtered
+2349,Bronze bar,true
+2351,Iron bar,true
+2355,Silver bar,true
+2353,Steel bar,true
+2357,Gold bar,true
+2359,Mithril bar,true
+2361,Adamantite bar,true
+2363,Runite bar,true

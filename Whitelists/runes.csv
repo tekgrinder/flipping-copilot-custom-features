@@ -1,0 +1,24 @@
+# Mode: whitelist
+item_id,name,is_filtered
+556,Air rune,true
+558,Mind rune,true
+555,Water rune,true
+557,Earth rune,true
+554,Fire rune,true
+559,Body rune,true
+564,Cosmic rune,true
+562,Chaos rune,true
+561,Nature rune,true
+563,Law rune,true
+560,Death rune,true
+28929,Sunfire rune,true
+9075,Astral rune,true
+565,Blood rune,true
+566,Soul rune,true
+21880,Wrath rune,true
+4695,Mist rune,true
+4696,Dust rune,true
+4698,Mud rune,true
+4697,Smoke rune,true
+4694,Steam rune,true
+4699,Lava rune,true

@@ -1,0 +1,19 @@
+# Mode: whitelist
+item_id,name,is_filtered
+103,Avantoe potion (unf),true
+22443,Cadantine blood potion (unf),true
+107,Cadantine potion (unf),true
+109,Dwarf weed potion (unf),true
+91,Guam potion (unf),true
+97,Harralander potion (unf),true
+30100,Huasca potion (unf),true
+101,Irit potion (unf),true
+105,Kwuarm potion (unf),true
+2483,Lantadyme potion (unf),true
+93,Marrentill potion (unf),true
+99,Ranarr potion (unf),true
+3004,Snapdragon potion (unf),true
+95,Tarromin potion (unf),true
+3002,Toadflax potion (unf),true
+111,Torstol potion (unf),true
+3406,Unfinished potion,true

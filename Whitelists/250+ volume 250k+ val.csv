@@ -1,0 +1,242 @@
+# Mode: whitelist
+item_id,name,is_filtered
+13263,Abyssal bludgeon,true
+13265,Abyssal dagger,true
+13271,Abyssal dagger (p++),true
+4151,Abyssal whip,true
+27676,Accursed sceptre (au),true
+27662,Accursed sceptre (u),true
+12881,Ahrim's armour set,true
+4708,Ahrim's hood,true
+4714,Ahrim's robeskirt,true
+4712,Ahrim's robetop,true
+22557,Amulet of avarice,true
+6585,Amulet of fury,true
+29801,Amulet of rancour,true
+19553,Amulet of torture,true
+21018,Ancestral hat,true
+21024,Ancestral robe bottom,true
+21021,Ancestral robe top,true
+12494,Ancient chaps,true
+19921,Ancient d'hide boots,true
+21807,Ancient emblem,true
+26233,Ancient godsword,true
+13060,Ancient rune armour set (lg),true
+21813,Ancient statuette,true
+21810,Ancient totem,true
+29806,Aranea boots,true
+21079,Arcane prayer scroll,true
+6733,Archers ring,true
+11830,Armadyl chainskirt,true
+12510,Armadyl chaps,true
+11828,Armadyl chestplate,true
+11785,Armadyl crossbow,true
+19930,Armadyl d'hide boots,true
+11802,Armadyl godsword,true
+11826,Armadyl helmet,true
+22477,Avernic defender hilt,true
+28334,Awakener's orb,true
+12502,Bandos chaps,true
+11832,Bandos chestplate,true
+19924,Bandos d'hide boots,true
+11804,Bandos godsword,true
+11834,Bandos tassets,true
+24268,Basilisk jaw,true
+28316,Bellator ring,true
+11128,Berserker necklace,true
+6737,Berserker ring,true
+8921,Black mask,true
+12831,Blessed spirit shield,true
+29022,Blood moon chestplate,true
+29028,Blood moon helm,true
+29025,Blood moon tassets,true
+24777,Blood shard,true
+29013,Blue moon chestplate,true
+29019,Blue moon helm,true
+28988,Blue moon spear,true
+29016,Blue moon tassets,true
+22951,Boots of brimstone,true
+22994,Bottomless compost bucket,true
+25862,Bow of faerdhinen (inactive),true
+22975,Brimstone ring,true
+11037,Brine sabre,true
+29574,Burning claw,true
+29577,Burning claws,true
+962,Christmas cracker,true
+30002,Chugging barrel (disassembled),true
+22547,Craw's bow (u),true
+23956,Crystal armour seed,true
+4207,Crystal weapon seed,true
+11235,Dark bow,true
+22954,Devout boots,true
+21034,Dexterous prayer scroll,true
+12877,Dharok's armour set,true
+4718,Dharok's greataxe,true
+4718,Dharok's greataxe,true
+4716,Dharok's helm,true
+4716,Dharok's helm,true
+4720,Dharok's platebody,true
+4720,Dharok's platebody,true
+4722,Dharok's platelegs,true
+4722,Dharok's platelegs,true
+21015,Dinh's bulwark,true
+3140,Dragon chainbody,true
+13652,Dragon claws,true
+21902,Dragon crossbow,true
+28217,Dragon felling axe,true
+21028,Dragon harpoon,true
+21012,Dragon hunter crossbow,true
+22978,Dragon hunter lance,true
+11256,Dragon impling jar,true
+11920,Dragon pickaxe,true
+1187,Dragon sq shield,true
+13576,Dragon warhammer,true
+28997,Dual macuahuitl,true
+12863,Dwarf cannon set,true
+30451,Echo ahrim's ornament kit,true
+28942,Echo crystal,true
+30443,Echo virtus ornament kit,true
+29000,Eclipse atlatl,true
+29004,Eclipse moon chestplate,true
+29010,Eclipse moon helm,true
+29007,Eclipse moon tassets,true
+20595,Elder chaos hood,true
+20520,Elder chaos robe,true
+20517,Elder chaos top,true
+21003,Elder maul,true
+25985,Elidinis' ward,true
+23959,Enhanced crystal teleport seed,true
+13235,Eternal boots,true
+23246,Fremennik kilt,true
+22324,Ghrazi rapier,true
+6311,Gout tuber,true
+21643,Granite boots,true
+21742,Granite hammer,true
+4153,Granite maul,true
+21733,Guardian boots,true
+12873,Guthan's armour set,true
+4730,Guthan's chainskirt,true
+4724,Guthan's helm,true
+4726,Guthan's warspear,true
+10380,Guthix chaps,true
+19927,Guthix d'hide boots,true
+19481,Heavy ballista,true
+20756,Hill giant club,true
+30085,Hueycoatl hide,true
+30079,Hueycoatl hide chaps,true
+30073,Hueycoatl hide coif,true
+30082,Hueycoatl hide vambraces,true
+22983,Hydra leather,true
+6920,Infinity boots,true
+22438,Justiciar armour set,true
+22327,Justiciar chestguard,true
+22326,Justiciar faceguard,true
+22328,Justiciar legguards,true
+4738,Karil's leatherskirt,true
+4736,Karil's leathertop,true
+21006,Kodai wand,true
+12004,Kraken tentacle,true
+19478,Light ballista,true
+25975,Lightbearer,true
+6889,Mage's book,true
+8788,Magic stone,true
+28313,Magus ring,true
+11924,Malediction ward,true
+8786,Marble block,true
+27229,Masori body,true
+27238,Masori body (f),true
+27232,Masori chaps,true
+27241,Masori chaps (f),true
+27226,Masori mask,true
+27235,Masori mask (f),true
+6914,Master wand,true
+12000,Mystic smoke staff,true
+19547,Necklace of anguish,true
+24422,Nightmare staff,true
+29796,Noxious halberd,true
+6568,Obsidian cape,true
+21298,Obsidian helmet,true
+21301,Obsidian platebody,true
+21304,Obsidian platelegs,true
+12002,Occult necklace,true
+11926,Odium ward,true
+6573,Onyx,true
+24229,Ornate maul handle,true
+26219,Osmumten's fang,true
+13237,Pegasian boots,true
+13229,Pegasian crystal,true
+26945,Pharaoh's sceptre (uncharged),true
+13239,Primordial boots,true
+30554,Raging echoes rug,true
+12596,Rangers' tunic,true
+11133,Regen bracelet,true
+19550,Ring of suffering,true
+12601,Ring of the gods,true
+2581,Robin hood hat,true
+24587,Rune pouch note,true
+22481,Sanguinesti staff (uncharged),true
+13040,Saradomin armour set (lg),true
+10388,Saradomin chaps,true
+19933,Saradomin d'hide boots,true
+11806,Saradomin godsword,true
+27641,Saturated heart,true
+6731,Seers ring,true
+12929,Serpentine helm (uncharged),true
+26528,Shattered cannon ornament kit,true
+26479,Shattered relics void ornament kit,true
+11998,Smoke battlestaff,true
+13233,Smouldering stone,true
+12821,Spectral spirit shield,true
+23389,Spiked manacles,true
+28939,Sunfire fanatic chausses,true
+28936,Sunfire fanatic cuirass,true
+28933,Sunfire fanatic helm,true
+6524,Toktz-ket-xil,true
+6526,Toktz-mej-tal,true
+6523,Toktz-xil-ak,true
+20716,Tome of fire (empty),true
+25576,Tome of water (empty),true
+4751,Torag's platelegs,true
+4751,Torag's platelegs,true
+19544,Tormented bracelet,true
+29580,Tormented synapse,true
+20062,Torture ornament kit,true
+26382,Torva full helm,true
+26384,Torva platebody,true
+26386,Torva platelegs,true
+12924,Toxic blowpipe (empty),true
+12902,Toxic staff (uncharged),true
+11905,Trident of the seas (full),true
+24187,Trouver parchment,true
+27277,Tumeken's shadow (uncharged),true
+20997,Twisted bow,true
+21000,Twisted buckler,true
+6528,Tzhaar-ket-om,true
+28307,Ultor ring,true
+12900,Uncharged toxic trident,true
+22294,Uncharged toxic trident (e),true
+6571,Uncut onyx,true
+27657,Ursine chainmace (u),true
+27612,Venator bow (uncharged),true
+28310,Venator ring,true
+27614,Venator shard,true
+4759,Verac's plateskirt,true
+22542,Viggora's chainmace (u),true
+26241,Virtus mask,true
+26245,Virtus robe bottom,true
+26243,Virtus robe top,true
+27690,Voidwaker,true
+27652,Webweaver bow (u),true
+2579,Wizard boots,true
+10372,Zamorak chaps,true
+10370,Zamorak d'hide body,true
+19936,Zamorak d'hide boots,true
+11808,Zamorak godsword,true
+11889,Zamorakian hasta,true
+11824,Zamorakian spear,true
+26374,Zaryte crossbow,true
+26235,Zaryte vambraces,true
+28810,Zombie axe,true
+8901,Black mask (10),true
+11284,Dragonfire shield,true
+22003,Dragonfire ward,true
