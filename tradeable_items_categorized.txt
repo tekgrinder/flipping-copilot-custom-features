@@ -1,0 +1,466 @@
+# Basic Resources
+11,Coins
+453,Coal
+
+# Herbs
+199,Grimy guam leaf
+201,Grimy marrentill
+203,Grimy tarromin
+205,Grimy harralander
+207,Grimy ranarr weed
+209,Grimy irit leaf
+211,Grimy avantoe
+213,Grimy kwuarm
+215,Grimy cadantine
+217,Grimy dwarf weed
+219,Grimy torstol
+249,Clean guam leaf
+251,Clean marrentill
+253,Clean tarromin
+255,Clean harralander
+257,Clean ranarr weed
+259,Clean irit leaf
+261,Clean avantoe
+263,Clean kwuarm
+265,Clean cadantine
+267,Clean dwarf weed
+269,Clean torstol
+
+# Potion Making
+221,Eye of newt
+227,Vial of water
+
+# Skilling Supplies
+313,Fishing bait
+314,Feather
+2347,Hammer
+
+# Runes
+554,Fire rune
+555,Water rune
+556,Air rune
+557,Earth rune
+558,Mind rune
+559,Body rune
+560,Death rune
+561,Nature rune
+562,Chaos rune
+563,Law rune
+564,Cosmic rune
+565,Blood rune
+566,Soul rune
+567,Steam rune
+568,Mist rune
+569,Dust rune
+570,Lava rune
+571,Mud rune
+572,Smoke rune
+573,Astral rune
+575,Wrath rune
+
+# Ammunition
+882,Bronze arrow
+884,Iron arrow
+886,Steel arrow
+888,Mithril arrow
+890,Adamant arrow
+892,Rune arrow
+877,Bronze bolts
+9140,Iron bolts
+9141,Steel bolts
+9142,Mithril bolts
+9143,Adamant bolts
+9144,Rune bolts
+
+# Metal Bars
+2351,Iron bar
+2353,Steel bar
+2359,Mithril bar
+2361,Adamant bar
+2363,Rune bar
+
+# Basic Melee Armor - Full Helms
+1153,Iron full helm
+1155,Steel full helm
+1157,Mithril full helm
+1159,Adamant full helm
+1161,Rune full helm
+1165,Black full helm
+
+# Basic Melee Armor - Platelegs
+1067,Iron platelegs
+1069,Steel platelegs
+1071,Mithril platelegs
+1073,Adamant platelegs
+1079,Rune platelegs
+
+# Basic Melee Armor - Chainbodies
+1089,Iron chainbody
+1091,Steel chainbody
+1093,Mithril chainbody
+1095,Adamant chainbody
+1097,Rune chainbody
+
+# Basic Melee Armor - Platebodies
+1115,Iron platebody
+1117,Steel platebody
+1119,Mithril platebody
+1121,Adamant platebody
+1123,Rune platebody
+
+# Basic Melee Armor - Kiteshields
+1191,Iron kiteshield
+1193,Steel kiteshield
+1195,Mithril kiteshield
+1197,Adamant kiteshield
+1199,Rune kiteshield
+
+# Basic Weapons - Swords
+1307,Bronze sword
+1309,Iron sword
+1311,Steel sword
+1313,Mithril sword
+1315,Adamant sword
+1317,Rune sword
+
+# Basic Weapons - Scimitars
+1321,Bronze scimitar
+1323,Iron scimitar
+1325,Steel scimitar
+1327,Mithril scimitar
+1329,Adamant scimitar
+1331,Rune scimitar
+
+# Tools - Pickaxes
+1265,Bronze pickaxe
+1267,Iron pickaxe
+1269,Steel pickaxe
+1273,Mithril pickaxe
+1271,Adamant pickaxe
+1275,Rune pickaxe
+
+# Tools - Axes
+1351,Bronze axe
+1349,Iron axe
+1353,Steel axe
+1355,Mithril axe
+1357,Adamant axe
+1359,Rune axe
+
+# Spears and Hastas
+2485,Bronze spear
+2487,Iron spear
+2489,Steel spear
+2491,Mithril spear
+2493,Adamant spear
+2495,Rune spear
+3095,Bronze hasta
+3096,Iron hasta
+3097,Steel hasta
+3098,Mithril hasta
+3099,Adamant hasta
+3100,Rune hasta
+
+# Magic Equipment - Mystic Sets
+4089,Blue mystic hat
+4091,Blue mystic robe top
+4093,Blue mystic robe bottom
+4095,Blue mystic gloves
+4097,Blue mystic boots
+4099,Light mystic hat
+4101,Light mystic robe top
+4103,Light mystic robe bottom
+4105,Light mystic gloves
+4107,Light mystic boots
+4109,Dark mystic hat
+4111,Dark mystic robe top
+4113,Dark mystic robe bottom
+4115,Dark mystic gloves
+4117,Dark mystic boots
+4119,Black mystic hat
+4121,Black mystic robe top
+4123,Black mystic robe bottom
+4125,Black mystic gloves
+4127,Black mystic boots
+4131,Mystic hat (dusk)
+4133,Mystic robe top (dusk)
+4135,Mystic robe bottom (dusk)
+4137,Mystic gloves (dusk)
+4139,Mystic boots (dusk)
+
+# Barrows Equipment - Ahrim's
+4708,Ahrim's hood
+4710,Ahrim's staff
+4712,Ahrim's robetop
+4714,Ahrim's robeskirt
+
+# Barrows Equipment - Dharok's
+4716,Dharok's helm
+4718,Dharok's greataxe
+4720,Dharok's platebody
+4722,Dharok's platelegs
+
+# Barrows Equipment - Guthan's
+4724,Guthan's helm
+4726,Guthan's warspear
+4728,Guthan's platebody
+4730,Guthan's chainskirt
+
+# Barrows Equipment - Karil's
+4732,Karil's coif
+4734,Karil's crossbow
+4736,Karil's leathertop
+4738,Karil's leatherskirt
+
+# Barrows Equipment - Torag's
+4745,Torag's helm
+4747,Torag's hammers
+4749,Torag's platebody
+4751,Torag's platelegs
+
+# Barrows Equipment - Verac's
+4753,Verac's helm
+4755,Verac's flail
+4757,Verac's brassard
+4759,Verac's plateskirt
+
+# High-Level Weapons
+4151,Abyssal whip
+4153,Granite maul
+4587,Dragon scimitar
+4585,Dragon longsword
+4675,Ancient staff
+
+# High-Level Magic Equipment
+6585,Dragon boots
+6889,Mages' book
+6914,Master wand
+6916,Infinity top
+6918,Infinity hat
+6920,Infinity boots
+6922,Infinity gloves
+6924,Infinity bottoms
+
+# Dragon Equipment
+6562,Dragon dagger
+6563,Dragon longsword
+6739,Dragon axe
+11840,Dragon boots
+11284,Dragon shield
+11286,Draconic visage
+11889,Dragon full helm
+11936,Dragon pickaxe
+11938,Dragon defender
+13259,Dragon warhammer
+13261,Dragon claws
+13305,Dragon kiteshield
+13307,Dragon platebody
+13309,Dragon platelegs
+13311,Dragon chainbody
+13313,Dragon med helm
+13315,Dragon sq shield
+13317,Dragon full helm
+13319,Dragon boots
+13321,Dragon defender
+13323,Dragon scimitar
+13325,Dragon longsword
+13327,Dragon dagger
+13329,Dragon battleaxe
+13331,Dragon 2h sword
+13333,Dragon halberd
+13335,Dragon spear
+13337,Dragon hasta
+13339,Dragon mace
+13341,Dragon sword
+13343,Dragon warhammer
+13345,Dragon crossbow
+13347,Dragon thrownaxe
+13349,Dragon dart
+13351,Dragon javelin
+13353,Dragon knife
+13355,Dragon arrow
+13357,Dragon bolt
+13359,Dragon limbs
+13361,Dragon metal lump
+
+# God Wars Dungeon Equipment
+11785,Armadyl crossbow
+11802,Armadyl godsword
+11804,Bandos godsword
+11806,Saradomin godsword
+11808,Zamorak godsword
+11824,Bandos chestplate
+11826,Bandos tassets
+11828,Bandos boots
+11830,Saradomin sword
+11832,Zamorakian spear
+11834,Armadyl helmet
+11836,Armadyl chestplate
+11838,Armadyl chainskirt
+
+# High-Level Shields
+11926,Odium ward
+11928,Malediction ward
+13421,Dragonfire shield
+13423,Ancient wyvern shield
+
+# Raid Rewards and High-End Equipment
+12002,Occult necklace
+12922,Tanzanite fang
+13227,Blood shard
+13229,Eldritch orb
+13231,Harmonised orb
+13233,Volatile orb
+13235,Nightmare staff
+13237,Inquisitor's mace
+13239,Inquisitor's great helm
+13241,Inquisitor's hauberk
+13243,Inquisitor's plateskirt
+13245,Faceguard
+13247,Basilisk jaw
+13249,Nightmare essence
+13251,Harmonised nightmare staff
+13253,Volatile nightmare staff
+13255,Eldritch nightmare staff
+13257,Twisted bow
+13271,Dragon hunter lance
+13273,Scythe of vitur
+13275,Ghrazi rapier
+13277,Sanguinesti staff
+13279,Justiciar faceguard
+13281,Justiciar chestguard
+13283,Justiciar legguards
+13285,Avernic defender hilt
+13287,Ancestral hat
+13289,Ancestral robe top
+13291,Ancestral robe bottom
+
+# Crystal Equipment
+13293,Primordial crystal
+13295,Pegasian crystal
+13297,Eternal crystal
+13299,Primordial boots
+13301,Pegasian boots
+13303,Eternal boots
+
+# Ornament Kits and Cosmetic Upgrades
+13361,Dragon metal lump
+13363,Dragon chainbody ornament kit
+13365,Dragon legs/skirt ornament kit
+13367,Dragon sq shield ornament kit
+13369,Dragon full helm ornament kit
+13371,Dragon platebody ornament kit
+13373,Dragon boots ornament kit
+13375,Dragon defender ornament kit
+13377,Dragon kiteshield ornament kit
+
+# Imbued Versions (i)
+13425,Twisted bow (i)
+13427,Harmonised nightmare staff (i)
+13429,Volatile nightmare staff (i)
+13431,Eldritch nightmare staff (i)
+13433,Scythe of vitur (i)
+13435,Ghrazi rapier (i)
+13437,Blade of saeldor (i)
+13439,Sanguinesti staff (i)
+13441,Dragon warhammer (i)
+13443,Dragon claws (i)
+13445,Armadyl godsword (i)
+13447,Bandos godsword (i)
+13449,Saradomin godsword (i)
+13451,Zamorak godsword (i)
+13453,Dragon defender (i)
+13455,Avernic defender (i)
+13457,Dragonfire shield (i)
+13459,Ancient wyvern shield (i)
+13461,Dragonfire ward (i)
+13463,Twisted buckler (i)
+13465,Dragon hunter crossbow (i)
+13467,Dragon hunter lance (i)
+13469,Kodai wand (i)
+13471,Elder maul (i)
+13473,Ancestral hat (i)
+13475,Ancestral robe top (i)
+13477,Ancestral robe bottom (i)
+13479,Justiciar faceguard (i)
+13481,Justiciar chestguard (i)
+13483,Justiciar legguards (i)
+13485,Primordial boots (i)
+13487,Pegasian boots (i)
+13489,Eternal boots (i)
+13491,Dragon boots (i)
+13493,Infinity boots (i)
+13495,Ranger boots (i)
+13497,Wizard boots (i)
+13499,Climbing boots (i)
+13501,Holy sandals (i)
+
+# Ornamental (or) Versions
+21000,Twisted bow (or)
+21002,Scythe of vitur (or)
+21004,Ghrazi rapier (or)
+21006,Sanguinesti staff (or)
+21008,Harmonised orb (or)
+21010,Volatile orb (or)
+21012,Eldritch orb (or)
+21014,Kodai wand (or)
+21016,Elder maul (or)
+21018,Dragon warhammer (or)
+21020,Dragon claws (or)
+21022,Armadyl godsword (or)
+21024,Bandos godsword (or)
+21026,Saradomin godsword (or)
+21028,Zamorak godsword (or)
+21030,Dragon defender (or)
+21032,Avernic defender (or)
+21034,Dragonfire shield (or)
+21036,Ancient wyvern shield (or)
+21038,Dragonfire ward (or)
+21040,Twisted buckler (or)
+21042,Dragon hunter crossbow (or)
+21044,Dragon hunter lance (or)
+21046,Ancestral hat (or)
+21048,Ancestral robe top (or)
+21050,Ancestral robe bottom (or)
+21052,Justiciar faceguard (or)
+21054,Justiciar chestguard (or)
+21056,Justiciar legguards (or)
+21058,Primordial boots (or)
+21060,Pegasian boots (or)
+21062,Eternal boots (or)
+21064,Dragon boots (or)
+21066,Infinity boots (or)
+21068,Ranger boots (or)
+21070,Wizard boots (or)
+21072,Climbing boots (or)
+21074,Holy sandals (or)
+
+# Graceful Equipment (or)
+21076,Graceful hood (or)
+21078,Graceful top (or)
+21080,Graceful legs (or)
+21082,Graceful gloves (or)
+21084,Graceful boots (or)
+21086,Graceful cape (or)
+
+# Capes and Their Variants
+21088,Max cape (or)
+21090,Fire cape (or)
+21092,Infernal cape (or)
+21094,Ava's assembler (or)
+21096,Mythical cape (or)
+21098,Obsidian cape (or)
+21100,Ardougne cloak 4 (or)
+21102,Music cape (or)
+21104,Quest point cape (or)
+21106,Achievement diary cape (or)
+21108,Max cape (or)
+21110,Fire cape (or)
+21112,Infernal cape (or)
+21114,Ava's assembler (or)
+21116,Mythical cape (or)
+21118,Obsidian cape (or)
+21120,Ardougne cloak 4 (or)
+21122,Music cape (or)
+21124,Quest point cape (or)
+21126,Achievement diary cape (or)
