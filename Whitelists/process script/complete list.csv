@@ -1,0 +1,4231 @@
+# Mode: blacklist
+item_id,name,is_filtered
+2,Cannonball,true
+6,Cannon base,true
+8,Cannon stand,true
+10,Cannon barrels,true
+12,Cannon furnace,true
+28,Insect repellent,true
+30,Bucket of wax,true
+36,Candle,true
+39,Bronze arrowtips,true
+40,Iron arrowtips,true
+41,Steel arrowtips,true
+42,Mithril arrowtips,true
+43,Adamant arrowtips,true
+44,Rune arrowtips,true
+45,Opal bolt tips,true
+46,Pearl bolt tips,true
+47,Barb bolttips,true
+48,Longbow (u),true
+50,Shortbow (u),true
+52,Arrow shaft,true
+53,Headless arrow,true
+54,Oak shortbow (u),true
+56,Oak longbow (u),true
+58,Willow longbow (u),true
+60,Willow shortbow (u),true
+62,Maple longbow (u),true
+64,Maple shortbow (u),true
+66,Yew longbow (u),true
+68,Yew shortbow (u),true
+70,Magic longbow (u),true
+72,Magic shortbow (u),true
+91,Guam potion (unf),true
+93,Marrentill potion (unf),true
+95,Tarromin potion (unf),true
+97,Harralander potion (unf),true
+99,Ranarr potion (unf),true
+101,Irit potion (unf),true
+103,Avantoe potion (unf),true
+105,Kwuarm potion (unf),true
+107,Cadantine potion (unf),true
+109,Dwarf weed potion (unf),true
+111,Torstol potion (unf),true
+113,Strength potion(4),true
+115,Strength potion(3),true
+117,Strength potion(2),true
+119,Strength potion(1),true
+121,Attack potion(3),true
+123,Attack potion(2),true
+125,Attack potion(1),true
+127,Restore potion(3),true
+129,Restore potion(2),true
+131,Restore potion(1),true
+133,Defence potion(3),true
+135,Defence potion(2),true
+137,Defence potion(1),true
+139,Prayer potion(3),true
+141,Prayer potion(2),true
+143,Prayer potion(1),true
+145,Super attack(3),true
+147,Super attack(2),true
+149,Super attack(1),true
+151,Fishing potion(3),true
+153,Fishing potion(2),true
+155,Fishing potion(1),true
+157,Super strength(3),true
+159,Super strength(2),true
+161,Super strength(1),true
+163,Super defence(3),true
+165,Super defence(2),true
+167,Super defence(1),true
+169,Ranging potion(3),true
+171,Ranging potion(2),true
+173,Ranging potion(1),true
+175,Antipoison(3),true
+177,Antipoison(2),true
+179,Antipoison(1),true
+181,Superantipoison(3),true
+183,Superantipoison(2),true
+185,Superantipoison(1),true
+187,Weapon poison,true
+189,Zamorak brew(3),true
+191,Zamorak brew(2),true
+193,Zamorak brew(1),true
+197,Poison chalice,true
+199,Grimy guam leaf,true
+201,Grimy marrentill,true
+203,Grimy tarromin,true
+205,Grimy harralander,true
+207,Grimy ranarr weed,true
+209,Grimy irit leaf,true
+211,Grimy avantoe,true
+213,Grimy kwuarm,true
+215,Grimy cadantine,true
+217,Grimy dwarf weed,true
+219,Grimy torstol,true
+221,Eye of newt,true
+223,Red spiders' eggs,true
+225,Limpwurt root,true
+227,Vial of water,true
+229,Vial,true
+231,Snape grass,true
+233,Pestle and mortar,true
+235,Unicorn horn dust,true
+237,Unicorn horn,true
+239,White berries,true
+241,Dragon scale dust,true
+243,Blue dragon scale,true
+245,Wine of zamorak,true
+247,Jangerberries,true
+249,Guam leaf,true
+251,Marrentill,true
+253,Tarromin,true
+255,Harralander,true
+257,Ranarr weed,true
+259,Irit leaf,true
+261,Avantoe,true
+263,Kwuarm,true
+265,Cadantine,true
+267,Dwarf weed,true
+269,Torstol,true
+272,Fish food,true
+273,Poison,true
+288,Goblin mail,true
+299,Mithril seeds,true
+301,Lobster pot,true
+303,Small fishing net,true
+305,Big fishing net,true
+307,Fishing rod,true
+309,Fly fishing rod,true
+311,Harpoon,true
+313,Fishing bait,true
+314,Feather,true
+315,Shrimps,true
+317,Raw shrimps,true
+319,Anchovies,true
+321,Raw anchovies,true
+325,Sardine,true
+327,Raw sardine,true
+329,Salmon,true
+331,Raw salmon,true
+333,Trout,true
+335,Raw trout,true
+339,Cod,true
+341,Raw cod,true
+345,Raw herring,true
+347,Herring,true
+349,Raw pike,true
+351,Pike,true
+353,Raw mackerel,true
+355,Mackerel,true
+359,Raw tuna,true
+361,Tuna,true
+363,Raw bass,true
+365,Bass,true
+371,Raw swordfish,true
+373,Swordfish,true
+377,Raw lobster,true
+379,Lobster,true
+383,Raw shark,true
+385,Shark,true
+389,Raw manta ray,true
+391,Manta ray,true
+395,Raw sea turtle,true
+397,Sea turtle,true
+401,Seaweed,true
+403,Edible seaweed,true
+405,Casket,true
+407,Oyster,true
+411,Oyster pearl,true
+413,Oyster pearls,true
+426,Priest gown,true
+428,Priest gown,true
+434,Clay,true
+436,Copper ore,true
+438,Tin ore,true
+440,Iron ore,true
+442,Silver ore,true
+444,Gold ore,true
+447,Mithril ore,true
+449,Adamantite ore,true
+451,Runite ore,true
+453,Coal,true
+464,Strange fruit,true
+526,Bones,true
+528,Burnt bones,true
+530,Bat bones,true
+532,Big bones,true
+534,Babydragon bones,true
+536,Dragon bones,true
+538,Druid's robe,true
+540,Druid's robe top,true
+542,Monk's robe,true
+544,Monk's robe top,true
+546,Shade robe top,true
+548,Shade robe,true
+554,Fire rune,true
+555,Water rune,true
+556,Air rune,true
+557,Earth rune,true
+558,Mind rune,true
+559,Body rune,true
+560,Death rune,true
+561,Nature rune,true
+562,Chaos rune,true
+563,Law rune,true
+564,Cosmic rune,true
+565,Blood rune,true
+566,Soul rune,true
+567,Unpowered orb,true
+569,Fire orb,true
+571,Water orb,true
+573,Air orb,true
+575,Earth orb,true
+577,Blue wizard robe,true
+579,Blue wizard hat,true
+581,Black robe,true
+590,Tinderbox,true
+592,Ashes,true
+596,Unlit torch,true
+621,Ship ticket,true
+626,Pink boots,true
+628,Green boots,true
+630,Blue boots,true
+632,Cream boots,true
+634,Turquoise boots,true
+636,Pink robe top,true
+638,Green robe top,true
+640,Blue robe top,true
+642,Cream robe top,true
+644,Turquoise robe top,true
+646,Pink robe bottoms,true
+648,Green robe bottoms,true
+650,Blue robe bottoms,true
+652,Cream robe bottoms,true
+654,Turquoise robe bottoms,true
+656,Pink hat,true
+658,Green hat,true
+660,Blue hat,true
+662,Cream hat,true
+664,Turquoise hat,true
+751,Gnomeball,true
+753,Cadava berries,true
+800,Bronze thrownaxe,true
+801,Iron thrownaxe,true
+802,Steel thrownaxe,true
+803,Mithril thrownaxe,true
+804,Adamant thrownaxe,true
+805,Rune thrownaxe,true
+806,Bronze dart,true
+807,Iron dart,true
+808,Steel dart,true
+809,Mithril dart,true
+810,Adamant dart,true
+811,Rune dart,true
+812,Bronze dart(p),true
+813,Iron dart (p),true
+814,Steel dart(p),true
+815,Mithril dart(p),true
+816,Adamant dart(p),true
+817,Rune dart(p),true
+819,Bronze dart tip,true
+820,Iron dart tip,true
+821,Steel dart tip,true
+822,Mithril dart tip,true
+823,Adamant dart tip,true
+824,Rune dart tip,true
+825,Bronze javelin,true
+826,Iron javelin,true
+827,Steel javelin,true
+828,Mithril javelin,true
+829,Adamant javelin,true
+830,Rune javelin,true
+831,Bronze javelin(p),true
+832,Iron javelin(p),true
+833,Steel javelin(p),true
+834,Mithril javelin(p),true
+835,Adamant javelin(p),true
+836,Rune javelin(p),true
+837,Crossbow,true
+839,Longbow,true
+841,Shortbow,true
+843,Oak shortbow,true
+845,Oak longbow,true
+847,Willow longbow,true
+849,Willow shortbow,true
+851,Maple longbow,true
+853,Maple shortbow,true
+855,Yew longbow,true
+857,Yew shortbow,true
+859,Magic longbow,true
+861,Magic shortbow,true
+863,Iron knife,true
+864,Bronze knife,true
+865,Steel knife,true
+866,Mithril knife,true
+867,Adamant knife,true
+868,Rune knife,true
+869,Black knife,true
+870,Bronze knife(p),true
+871,Iron knife(p),true
+872,Steel knife(p),true
+873,Mithril knife(p),true
+874,Black knife(p),true
+875,Adamant knife(p),true
+876,Rune knife(p),true
+877,Bronze bolts,true
+878,Bronze bolts (p),true
+879,Opal bolts,true
+880,Pearl bolts,true
+881,Barbed bolts,true
+882,Bronze arrow,true
+883,Bronze arrow(p),true
+884,Iron arrow,true
+885,Iron arrow(p),true
+886,Steel arrow,true
+887,Steel arrow(p),true
+888,Mithril arrow,true
+889,Mithril arrow(p),true
+890,Adamant arrow,true
+891,Adamant arrow(p),true
+892,Rune arrow,true
+893,Rune arrow(p),true
+946,Knife,true
+948,Bear fur,true
+950,Silk,true
+952,Spade,true
+954,Rope,true
+958,Grey wolf fur,true
+960,Plank,true
+962,Christmas cracker,true
+970,Papyrus,true
+973,Charcoal,true
+975,Machete,true
+981,Disk of returning,true
+983,Brass key,true
+985,Tooth half of key,true
+987,Loop half of key,true
+989,Crystal key,true
+991,Muddy key,true
+993,Sinister key,true
+1005,White apron,true
+1007,Red cape,true
+1009,Brass necklace,true
+1011,Blue skirt,true
+1013,Pink skirt,true
+1015,Black skirt,true
+1017,Wizard hat,true
+1019,Black cape,true
+1021,Blue cape,true
+1023,Yellow cape,true
+1025,Right eye patch,true
+1027,Green cape,true
+1029,Purple cape,true
+1031,Orange cape,true
+1033,Zamorak monk bottom,true
+1035,Zamorak monk top,true
+1038,Red partyhat,true
+1040,Yellow partyhat,true
+1042,Blue partyhat,true
+1044,Green partyhat,true
+1046,Purple partyhat,true
+1048,White partyhat,true
+1050,Santa hat,true
+1053,Green halloween mask,true
+1055,Blue halloween mask,true
+1057,Red halloween mask,true
+1059,Leather gloves,true
+1061,Leather boots,true
+1063,Leather vambraces,true
+1065,Green d'hide vambraces,true
+1067,Iron platelegs,true
+1069,Steel platelegs,true
+1071,Mithril platelegs,true
+1073,Adamant platelegs,true
+1075,Bronze platelegs,true
+1077,Black platelegs,true
+1079,Rune platelegs,true
+1081,Iron plateskirt,true
+1083,Steel plateskirt,true
+1085,Mithril plateskirt,true
+1087,Bronze plateskirt,true
+1089,Black plateskirt,true
+1091,Adamant plateskirt,true
+1093,Rune plateskirt,true
+1095,Leather chaps,true
+1097,Studded chaps,true
+1099,Green d'hide chaps,true
+1101,Iron chainbody,true
+1103,Bronze chainbody,true
+1105,Steel chainbody,true
+1107,Black chainbody,true
+1109,Mithril chainbody,true
+1111,Adamant chainbody,true
+1113,Rune chainbody,true
+1115,Iron platebody,true
+1117,Bronze platebody,true
+1119,Steel platebody,true
+1121,Mithril platebody,true
+1123,Adamant platebody,true
+1125,Black platebody,true
+1127,Rune platebody,true
+1129,Leather body,true
+1131,Hardleather body,true
+1133,Studded body,true
+1135,Green d'hide body,true
+1137,Iron med helm,true
+1139,Bronze med helm,true
+1141,Steel med helm,true
+1143,Mithril med helm,true
+1145,Adamant med helm,true
+1147,Rune med helm,true
+1149,Dragon med helm,true
+1151,Black med helm,true
+1153,Iron full helm,true
+1155,Bronze full helm,true
+1157,Steel full helm,true
+1159,Mithril full helm,true
+1161,Adamant full helm,true
+1163,Rune full helm,true
+1165,Black full helm,true
+1167,Leather cowl,true
+1169,Coif,true
+1171,Wooden shield,true
+1173,Bronze sq shield,true
+1175,Iron sq shield,true
+1177,Steel sq shield,true
+1179,Black sq shield,true
+1181,Mithril sq shield,true
+1183,Adamant sq shield,true
+1185,Rune sq shield,true
+1187,Dragon sq shield,true
+1189,Bronze kiteshield,true
+1191,Iron kiteshield,true
+1193,Steel kiteshield,true
+1195,Black kiteshield,true
+1197,Mithril kiteshield,true
+1199,Adamant kiteshield,true
+1201,Rune kiteshield,true
+1203,Iron dagger,true
+1205,Bronze dagger,true
+1207,Steel dagger,true
+1209,Mithril dagger,true
+1211,Adamant dagger,true
+1213,Rune dagger,true
+1215,Dragon dagger,true
+1217,Black dagger,true
+1219,Iron dagger(p),true
+1221,Bronze dagger(p),true
+1223,Steel dagger(p),true
+1225,Mithril dagger(p),true
+1227,Adamant dagger(p),true
+1229,Rune dagger(p),true
+1231,Dragon dagger(p),true
+1233,Black dagger(p),true
+1237,Bronze spear,true
+1239,Iron spear,true
+1241,Steel spear,true
+1243,Mithril spear,true
+1245,Adamant spear,true
+1247,Rune spear,true
+1249,Dragon spear,true
+1251,Bronze spear(p),true
+1253,Iron spear(p),true
+1255,Steel spear(p),true
+1257,Mithril spear(p),true
+1259,Adamant spear(p),true
+1261,Rune spear(p),true
+1263,Dragon spear(p),true
+1265,Bronze pickaxe,true
+1267,Iron pickaxe,true
+1269,Steel pickaxe,true
+1271,Adamant pickaxe,true
+1273,Mithril pickaxe,true
+1275,Rune pickaxe,true
+1277,Bronze sword,true
+1279,Iron sword,true
+1281,Steel sword,true
+1283,Black sword,true
+1285,Mithril sword,true
+1287,Adamant sword,true
+1289,Rune sword,true
+1291,Bronze longsword,true
+1293,Iron longsword,true
+1295,Steel longsword,true
+1297,Black longsword,true
+1299,Mithril longsword,true
+1301,Adamant longsword,true
+1303,Rune longsword,true
+1305,Dragon longsword,true
+1307,Bronze 2h sword,true
+1309,Iron 2h sword,true
+1311,Steel 2h sword,true
+1313,Black 2h sword,true
+1315,Mithril 2h sword,true
+1317,Adamant 2h sword,true
+1319,Rune 2h sword,true
+1321,Bronze scimitar,true
+1323,Iron scimitar,true
+1325,Steel scimitar,true
+1327,Black scimitar,true
+1329,Mithril scimitar,true
+1331,Adamant scimitar,true
+1333,Rune scimitar,true
+1335,Iron warhammer,true
+1337,Bronze warhammer,true
+1339,Steel warhammer,true
+1341,Black warhammer,true
+1343,Mithril warhammer,true
+1345,Adamant warhammer,true
+1347,Rune warhammer,true
+1349,Iron axe,true
+1351,Bronze axe,true
+1353,Steel axe,true
+1355,Mithril axe,true
+1357,Adamant axe,true
+1359,Rune axe,true
+1361,Black axe,true
+1363,Iron battleaxe,true
+1365,Steel battleaxe,true
+1367,Black battleaxe,true
+1369,Mithril battleaxe,true
+1371,Adamant battleaxe,true
+1373,Rune battleaxe,true
+1375,Bronze battleaxe,true
+1377,Dragon battleaxe,true
+1379,Staff,true
+1381,Staff of air,true
+1383,Staff of water,true
+1385,Staff of earth,true
+1387,Staff of fire,true
+1389,Magic staff,true
+1391,Battlestaff,true
+1393,Fire battlestaff,true
+1395,Water battlestaff,true
+1397,Air battlestaff,true
+1399,Earth battlestaff,true
+1401,Mystic fire staff,true
+1403,Mystic water staff,true
+1405,Mystic air staff,true
+1407,Mystic earth staff,true
+1420,Iron mace,true
+1422,Bronze mace,true
+1424,Steel mace,true
+1426,Black mace,true
+1428,Mithril mace,true
+1430,Adamant mace,true
+1432,Rune mace,true
+1434,Dragon mace,true
+1436,Rune essence,true
+1438,Air talisman,true
+1440,Earth talisman,true
+1442,Fire talisman,true
+1444,Water talisman,true
+1446,Body talisman,true
+1448,Mind talisman,true
+1450,Blood talisman,true
+1452,Chaos talisman,true
+1454,Cosmic talisman,true
+1456,Death talisman,true
+1462,Nature talisman,true
+1464,Archery ticket,true
+1470,Red bead,true
+1472,Yellow bead,true
+1474,Black bead,true
+1476,White bead,true
+1478,Amulet of accuracy,true
+1511,Logs,true
+1513,Magic logs,true
+1515,Yew logs,true
+1517,Maple logs,true
+1519,Willow logs,true
+1521,Oak logs,true
+1523,Lockpick,true
+1539,Steel nails,true
+1540,Anti-dragon shield,true
+1550,Garlic,true
+1552,Seasoned sardine,true
+1573,Doogle leaves,true
+1592,Ring mould,true
+1595,Amulet mould,true
+1597,Necklace mould,true
+1599,Holy mould,true
+1601,Diamond,true
+1603,Ruby,true
+1605,Emerald,true
+1607,Sapphire,true
+1609,Opal,true
+1611,Jade,true
+1613,Red topaz,true
+1615,Dragonstone,true
+1617,Uncut diamond,true
+1619,Uncut ruby,true
+1621,Uncut emerald,true
+1623,Uncut sapphire,true
+1625,Uncut opal,true
+1627,Uncut jade,true
+1629,Uncut red topaz,true
+1631,Uncut dragonstone,true
+1635,Gold ring,true
+1637,Sapphire ring,true
+1639,Emerald ring,true
+1641,Ruby ring,true
+1643,Diamond ring,true
+1645,Dragonstone ring,true
+1654,Gold necklace,true
+1656,Sapphire necklace,true
+1658,Emerald necklace,true
+1660,Ruby necklace,true
+1662,Diamond necklace,true
+1664,Dragon necklace,true
+1673,Gold amulet (u),true
+1675,Sapphire amulet (u),true
+1677,Emerald amulet (u),true
+1679,Ruby amulet (u),true
+1681,Diamond amulet (u),true
+1683,Dragonstone amulet (u),true
+1692,Gold amulet,true
+1694,Sapphire amulet,true
+1696,Emerald amulet,true
+1698,Ruby amulet,true
+1700,Diamond amulet,true
+1702,Dragonstone amulet,true
+1704,Amulet of glory,true
+1712,Amulet of glory(4),true
+1714,Unstrung symbol,true
+1716,Unblessed symbol,true
+1718,Holy symbol,true
+1720,Unstrung emblem,true
+1722,Unpowered symbol,true
+1724,Unholy symbol,true
+1725,Amulet of strength,true
+1727,Amulet of magic,true
+1729,Amulet of defence,true
+1731,Amulet of power,true
+1733,Needle,true
+1734,Thread,true
+1735,Shears,true
+1737,Wool,true
+1739,Cowhide,true
+1741,Leather,true
+1743,Hard leather,true
+1745,Green dragon leather,true
+1747,Black dragonhide,true
+1749,Red dragonhide,true
+1751,Blue dragonhide,true
+1753,Green dragonhide,true
+1755,Chisel,true
+1757,Brown apron,true
+1759,Ball of wool,true
+1761,Soft clay,true
+1763,Red dye,true
+1765,Yellow dye,true
+1767,Blue dye,true
+1769,Orange dye,true
+1771,Green dye,true
+1773,Purple dye,true
+1775,Molten glass,true
+1777,Bow string,true
+1779,Flax,true
+1781,Soda ash,true
+1783,Bucket of sand,true
+1785,Glassblowing pipe,true
+1787,Unfired pot,true
+1789,Unfired pie dish,true
+1791,Unfired bowl,true
+1793,Woad leaf,true
+1794,Bronze wire,true
+1823,Waterskin(4),true
+1831,Waterskin(0),true
+1833,Desert shirt,true
+1835,Desert robe,true
+1837,Desert boots,true
+1854,Shantay pass,true
+1859,Raw ugthanki meat,true
+1861,Ugthanki meat,true
+1865,Pitta bread,true
+1869,Chopped tomato,true
+1871,Chopped onion,true
+1873,Chopped ugthanki,true
+1875,Onion & tomato,true
+1877,Ugthanki & onion,true
+1879,Ugthanki & tomato,true
+1881,Kebab mix,true
+1885,Ugthanki kebab,true
+1887,Cake tin,true
+1891,Cake,true
+1897,Chocolate cake,true
+1905,Asgarnian ale,true
+1907,Wizard's mind bomb,true
+1909,Greenman's ale,true
+1911,Dragon bitter,true
+1913,Dwarven stout,true
+1915,Grog,true
+1917,Beer,true
+1919,Beer glass,true
+1921,Bowl of water,true
+1923,Bowl,true
+1925,Bucket,true
+1927,Bucket of milk,true
+1929,Bucket of water,true
+1931,Pot,true
+1933,Pot of flour,true
+1935,Jug,true
+1937,Jug of water,true
+1939,Swamp tar,true
+1941,Swamp paste,true
+1942,Potato,true
+1944,Egg,true
+1947,Grain,true
+1949,Chef's hat,true
+1951,Redberries,true
+1953,Pastry dough,true
+1955,Cooking apple,true
+1957,Onion,true
+1959,Pumpkin,true
+1961,Easter egg,true
+1963,Banana,true
+1965,Cabbage,true
+1969,Spinach roll,true
+1971,Kebab,true
+1973,Chocolate bar,true
+1975,Chocolate dust,true
+1978,Cup of tea,true
+1980,Empty cup,true
+1982,Tomato,true
+1985,Cheese,true
+1987,Grapes,true
+1989,Half full wine jug,true
+1993,Jug of wine,true
+2003,Stew,true
+2007,Spice,true
+2011,Curry,true
+2015,Vodka,true
+2017,Whisky,true
+2019,Gin,true
+2021,Brandy,true
+2023,Cocktail guide,true
+2025,Cocktail shaker,true
+2026,Cocktail glass,true
+2028,Premade blurb' sp.,true
+2030,Premade choc s'dy,true
+2032,Premade dr' dragon,true
+2034,Premade fr' blast,true
+2036,Premade p' punch,true
+2038,Premade sgg,true
+2040,Premade wiz blz'd,true
+2048,Pineapple punch,true
+2054,Wizard blizzard,true
+2064,Blurberry special,true
+2074,Choc saturday,true
+2080,Short green guy,true
+2084,Fruit blast,true
+2092,Drunk dragon,true
+2102,Lemon,true
+2104,Lemon chunks,true
+2106,Lemon slices,true
+2108,Orange,true
+2110,Orange chunks,true
+2112,Orange slices,true
+2114,Pineapple,true
+2116,Pineapple chunks,true
+2118,Pineapple ring,true
+2120,Lime,true
+2122,Lime chunks,true
+2124,Lime slices,true
+2126,Dwellberries,true
+2128,Equa leaves,true
+2130,Pot of cream,true
+2132,Raw beef,true
+2134,Raw rat meat,true
+2136,Raw bear meat,true
+2138,Raw chicken,true
+2140,Cooked chicken,true
+2142,Cooked meat,true
+2150,Swamp toad,true
+2152,Toad's legs,true
+2162,King worm,true
+2164,Batta tin,true
+2165,Crunchy tray,true
+2166,Gnomebowl mould,true
+2167,Gianne's cook book,true
+2169,Gnome spice,true
+2171,Gianne dough,true
+2185,Chocolate bomb,true
+2187,Tangled toad's legs,true
+2191,Worm hole,true
+2195,Veg ball,true
+2203,Rock-climbing boots,true
+2205,Worm crunchies,true
+2209,Chocchip crunchies,true
+2213,Spicy crunchies,true
+2217,Toad crunchies,true
+2219,Premade w'm batta,true
+2221,Premade t'd batta,true
+2223,Premade c+t batta,true
+2225,Premade fr't batta,true
+2227,Premade veg batta,true
+2229,Premade choc bomb,true
+2231,Premade ttl,true
+2233,Premade worm hole,true
+2235,Premade veg ball,true
+2237,Premade w'm crun',true
+2239,Premade ch' crunch,true
+2241,Premade s'y crunch,true
+2243,Premade t'd crunch,true
+2253,Worm batta,true
+2255,Toad batta,true
+2259,Cheese+tom batta,true
+2277,Fruit batta,true
+2281,Vegetable batta,true
+2283,Pizza base,true
+2289,Plain pizza,true
+2293,Meat pizza,true
+2297,Anchovy pizza,true
+2301,Pineapple pizza,true
+2307,Bread dough,true
+2309,Bread,true
+2313,Pie dish,true
+2315,Pie shell,true
+2317,Uncooked apple pie,true
+2319,Uncooked meat pie,true
+2321,Uncooked berry pie,true
+2323,Apple pie,true
+2325,Redberry pie,true
+2327,Meat pie,true
+2337,Raw oomlie,true
+2341,Wrapped oomlie,true
+2343,Cooked oomlie wrap,true
+2347,Hammer,true
+2349,Bronze bar,true
+2351,Iron bar,true
+2353,Steel bar,true
+2355,Silver bar,true
+2357,Gold bar,true
+2359,Mithril bar,true
+2361,Adamantite bar,true
+2363,Runite bar,true
+2366,Shield left half,true
+2368,Shield right half,true
+2370,Steel studs,true
+2428,Attack potion(4),true
+2430,Restore potion(4),true
+2432,Defence potion(4),true
+2434,Prayer potion(4),true
+2436,Super attack(4),true
+2438,Fishing potion(4),true
+2440,Super strength(4),true
+2442,Super defence(4),true
+2444,Ranging potion(4),true
+2446,Antipoison(4),true
+2448,Superantipoison(4),true
+2450,Zamorak brew(4),true
+2452,Antifire potion(4),true
+2454,Antifire potion(3),true
+2456,Antifire potion(2),true
+2458,Antifire potion(1),true
+2460,Assorted flowers,true
+2462,Red flowers,true
+2464,Blue flowers,true
+2466,Yellow flowers,true
+2468,Purple flowers,true
+2470,Orange flowers,true
+2472,Mixed flowers,true
+2474,White flowers,true
+2476,Black flowers,true
+2481,Lantadyme,true
+2483,Lantadyme potion (unf),true
+2485,Grimy lantadyme,true
+2487,Blue d'hide vambraces,true
+2489,Red d'hide vambraces,true
+2491,Black d'hide vambraces,true
+2493,Blue d'hide chaps,true
+2495,Red d'hide chaps,true
+2497,Black d'hide chaps,true
+2499,Blue d'hide body,true
+2501,Red d'hide body,true
+2503,Black d'hide body,true
+2505,Blue dragon leather,true
+2507,Red dragon leather,true
+2509,Black dragon leather,true
+2520,Brown toy horsey,true
+2522,White toy horsey,true
+2524,Black toy horsey,true
+2526,Grey toy horsey,true
+2550,Ring of recoil,true
+2552,Ring of dueling(8),true
+2568,Ring of forging,true
+2570,Ring of life,true
+2572,Ring of wealth,true
+2577,Ranger boots,true
+2579,Wizard boots,true
+2581,Robin hood hat,true
+2583,Black platebody (t),true
+2585,Black platelegs (t),true
+2587,Black full helm (t),true
+2589,Black kiteshield (t),true
+2591,Black platebody (g),true
+2593,Black platelegs (g),true
+2595,Black full helm (g),true
+2597,Black kiteshield (g),true
+2599,Adamant platebody (t),true
+2601,Adamant platelegs (t),true
+2603,Adamant kiteshield (t),true
+2605,Adamant full helm (t),true
+2607,Adamant platebody (g),true
+2609,Adamant platelegs (g),true
+2611,Adamant kiteshield (g),true
+2613,Adamant full helm (g),true
+2615,Rune platebody (g),true
+2617,Rune platelegs (g),true
+2619,Rune full helm (g),true
+2621,Rune kiteshield (g),true
+2623,Rune platebody (t),true
+2625,Rune platelegs (t),true
+2627,Rune full helm (t),true
+2629,Rune kiteshield (t),true
+2631,Highwayman mask,true
+2633,Blue beret,true
+2635,Black beret,true
+2637,White beret,true
+2639,Tan cavalier,true
+2641,Dark cavalier,true
+2643,Black cavalier,true
+2645,Red headband,true
+2647,Black headband,true
+2649,Brown headband,true
+2651,Pirate's hat,true
+2653,Zamorak platebody,true
+2655,Zamorak platelegs,true
+2657,Zamorak full helm,true
+2659,Zamorak kiteshield,true
+2661,Saradomin platebody,true
+2663,Saradomin platelegs,true
+2665,Saradomin full helm,true
+2667,Saradomin kiteshield,true
+2669,Guthix platebody,true
+2671,Guthix platelegs,true
+2673,Guthix full helm,true
+2675,Guthix kiteshield,true
+2859,Wolf bones,true
+2861,Wolfbone arrowtips,true
+2862,Achey tree logs,true
+2864,Ogre arrow shaft,true
+2865,Flighted ogre arrow,true
+2866,Ogre arrow,true
+2876,Raw chompy,true
+2878,Cooked chompy,true
+2890,Elemental shield,true
+2894,Grey boots,true
+2896,Grey robe top,true
+2898,Grey robe bottoms,true
+2900,Grey hat,true
+2902,Grey gloves,true
+2904,Red boots,true
+2906,Red robe top,true
+2908,Red robe bottoms,true
+2910,Red hat,true
+2912,Red gloves,true
+2914,Yellow boots,true
+2916,Yellow robe top,true
+2918,Yellow robe bottoms,true
+2920,Yellow hat,true
+2922,Yellow gloves,true
+2924,Teal boots,true
+2926,Teal robe top,true
+2928,Teal robe bottoms,true
+2930,Teal hat,true
+2932,Teal gloves,true
+2934,Purple boots,true
+2936,Purple robe top,true
+2938,Purple robe bottoms,true
+2940,Purple hat,true
+2942,Purple gloves,true
+2955,Moonlight mead,true
+2961,Silver sickle,true
+2970,Mort myre fungus,true
+2972,Mort myre stem,true
+2974,Mort myre pear,true
+2976,Sickle mould,true
+2997,Pirate's hook,true
+2998,Toadflax,true
+3000,Snapdragon,true
+3002,Toadflax potion (unf),true
+3004,Snapdragon potion (unf),true
+3008,Energy potion(4),true
+3010,Energy potion(3),true
+3012,Energy potion(2),true
+3014,Energy potion(1),true
+3016,Super energy(4),true
+3018,Super energy(3),true
+3020,Super energy(2),true
+3022,Super energy(1),true
+3024,Super restore(4),true
+3026,Super restore(3),true
+3028,Super restore(2),true
+3030,Super restore(1),true
+3032,Agility potion(4),true
+3034,Agility potion(3),true
+3036,Agility potion(2),true
+3038,Agility potion(1),true
+3040,Magic potion(4),true
+3042,Magic potion(3),true
+3044,Magic potion(2),true
+3046,Magic potion(1),true
+3049,Grimy toadflax,true
+3051,Grimy snapdragon,true
+3053,Lava battlestaff,true
+3054,Mystic lava staff,true
+3093,Black dart,true
+3094,Black dart(p),true
+3095,Bronze claws,true
+3096,Iron claws,true
+3097,Steel claws,true
+3098,Black claws,true
+3099,Mithril claws,true
+3100,Adamant claws,true
+3101,Rune claws,true
+3105,Climbing boots,true
+3107,Spiked boots,true
+3122,Granite shield,true
+3123,Shaikahan bones,true
+3125,Jogre bones,true
+3138,Potato cactus,true
+3140,Dragon chainbody,true
+3142,Raw karambwan,true
+3144,Cooked karambwan,true
+3157,Karambwan vessel,true
+3159,Karambwan vessel,true
+3162,Sliced banana,true
+3183,Monkey bones,true
+3188,Cleaning cloth,true
+3190,Bronze halberd,true
+3192,Iron halberd,true
+3194,Steel halberd,true
+3196,Black halberd,true
+3198,Mithril halberd,true
+3200,Adamant halberd,true
+3202,Rune halberd,true
+3204,Dragon halberd,true
+3211,Limestone,true
+3216,Barrel,true
+3226,Raw rabbit,true
+3228,Cooked rabbit,true
+3239,Bark,true
+3325,Vampyre dust,true
+3327,Myre snelm,true
+3329,Blood'n'tar snelm,true
+3331,Ochre snelm,true
+3333,Bruise blue snelm,true
+3335,Broken bark snelm,true
+3337,Pointed myre snelm,true
+3339,Pointed blood'n'tar snelm,true
+3341,Pointed ochre snelm,true
+3343,Pointed bruise blue snelm,true
+3345,Blamish myre shell,true
+3347,Blamish red shell,true
+3349,Blamish ochre shell,true
+3351,Blamish blue shell,true
+3353,Blamish bark shell,true
+3355,Blamish myre shell,true
+3357,Blamish red shell,true
+3359,Blamish ochre shell,true
+3361,Blamish blue shell,true
+3363,Thin snail,true
+3365,Lean snail,true
+3367,Fat snail,true
+3369,Thin snail meat,true
+3371,Lean snail meat,true
+3373,Fat snail meat,true
+3379,Raw slimy eel,true
+3381,Cooked slimy eel,true
+3385,Splitbark helm,true
+3387,Splitbark body,true
+3389,Splitbark legs,true
+3391,Splitbark gauntlets,true
+3393,Splitbark boots,true
+3396,Loar remains,true
+3398,Phrin remains,true
+3400,Riyl remains,true
+3402,Asyn remains,true
+3404,Fiyr remains,true
+3406,Unfinished potion,true
+3408,Serum 207 (4),true
+3410,Serum 207 (3),true
+3412,Serum 207 (2),true
+3414,Serum 207 (1),true
+3420,Limestone brick,true
+3422,Olive oil(4),true
+3424,Olive oil(3),true
+3426,Olive oil(2),true
+3428,Olive oil(1),true
+3430,Sacred oil(4),true
+3432,Sacred oil(3),true
+3434,Sacred oil(2),true
+3436,Sacred oil(1),true
+3438,Pyre logs,true
+3440,Oak pyre logs,true
+3442,Willow pyre logs,true
+3444,Maple pyre logs,true
+3446,Yew pyre logs,true
+3448,Magic pyre logs,true
+3470,Fine cloth,true
+3472,Black plateskirt (t),true
+3473,Black plateskirt (g),true
+3474,Adamant plateskirt (t),true
+3475,Adamant plateskirt (g),true
+3476,Rune plateskirt (g),true
+3477,Rune plateskirt (t),true
+3478,Zamorak plateskirt,true
+3479,Saradomin plateskirt,true
+3480,Guthix plateskirt,true
+3481,Gilded platebody,true
+3483,Gilded platelegs,true
+3485,Gilded plateskirt,true
+3486,Gilded full helm,true
+3488,Gilded kiteshield,true
+3678,Flamtaer hammer,true
+3749,Archer helm,true
+3751,Berserker helm,true
+3753,Warrior helm,true
+3755,Farseer helm,true
+3759,Fremennik cyan cloak,true
+3761,Fremennik brown cloak,true
+3763,Fremennik blue cloak,true
+3765,Fremennik green cloak,true
+3767,Fremennik brown shirt,true
+3769,Fremennik grey shirt,true
+3771,Fremennik beige shirt,true
+3773,Fremennik red shirt,true
+3775,Fremennik blue shirt,true
+3777,Fremennik red cloak,true
+3779,Fremennik grey cloak,true
+3781,Fremennik yellow cloak,true
+3783,Fremennik teal cloak,true
+3785,Fremennik purple cloak,true
+3787,Fremennik pink cloak,true
+3789,Fremennik black cloak,true
+3791,Fremennik boots,true
+3793,Fremennik robe,true
+3795,Fremennik skirt,true
+3797,Fremennik hat,true
+3799,Fremennik gloves,true
+3801,Keg of beer,true
+3803,Beer tankard,true
+3827,Saradomin page 1,true
+3828,Saradomin page 2,true
+3829,Saradomin page 3,true
+3830,Saradomin page 4,true
+3831,Zamorak page 1,true
+3832,Zamorak page 2,true
+3833,Zamorak page 3,true
+3834,Zamorak page 4,true
+3835,Guthix page 1,true
+3836,Guthix page 2,true
+3837,Guthix page 3,true
+3838,Guthix page 4,true
+3853,Games necklace(8),true
+4012,Monkey nuts,true
+4014,Monkey bar,true
+4016,Banana stew,true
+4087,Dragon platelegs,true
+4089,Mystic hat,true
+4091,Mystic robe top,true
+4093,Mystic robe bottom,true
+4095,Mystic gloves,true
+4097,Mystic boots,true
+4099,Mystic hat (dark),true
+4101,Mystic robe top (dark),true
+4103,Mystic robe bottom (dark),true
+4105,Mystic gloves (dark),true
+4107,Mystic boots (dark),true
+4109,Mystic hat (light),true
+4111,Mystic robe top (light),true
+4113,Mystic robe bottom (light),true
+4115,Mystic gloves (light),true
+4117,Mystic boots (light),true
+4119,Bronze boots,true
+4121,Iron boots,true
+4123,Steel boots,true
+4125,Black boots,true
+4127,Mithril boots,true
+4129,Adamant boots,true
+4131,Rune boots,true
+4151,Abyssal whip,true
+4153,Granite maul,true
+4156,Mirror shield,true
+4161,Bag of salt,true
+4162,Rock hammer,true
+4164,Facemask,true
+4166,Earmuffs,true
+4168,Nose peg,true
+4170,Slayer's staff,true
+4207,Crystal weapon seed,true
+4298,Ham shirt,true
+4300,Ham robe,true
+4302,Ham hood,true
+4304,Ham cloak,true
+4306,Ham logo,true
+4308,Ham gloves,true
+4310,Ham boots,true
+4315,Team-1 cape,true
+4317,Team-2 cape,true
+4319,Team-3 cape,true
+4321,Team-4 cape,true
+4323,Team-5 cape,true
+4325,Team-6 cape,true
+4327,Team-7 cape,true
+4329,Team-8 cape,true
+4331,Team-9 cape,true
+4333,Team-10 cape,true
+4335,Team-11 cape,true
+4337,Team-12 cape,true
+4339,Team-13 cape,true
+4341,Team-14 cape,true
+4343,Team-15 cape,true
+4345,Team-16 cape,true
+4347,Team-17 cape,true
+4349,Team-18 cape,true
+4351,Team-19 cape,true
+4353,Team-20 cape,true
+4355,Team-21 cape,true
+4357,Team-22 cape,true
+4359,Team-23 cape,true
+4361,Team-24 cape,true
+4363,Team-25 cape,true
+4365,Team-26 cape,true
+4367,Team-27 cape,true
+4369,Team-28 cape,true
+4371,Team-29 cape,true
+4373,Team-30 cape,true
+4375,Team-31 cape,true
+4377,Team-32 cape,true
+4379,Team-33 cape,true
+4381,Team-34 cape,true
+4383,Team-35 cape,true
+4385,Team-36 cape,true
+4387,Team-37 cape,true
+4389,Team-38 cape,true
+4391,Team-39 cape,true
+4393,Team-40 cape,true
+4395,Team-41 cape,true
+4397,Team-42 cape,true
+4399,Team-43 cape,true
+4401,Team-44 cape,true
+4403,Team-45 cape,true
+4405,Team-46 cape,true
+4407,Team-47 cape,true
+4409,Team-48 cape,true
+4411,Team-49 cape,true
+4413,Team-50 cape,true
+4417,Guthix rest(4),true
+4419,Guthix rest(3),true
+4421,Guthix rest(2),true
+4423,Guthix rest(1),true
+4436,Airtight pot,true
+4438,Unfired pot lid,true
+4440,Pot lid,true
+4456,Bowl of hot water,true
+4458,Cup of water,true
+4460,Cup of hot water,true
+4517,Giant frog legs,true
+4522,Oil lamp,true
+4525,Empty oil lamp,true
+4527,Empty candle lantern,true
+4529,Candle lantern,true
+4532,Candle lantern,true
+4535,Empty oil lantern,true
+4537,Oil lantern,true
+4540,Oil lantern frame,true
+4542,Lantern lens,true
+4544,Bullseye lantern (unf),true
+4546,Bullseye lantern (empty),true
+4548,Bullseye lantern,true
+4551,Spiny helmet,true
+4580,Black spear,true
+4582,Black spear(p),true
+4585,Dragon plateskirt,true
+4587,Dragon scimitar,true
+4591,Kharidian headpiece,true
+4593,Fake beard,true
+4595,Karidian disguise,true
+4600,Willow blackjack,true
+4608,Super kebab,true
+4627,Bandit's brew,true
+4668,Garlic powder,true
+4675,Ancient staff,true
+4684,Linen,true
+4687,Bucket of sap,true
+4689,Pile of salt,true
+4694,Steam rune,true
+4695,Mist rune,true
+4696,Dust rune,true
+4697,Smoke rune,true
+4698,Mud rune,true
+4699,Lava rune,true
+4708,Ahrim's hood,true
+4710,Ahrim's staff,true
+4712,Ahrim's robetop,true
+4714,Ahrim's robeskirt,true
+4716,Dharok's helm,true
+4718,Dharok's greataxe,true
+4720,Dharok's platebody,true
+4722,Dharok's platelegs,true
+4724,Guthan's helm,true
+4726,Guthan's warspear,true
+4728,Guthan's platebody,true
+4730,Guthan's chainskirt,true
+4732,Karil's coif,true
+4734,Karil's crossbow,true
+4736,Karil's leathertop,true
+4738,Karil's leatherskirt,true
+4740,Bolt rack,true
+4745,Torag's helm,true
+4747,Torag's hammers,true
+4749,Torag's platebody,true
+4751,Torag's platelegs,true
+4753,Verac's helm,true
+4755,Verac's flail,true
+4757,Verac's brassard,true
+4759,Verac's plateskirt,true
+4773,Bronze brutal,true
+4778,Iron brutal,true
+4783,Steel brutal,true
+4788,Black brutal,true
+4793,Mithril brutal,true
+4798,Adamant brutal,true
+4803,Rune brutal,true
+4812,Zogre bones,true
+4819,Bronze nails,true
+4820,Iron nails,true
+4821,Black nails,true
+4822,Mithril nails,true
+4823,Adamantite nails,true
+4824,Rune nails,true
+4825,Unstrung comp bow,true
+4827,Comp ogre bow,true
+4830,Fayrg bones,true
+4832,Raurg bones,true
+4834,Ourg bones,true
+4842,Relicym's balm(4),true
+4844,Relicym's balm(3),true
+4846,Relicym's balm(2),true
+4848,Relicym's balm(1),true
+4850,Ogre coffin key,true
+4860,Ahrim's hood 0,true
+4866,Ahrim's staff 0,true
+4872,Ahrim's robetop 0,true
+4878,Ahrim's robeskirt 0,true
+4884,Dharok's helm 0,true
+4890,Dharok's greataxe 0,true
+4896,Dharok's platebody 0,true
+4902,Dharok's platelegs 0,true
+4908,Guthan's helm 0,true
+4914,Guthan's warspear 0,true
+4920,Guthan's platebody 0,true
+4926,Guthan's chainskirt 0,true
+4932,Karil's coif 0,true
+4938,Karil's crossbow 0,true
+4944,Karil's leathertop 0,true
+4950,Karil's leatherskirt 0,true
+4956,Torag's helm 0,true
+4962,Torag's hammers 0,true
+4968,Torag's platebody 0,true
+4974,Torag's platelegs 0,true
+4980,Verac's helm 0,true
+4986,Verac's flail 0,true
+4992,Verac's brassard 0,true
+4998,Verac's plateskirt 0,true
+5001,Raw cave eel,true
+5003,Cave eel,true
+5014,Mining helmet,true
+5016,Bone spear,true
+5018,Bone club,true
+5024,Woven top,true
+5026,Woven top,true
+5028,Woven top,true
+5030,Shirt,true
+5032,Shirt,true
+5034,Shirt,true
+5036,Trousers,true
+5038,Trousers,true
+5040,Trousers,true
+5042,Shorts,true
+5044,Shorts,true
+5046,Shorts,true
+5048,Skirt,true
+5050,Skirt,true
+5052,Skirt,true
+5075,Bird nest,true
+5096,Marigold seed,true
+5097,Rosemary seed,true
+5098,Nasturtium seed,true
+5099,Woad seed,true
+5100,Limpwurt seed,true
+5101,Redberry seed,true
+5102,Cadavaberry seed,true
+5103,Dwellberry seed,true
+5104,Jangerberry seed,true
+5105,Whiteberry seed,true
+5106,Poison ivy seed,true
+5280,Cactus seed,true
+5281,Belladonna seed,true
+5282,Mushroom spore,true
+5283,Apple tree seed,true
+5284,Banana tree seed,true
+5285,Orange tree seed,true
+5286,Curry tree seed,true
+5287,Pineapple seed,true
+5288,Papaya tree seed,true
+5289,Palm tree seed,true
+5290,Calquat tree seed,true
+5291,Guam seed,true
+5292,Marrentill seed,true
+5293,Tarromin seed,true
+5294,Harralander seed,true
+5295,Ranarr seed,true
+5296,Toadflax seed,true
+5297,Irit seed,true
+5298,Avantoe seed,true
+5299,Kwuarm seed,true
+5300,Snapdragon seed,true
+5301,Cadantine seed,true
+5302,Lantadyme seed,true
+5303,Dwarf weed seed,true
+5304,Torstol seed,true
+5305,Barley seed,true
+5306,Jute seed,true
+5307,Hammerstone seed,true
+5308,Asgarnian seed,true
+5309,Yanillian seed,true
+5310,Krandorian seed,true
+5311,Wildblood seed,true
+5312,Acorn,true
+5313,Willow seed,true
+5314,Maple seed,true
+5315,Yew seed,true
+5316,Magic seed,true
+5318,Potato seed,true
+5319,Onion seed,true
+5320,Sweetcorn seed,true
+5321,Watermelon seed,true
+5322,Tomato seed,true
+5323,Strawberry seed,true
+5324,Cabbage seed,true
+5325,Gardening trowel,true
+5329,Secateurs,true
+5331,Watering can,true
+5341,Rake,true
+5343,Seed dibber,true
+5345,Gardening boots,true
+5350,Empty plant pot,true
+5352,Unfired plant pot,true
+5354,Filled plant pot,true
+5370,Oak sapling,true
+5371,Willow sapling,true
+5372,Maple sapling,true
+5373,Yew sapling,true
+5374,Magic sapling,true
+5376,Basket,true
+5386,Apples(5),true
+5396,Oranges(5),true
+5406,Strawberries(5),true
+5416,Bananas(5),true
+5418,Empty sack,true
+5438,Potatoes(10),true
+5458,Onions(10),true
+5478,Cabbages(10),true
+5496,Apple sapling,true
+5497,Banana sapling,true
+5498,Orange sapling,true
+5499,Curry sapling,true
+5500,Pineapple sapling,true
+5501,Papaya sapling,true
+5502,Palm sapling,true
+5503,Calquat sapling,true
+5504,Strawberry,true
+5516,Elemental talisman,true
+5521,Binding necklace,true
+5523,Tiara mould,true
+5525,Tiara,true
+5527,Air tiara,true
+5529,Mind tiara,true
+5531,Water tiara,true
+5533,Body tiara,true
+5535,Earth tiara,true
+5537,Fire tiara,true
+5539,Cosmic tiara,true
+5541,Nature tiara,true
+5543,Chaos tiara,true
+5547,Death tiara,true
+5549,Blood tiara,true
+5574,Initiate sallet,true
+5575,Initiate hauberk,true
+5576,Initiate cuisse,true
+5616,Bronze arrow(p+),true
+5617,Iron arrow(p+),true
+5618,Steel arrow(p+),true
+5619,Mithril arrow(p+),true
+5620,Adamant arrow(p+),true
+5621,Rune arrow(p+),true
+5622,Bronze arrow(p++),true
+5623,Iron arrow(p++),true
+5624,Steel arrow(p++),true
+5625,Mithril arrow(p++),true
+5626,Adamant arrow(p++),true
+5627,Rune arrow(p++),true
+5628,Bronze dart(p+),true
+5629,Iron dart(p+),true
+5630,Steel dart(p+),true
+5631,Black dart(p+),true
+5632,Mithril dart(p+),true
+5633,Adamant dart(p+),true
+5634,Rune dart(p+),true
+5635,Bronze dart(p++),true
+5636,Iron dart(p++),true
+5637,Steel dart(p++),true
+5638,Black dart(p++),true
+5639,Mithril dart(p++),true
+5640,Adamant dart(p++),true
+5641,Rune dart(p++),true
+5642,Bronze javelin(p+),true
+5643,Iron javelin(p+),true
+5644,Steel javelin(p+),true
+5645,Mithril javelin(p+),true
+5646,Adamant javelin(p+),true
+5647,Rune javelin(p+),true
+5648,Bronze javelin(p++),true
+5649,Iron javelin(p++),true
+5650,Steel javelin(p++),true
+5651,Mithril javelin(p++),true
+5652,Adamant javelin(p++),true
+5653,Rune javelin(p++),true
+5654,Bronze knife(p+),true
+5655,Iron knife(p+),true
+5656,Steel knife(p+),true
+5657,Mithril knife(p+),true
+5658,Black knife(p+),true
+5659,Adamant knife(p+),true
+5660,Rune knife(p+),true
+5661,Bronze knife(p++),true
+5662,Iron knife(p++),true
+5663,Steel knife(p++),true
+5664,Mithril knife(p++),true
+5665,Black knife(p++),true
+5666,Adamant knife(p++),true
+5667,Rune knife(p++),true
+5668,Iron dagger(p+),true
+5670,Bronze dagger(p+),true
+5672,Steel dagger(p+),true
+5674,Mithril dagger(p+),true
+5676,Adamant dagger(p+),true
+5678,Rune dagger(p+),true
+5680,Dragon dagger(p+),true
+5682,Black dagger(p+),true
+5686,Iron dagger(p++),true
+5688,Bronze dagger(p++),true
+5690,Steel dagger(p++),true
+5692,Mithril dagger(p++),true
+5694,Adamant dagger(p++),true
+5696,Rune dagger(p++),true
+5698,Dragon dagger(p++),true
+5700,Black dagger(p++),true
+5704,Bronze spear(p+),true
+5706,Iron spear(p+),true
+5708,Steel spear(p+),true
+5710,Mithril spear(p+),true
+5712,Adamant spear(p+),true
+5714,Rune spear(p+),true
+5716,Dragon spear(p+),true
+5718,Bronze spear(p++),true
+5720,Iron spear(p++),true
+5722,Steel spear(p++),true
+5724,Mithril spear(p++),true
+5726,Adamant spear(p++),true
+5728,Rune spear(p++),true
+5730,Dragon spear(p++),true
+5734,Black spear(p+),true
+5736,Black spear(p++),true
+5739,Asgarnian ale(m),true
+5741,Mature wmb,true
+5743,Greenman's ale(m),true
+5745,Dragon bitter(m),true
+5747,Dwarven stout(m),true
+5749,Moonlight mead(m),true
+5751,Axeman's folly,true
+5753,Axeman's folly(m),true
+5755,Chef's delight,true
+5757,Chef's delight(m),true
+5759,Slayer's respite,true
+5761,Slayer's respite(m),true
+5763,Cider,true
+5765,Mature cider,true
+5767,Ale yeast,true
+5769,Calquat keg,true
+5777,Dwarven stout(4),true
+5785,Asgarnian ale(4),true
+5793,Greenmans ale(4),true
+5801,Mind bomb(4),true
+5809,Dragon bitter(4),true
+5817,Moonlight mead(4),true
+5825,Axeman's folly(4),true
+5833,Chef's delight(4),true
+5841,Slayer's respite(4),true
+5849,Cider(4),true
+5857,Dwarven stout(m4),true
+5865,Asgarnian ale(m4),true
+5873,Greenmans ale(m4),true
+5881,Mind bomb(m4),true
+5889,Dragon bitter(m4),true
+5897,Moonlight mead(m4),true
+5905,Axeman's folly(m4),true
+5913,Chef's delight(m4),true
+5921,Slayer's respite(m4),true
+5929,Cider(m4),true
+5931,Jute fibre,true
+5933,Willow branch,true
+5935,Coconut milk,true
+5937,Weapon poison(+),true
+5940,Weapon poison(++),true
+5943,Antidote+(4),true
+5945,Antidote+(3),true
+5947,Antidote+(2),true
+5949,Antidote+(1),true
+5952,Antidote++(4),true
+5954,Antidote++(3),true
+5956,Antidote++(2),true
+5958,Antidote++(1),true
+5968,Tomatoes(5),true
+5970,Curry leaf,true
+5972,Papaya fruit,true
+5974,Coconut,true
+5980,Calquat fruit,true
+5982,Watermelon,true
+5984,Watermelon slice,true
+5986,Sweetcorn,true
+5988,Cooked sweetcorn,true
+5992,Apple mush,true
+5994,Hammerstone hops,true
+5996,Asgarnian hops,true
+5998,Yanillian hops,true
+6000,Krandorian hops,true
+6002,Wildblood hops,true
+6004,Mushroom,true
+6006,Barley,true
+6008,Barley malt,true
+6010,Marigolds,true
+6012,Nasturtiums,true
+6014,Rosemary,true
+6016,Cactus spine,true
+6018,Poison ivy berries,true
+6020,Leaves,true
+6022,Oak leaves,true
+6024,Willow leaves,true
+6026,Yew leaves,true
+6028,Maple leaves,true
+6030,Magic leaves,true
+6032,Compost,true
+6034,Supercompost,true
+6036,Plant cure,true
+6038,Magic string,true
+6043,Oak roots,true
+6045,Willow roots,true
+6047,Maple roots,true
+6049,Yew roots,true
+6051,Magic roots,true
+6055,Weeds,true
+6061,Bronze bolts (p+),true
+6062,Bronze bolts (p++),true
+6128,Rock-shell helm,true
+6129,Rock-shell plate,true
+6130,Rock-shell legs,true
+6131,Spined helm,true
+6133,Spined body,true
+6135,Spined chaps,true
+6137,Skeletal helm,true
+6139,Skeletal top,true
+6141,Skeletal bottoms,true
+6143,Spined boots,true
+6145,Rock-shell boots,true
+6147,Skeletal boots,true
+6149,Spined gloves,true
+6151,Rock-shell gloves,true
+6153,Skeletal gloves,true
+6155,Dagannoth hide,true
+6157,Rock-shell chunk,true
+6159,Rock-shell shard,true
+6161,Rock-shell splinter,true
+6163,Skull piece,true
+6165,Ribcage piece,true
+6167,Fibula piece,true
+6169,Circular hide,true
+6171,Flattened hide,true
+6173,Stretched hide,true
+6211,Teak pyre logs,true
+6213,Mahogany pyre logs,true
+6215,Broodoo shield (10),true
+6235,Broodoo shield,true
+6237,Broodoo shield (10),true
+6257,Broodoo shield,true
+6259,Broodoo shield (10),true
+6279,Broodoo shield,true
+6281,Thatch spar light,true
+6283,Thatch spar med,true
+6285,Thatch spar dense,true
+6287,Snake hide,true
+6289,Snakeskin,true
+6291,Spider carcass,true
+6297,Spider on stick,true
+6299,Spider on shaft,true
+6305,Skewer stick,true
+6306,Trading sticks,true
+6311,Gout tuber,true
+6313,Opal machete,true
+6315,Jade machete,true
+6317,Red topaz machete,true
+6319,Proboscis,true
+6322,Snakeskin body,true
+6324,Snakeskin chaps,true
+6326,Snakeskin bandana,true
+6328,Snakeskin boots,true
+6330,Snakeskin vambraces,true
+6332,Mahogany logs,true
+6333,Teak logs,true
+6335,Tribal mask,true
+6337,Tribal mask,true
+6339,Tribal mask,true
+6341,Tribal top,true
+6343,Villager robe,true
+6345,Villager hat,true
+6347,Villager armband,true
+6349,Villager sandals,true
+6351,Tribal top,true
+6353,Villager robe,true
+6355,Villager hat,true
+6357,Villager sandals,true
+6359,Villager armband,true
+6361,Tribal top,true
+6363,Villager robe,true
+6365,Villager hat,true
+6367,Villager sandals,true
+6369,Villager armband,true
+6371,Tribal top,true
+6373,Villager robe,true
+6375,Villager hat,true
+6377,Villager sandals,true
+6379,Villager armband,true
+6382,Fez,true
+6384,Desert top,true
+6386,Desert robes,true
+6388,Desert top,true
+6390,Desert legs,true
+6392,Menaphite purple hat,true
+6394,Menaphite purple top,true
+6396,Menaphite purple robe,true
+6398,Menaphite purple kilt,true
+6400,Menaphite red hat,true
+6402,Menaphite red top,true
+6404,Menaphite red robe,true
+6406,Menaphite red kilt,true
+6408,Oak blackjack(o),true
+6410,Oak blackjack(d),true
+6412,Willow blackjack(o),true
+6414,Willow blackjack(d),true
+6416,Maple blackjack,true
+6418,Maple blackjack(o),true
+6420,Maple blackjack(d),true
+6470,Compost potion(4),true
+6472,Compost potion(3),true
+6474,Compost potion(2),true
+6476,Compost potion(1),true
+6522,Toktz-xil-ul,true
+6523,Toktz-xil-ak,true
+6524,Toktz-ket-xil,true
+6525,Toktz-xil-ek,true
+6526,Toktz-mej-tal,true
+6527,Tzhaar-ket-em,true
+6528,Tzhaar-ket-om,true
+6562,Mud battlestaff,true
+6563,Mystic mud staff,true
+6568,Obsidian cape,true
+6571,Uncut onyx,true
+6573,Onyx,true
+6575,Onyx ring,true
+6577,Onyx necklace,true
+6579,Onyx amulet (u),true
+6581,Onyx amulet,true
+6583,Ring of stone,true
+6585,Amulet of fury,true
+6587,White claws,true
+6589,White battleaxe,true
+6591,White dagger,true
+6593,White dagger(p),true
+6595,White dagger(p+),true
+6597,White dagger(p++),true
+6599,White halberd,true
+6601,White mace,true
+6603,White magic staff,true
+6605,White sword,true
+6607,White longsword,true
+6609,White 2h sword,true
+6611,White scimitar,true
+6613,White warhammer,true
+6615,White chainbody,true
+6617,White platebody,true
+6619,White boots,true
+6621,White med helm,true
+6623,White full helm,true
+6625,White platelegs,true
+6627,White plateskirt,true
+6629,White gloves,true
+6631,White sq shield,true
+6633,White kiteshield,true
+6667,Empty fishbowl,true
+6681,Ground guam,true
+6685,Saradomin brew(4),true
+6687,Saradomin brew(3),true
+6689,Saradomin brew(2),true
+6691,Saradomin brew(1),true
+6693,Crushed nest,true
+6697,Pat of butter,true
+6701,Baked potato,true
+6703,Potato with butter,true
+6705,Potato with cheese,true
+6724,Seercull,true
+6729,Dagannoth bones,true
+6731,Seers ring,true
+6733,Archers ring,true
+6735,Warrior ring,true
+6737,Berserker ring,true
+6739,Dragon axe,true
+6750,Black desert shirt,true
+6752,Black desert robe,true
+6760,Guthix mjolnir,true
+6762,Saradomin mjolnir,true
+6764,Zamorak mjolnir,true
+6794,Choc-ice,true
+6809,Granite legs,true
+6812,Wyvern bones,true
+6814,Fur,true
+6889,Mage's book,true
+6891,Arena book,true
+6908,Beginner wand,true
+6910,Apprentice wand,true
+6912,Teacher wand,true
+6914,Master wand,true
+6916,Infinity top,true
+6918,Infinity hat,true
+6920,Infinity boots,true
+6922,Infinity gloves,true
+6924,Infinity bottoms,true
+6959,Pink cape,true
+6962,Triangle sandwich,true
+6971,Sandstone (1kg),true
+6973,Sandstone (2kg),true
+6975,Sandstone (5kg),true
+6977,Sandstone (10kg),true
+6979,Granite (500g),true
+6981,Granite (2kg),true
+6983,Granite (5kg),true
+7051,Unlit bug lantern,true
+7054,Chilli potato,true
+7056,Egg potato,true
+7058,Mushroom potato,true
+7060,Tuna potato,true
+7062,Chilli con carne,true
+7064,Egg and tomato,true
+7066,Mushroom & onion,true
+7068,Tuna and corn,true
+7070,Minced meat,true
+7072,Spicy sauce,true
+7074,Chopped garlic,true
+7076,Uncooked egg,true
+7078,Scrambled egg,true
+7080,Sliced mushrooms,true
+7082,Fried mushrooms,true
+7084,Fried onions,true
+7086,Chopped tuna,true
+7088,Sweetcorn,true
+7110,Stripy pirate shirt,true
+7112,Pirate bandana,true
+7114,Pirate boots,true
+7116,Pirate leggings,true
+7122,Stripy pirate shirt,true
+7124,Pirate bandana,true
+7126,Pirate leggings,true
+7128,Stripy pirate shirt,true
+7130,Pirate bandana,true
+7132,Pirate leggings,true
+7134,Stripy pirate shirt,true
+7136,Pirate bandana,true
+7138,Pirate leggings,true
+7158,Dragon 2h sword,true
+7159,Insulated boots,true
+7162,Pie recipe book,true
+7168,Raw mud pie,true
+7170,Mud pie,true
+7176,Raw garden pie,true
+7178,Garden pie,true
+7186,Raw fish pie,true
+7188,Fish pie,true
+7196,Raw admiral pie,true
+7198,Admiral pie,true
+7206,Raw wild pie,true
+7208,Wild pie,true
+7216,Raw summer pie,true
+7218,Summer pie,true
+7223,Roast rabbit,true
+7225,Iron spit,true
+7228,Cooked chompy,true
+7319,Red boater,true
+7321,Orange boater,true
+7323,Green boater,true
+7325,Blue boater,true
+7327,Black boater,true
+7329,Red firelighter,true
+7330,Green firelighter,true
+7331,Blue firelighter,true
+7332,Black shield (h1),true
+7334,Adamant shield (h1),true
+7336,Rune shield (h1),true
+7338,Black shield (h2),true
+7340,Adamant shield (h2),true
+7342,Rune shield (h2),true
+7344,Black shield (h3),true
+7346,Adamant shield (h3),true
+7348,Rune shield (h3),true
+7350,Black shield (h4),true
+7352,Adamant shield (h4),true
+7354,Rune shield (h4),true
+7356,Black shield (h5),true
+7358,Adamant shield (h5),true
+7360,Rune shield (h5),true
+7362,Studded body (g),true
+7364,Studded body (t),true
+7366,Studded chaps (g),true
+7368,Studded chaps (t),true
+7370,Green d'hide body (g),true
+7372,Green d'hide body (t),true
+7374,Blue d'hide body (g),true
+7376,Blue d'hide body (t),true
+7378,Green d'hide chaps (g),true
+7380,Green d'hide chaps (t),true
+7382,Blue d'hide chaps (g),true
+7384,Blue d'hide chaps (t),true
+7386,Blue skirt (g),true
+7388,Blue skirt (t),true
+7390,Blue wizard robe (g),true
+7392,Blue wizard robe (t),true
+7394,Blue wizard hat (g),true
+7396,Blue wizard hat (t),true
+7398,Enchanted robe,true
+7399,Enchanted top,true
+7400,Enchanted hat,true
+7416,Mole claw,true
+7418,Mole skin,true
+7433,Wooden spoon,true
+7435,Egg whisk,true
+7437,Spork,true
+7439,Spatula,true
+7441,Frying pan,true
+7443,Skewer,true
+7445,Rolling pin,true
+7447,Kitchen knife,true
+7449,Meat tenderiser,true
+7451,Cleaver,true
+7466,Cornflour,true
+7468,Pot of cornflour,true
+7521,Cooked crab meat,true
+7566,Raw jubbly,true
+7568,Cooked jubbly,true
+7650,Silver dust,true
+7660,Guthix balance(4),true
+7662,Guthix balance(3),true
+7664,Guthix balance(2),true
+7666,Guthix balance(1),true
+7668,Gadderhammer,true
+7759,Toy soldier,true
+7761,Toy soldier (wound),true
+7763,Toy doll,true
+7765,Toy doll (wound),true
+7767,Toy mouse,true
+7769,Toy mouse (wound),true
+7771,Toy cat,true
+7801,Snake hide,true
+7919,Bottle of wine,true
+7936,Pure essence,true
+7939,Tortoise shell,true
+7944,Raw monkfish,true
+7946,Monkfish,true
+8007,Varrock teleport,true
+8008,Lumbridge teleport,true
+8009,Falador teleport,true
+8010,Camelot teleport,true
+8011,Ardougne teleport,true
+8012,Watchtower teleport,true
+8013,Teleport to house,true
+8014,Bones to bananas,true
+8015,Bones to peaches,true
+8016,Enchant sapphire or opal,true
+8017,Enchant emerald or jade,true
+8018,Enchant ruby or topaz,true
+8019,Enchant diamond,true
+8020,Enchant dragonstone,true
+8021,Enchant onyx,true
+8417,Bagged dead tree,true
+8419,Bagged nice tree,true
+8421,Bagged oak tree,true
+8423,Bagged willow tree,true
+8425,Bagged maple tree,true
+8427,Bagged yew tree,true
+8429,Bagged magic tree,true
+8431,Bagged plant 1,true
+8433,Bagged plant 2,true
+8435,Bagged plant 3,true
+8437,Thorny hedge,true
+8439,Nice hedge,true
+8441,Small box hedge,true
+8443,Topiary hedge,true
+8445,Fancy hedge,true
+8447,Tall fancy hedge,true
+8449,Tall box hedge,true
+8451,Bagged flower,true
+8453,Bagged daffodils,true
+8455,Bagged bluebells,true
+8457,Bagged sunflower,true
+8459,Bagged marigolds,true
+8461,Bagged roses,true
+8496,Crude chair,true
+8498,Wooden chair,true
+8500,Rocking chair,true
+8502,Oak chair,true
+8504,Oak armchair,true
+8506,Teak armchair,true
+8508,Mahogany armchair,true
+8510,Bookcase,true
+8512,Oak bookcase,true
+8514,Mahogany bookcase,true
+8516,Beer barrel,true
+8518,Cider barrel,true
+8520,Asgarnian ale,true
+8522,Greenman's ale,true
+8524,Dragon bitter,true
+8526,Chef's delight,true
+8528,Kitchen table,true
+8530,Oak kitchen table,true
+8532,Teak kitchen table,true
+8548,Wood dining table,true
+8550,Oak dining table,true
+8552,Carved oak table,true
+8554,Teak table,true
+8556,Carved teak table,true
+8558,Mahogany table,true
+8560,Opulent table,true
+8562,Wooden bench,true
+8564,Oak bench,true
+8566,Carved oak bench,true
+8568,Teak dining bench,true
+8570,Carved teak bench,true
+8572,Mahogany bench,true
+8574,Gilded bench,true
+8576,Wooden bed,true
+8578,Oak bed,true
+8580,Large oak bed,true
+8582,Teak bed,true
+8584,Large teak bed,true
+8586,Four-poster bed,true
+8588,Gilded four-poster,true
+8590,Oak clock,true
+8592,Teak clock,true
+8594,Gilded clock,true
+8596,Shaving stand,true
+8598,Oak shaving stand,true
+8600,Oak dresser,true
+8602,Teak dresser,true
+8604,Fancy teak dresser,true
+8606,Mahogany dresser,true
+8608,Gilded dresser,true
+8610,Shoe box,true
+8612,Oak drawers,true
+8614,Oak wardrobe,true
+8616,Teak drawers,true
+8618,Teak wardrobe,true
+8620,Mahogany wardrobe,true
+8622,Gilded wardrobe,true
+8624,Crystal ball,true
+8626,Elemental sphere,true
+8628,Crystal of power,true
+8778,Oak plank,true
+8780,Teak plank,true
+8782,Mahogany plank,true
+8784,Gold leaf,true
+8786,Marble block,true
+8788,Magic stone,true
+8790,Bolt of cloth,true
+8792,Clockwork,true
+8794,Saw,true
+8837,Timber beam,true
+8872,Bone dagger,true
+8874,Bone dagger (p),true
+8876,Bone dagger (p+),true
+8878,Bone dagger (p++),true
+8880,Dorgeshuun crossbow,true
+8882,Bone bolts,true
+8901,Black mask (10),true
+8921,Black mask,true
+8924,Bandana eyepatch,true
+8925,Bandana eyepatch,true
+8926,Bandana eyepatch,true
+8927,Bandana eyepatch,true
+8928,Hat eyepatch,true
+9003,Security book,true
+9004,Stronghold notes,true
+9026,Ivory comb,true
+9028,Golden scarab,true
+9030,Stone scarab,true
+9032,Pottery scarab,true
+9034,Golden statuette,true
+9036,Pottery statuette,true
+9038,Stone statuette,true
+9040,Gold seal,true
+9042,Stone seal,true
+9052,Locust meat,true
+9075,Astral rune,true
+9140,Iron bolts,true
+9141,Steel bolts,true
+9142,Mithril bolts,true
+9143,Adamant bolts,true
+9144,Runite bolts,true
+9145,Silver bolts,true
+9174,Bronze crossbow,true
+9177,Iron crossbow,true
+9179,Steel crossbow,true
+9181,Mithril crossbow,true
+9183,Adamant crossbow,true
+9185,Rune crossbow,true
+9187,Jade bolt tips,true
+9188,Topaz bolt tips,true
+9189,Sapphire bolt tips,true
+9190,Emerald bolt tips,true
+9191,Ruby bolt tips,true
+9192,Diamond bolt tips,true
+9193,Dragonstone bolt tips,true
+9194,Onyx bolt tips,true
+9236,Opal bolts (e),true
+9238,Pearl bolts (e),true
+9239,Topaz bolts (e),true
+9240,Sapphire bolts (e),true
+9241,Emerald bolts (e),true
+9242,Ruby bolts (e),true
+9243,Diamond bolts (e),true
+9244,Dragonstone bolts (e),true
+9245,Onyx bolts (e),true
+9287,Iron bolts (p),true
+9288,Steel bolts (p),true
+9289,Mithril bolts (p),true
+9290,Adamant bolts (p),true
+9291,Runite bolts (p),true
+9292,Silver bolts (p),true
+9294,Iron bolts (p+),true
+9295,Steel bolts (p+),true
+9296,Mithril bolts (p+),true
+9297,Adamant bolts (p+),true
+9298,Runite bolts (p+),true
+9299,Silver bolts (p+),true
+9301,Iron bolts (p++),true
+9302,Steel bolts (p++),true
+9303,Mithril bolts (p++),true
+9304,Adamant bolts (p++),true
+9305,Runite bolts (p++),true
+9306,Silver bolts (p++),true
+9336,Topaz bolts,true
+9337,Sapphire bolts,true
+9338,Emerald bolts,true
+9339,Ruby bolts,true
+9340,Diamond bolts,true
+9341,Dragonstone bolts,true
+9342,Onyx bolts,true
+9375,Bronze bolts (unf),true
+9377,Iron bolts (unf),true
+9378,Steel bolts (unf),true
+9379,Mithril bolts (unf),true
+9380,Adamant bolts(unf),true
+9381,Runite bolts (unf),true
+9382,Silver bolts (unf),true
+9416,Mith grapple tip,true
+9418,Mith grapple,true
+9419,Mith grapple,true
+9420,Bronze limbs,true
+9423,Iron limbs,true
+9425,Steel limbs,true
+9427,Mithril limbs,true
+9429,Adamantite limbs,true
+9431,Runite limbs,true
+9434,Bolt mould,true
+9436,Sinew,true
+9438,Crossbow string,true
+9440,Wooden stock,true
+9442,Oak stock,true
+9444,Willow stock,true
+9446,Teak stock,true
+9448,Maple stock,true
+9450,Mahogany stock,true
+9452,Yew stock,true
+9454,Bronze crossbow (u),true
+9457,Iron crossbow (u),true
+9459,Steel crossbow (u),true
+9461,Mithril crossbow (u),true
+9463,Adamant crossbow (u),true
+9465,Runite crossbow (u),true
+9469,Grand seed pod,true
+9470,Gnome scarf,true
+9472,Gnome goggles,true
+9475,Mint cake,true
+9629,Tyras helm,true
+9634,Vyrewatch top,true
+9636,Vyrewatch legs,true
+9638,Vyrewatch shoes,true
+9640,Citizen top,true
+9642,Citizen trousers,true
+9644,Citizen shoes,true
+9666,Proselyte harness m,true
+9668,Initiate harness m,true
+9670,Proselyte harness f,true
+9672,Proselyte sallet,true
+9674,Proselyte hauberk,true
+9676,Proselyte cuisse,true
+9678,Proselyte tasset,true
+9729,Elemental helmet,true
+9731,Mind shield,true
+9733,Mind helmet,true
+9735,Desert goat horn,true
+9736,Goat horn dust,true
+9739,Combat potion(4),true
+9741,Combat potion(3),true
+9743,Combat potion(2),true
+9745,Combat potion(1),true
+9843,Oak cape rack,true
+9844,Teak cape rack,true
+9845,Mahogany cape rack,true
+9846,Gilded cape rack,true
+9847,Marble cape rack,true
+9848,Magic cape rack,true
+9849,Oak toy box,true
+9850,Teak toy box,true
+9851,Mahogany toy box,true
+9852,Oak magic wardrobe,true
+9853,Carved oak magic wardrobe,true
+9854,Teak magic wardrobe,true
+9855,Carved teak magic wardrobe,true
+9856,Mahogany magic wardrobe,true
+9857,Gilded magic wardrobe,true
+9858,Marble magic wardrobe,true
+9859,Oak armour case,true
+9860,Teak armour case,true
+9861,Mahogany armour case,true
+9862,Oak treasure chest,true
+9863,Teak treasure chest,true
+9864,M. treasure chest,true
+9865,Oak fancy dress box,true
+9866,Teak fancy dress box,true
+9867,Mahogany fancy dress box,true
+9978,Raw bird meat,true
+9980,Roast bird meat,true
+9986,Raw beast meat,true
+9988,Roast beast meat,true
+9994,Spicy tomato,true
+9996,Spicy minced meat,true
+9998,Hunter potion(4),true
+10000,Hunter potion(3),true
+10002,Hunter potion(2),true
+10004,Hunter potion(1),true
+10006,Bird snare,true
+10008,Box trap,true
+10010,Butterfly net,true
+10012,Butterfly jar,true
+10014,Black warlock,true
+10016,Snowy knight,true
+10018,Sapphire glacialis,true
+10020,Ruby harvest,true
+10025,Magic box,true
+10029,Teasing stick,true
+10031,Rabbit snare,true
+10033,Chinchompa,true
+10034,Red chinchompa,true
+10035,Kyatt legs,true
+10037,Kyatt top,true
+10039,Kyatt hat,true
+10041,Larupia legs,true
+10043,Larupia top,true
+10045,Larupia hat,true
+10047,Graahk legs,true
+10049,Graahk top,true
+10051,Graahk headdress,true
+10053,Wood camo top,true
+10055,Wood camo legs,true
+10057,Jungle camo top,true
+10059,Jungle camo legs,true
+10061,Desert camo top,true
+10063,Desert camo legs,true
+10065,Polar camo top,true
+10067,Polar camo legs,true
+10069,Spotted cape,true
+10071,Spottier cape,true
+10075,Gloves of silence,true
+10077,Spiky vambraces,true
+10079,Green spiky vambraces,true
+10081,Blue spiky vambraces,true
+10083,Red spiky vambraces,true
+10085,Black spiky vambraces,true
+10087,Stripy feather,true
+10088,Red feather,true
+10089,Blue feather,true
+10090,Yellow feather,true
+10091,Orange feather,true
+10093,Tatty larupia fur,true
+10095,Larupia fur,true
+10097,Tatty graahk fur,true
+10099,Graahk fur,true
+10101,Tatty kyatt fur,true
+10103,Kyatt fur,true
+10105,Kebbit spike,true
+10107,Long kebbit spike,true
+10109,Kebbit teeth,true
+10111,Kebbit teeth dust,true
+10113,Kebbit claws,true
+10115,Dark kebbit fur,true
+10117,Polar kebbit fur,true
+10119,Feldip weasel fur,true
+10121,Common kebbit fur,true
+10123,Desert devil fur,true
+10125,Spotted kebbit fur,true
+10127,Dashing kebbit fur,true
+10129,Barb-tail harpoon,true
+10132,Strung rabbit foot,true
+10134,Rabbit foot,true
+10136,Rainbow fish,true
+10138,Raw rainbow fish,true
+10142,Guam tar,true
+10143,Marrentill tar,true
+10144,Tarromin tar,true
+10145,Harralander tar,true
+10146,Orange salamander,true
+10147,Red salamander,true
+10148,Black salamander,true
+10149,Swamp lizard,true
+10150,Noose wand,true
+10156,Hunters' crossbow,true
+10158,Kebbit bolts,true
+10159,Long kebbit bolts,true
+10280,Willow comp bow,true
+10282,Yew comp bow,true
+10284,Magic comp bow,true
+10286,Rune helm (h1),true
+10288,Rune helm (h2),true
+10290,Rune helm (h3),true
+10292,Rune helm (h4),true
+10294,Rune helm (h5),true
+10296,Adamant helm (h1),true
+10298,Adamant helm (h2),true
+10300,Adamant helm (h3),true
+10302,Adamant helm (h4),true
+10304,Adamant helm (h5),true
+10306,Black helm (h1),true
+10308,Black helm (h2),true
+10310,Black helm (h3),true
+10312,Black helm (h4),true
+10314,Black helm (h5),true
+10316,Bob's red shirt,true
+10318,Bob's blue shirt,true
+10320,Bob's green shirt,true
+10322,Bob's black shirt,true
+10324,Bob's purple shirt,true
+10326,Purple firelighter,true
+10327,White firelighter,true
+10330,3rd age range top,true
+10332,3rd age range legs,true
+10334,3rd age range coif,true
+10336,3rd age vambraces,true
+10338,3rd age robe top,true
+10340,3rd age robe,true
+10342,3rd age mage hat,true
+10344,3rd age amulet,true
+10346,3rd age platelegs,true
+10348,3rd age platebody,true
+10350,3rd age full helmet,true
+10352,3rd age kiteshield,true
+10354,Amulet of glory (t4),true
+10362,Amulet of glory (t),true
+10364,Strength amulet (t),true
+10366,Amulet of magic (t),true
+10368,Zamorak bracers,true
+10370,Zamorak d'hide body,true
+10372,Zamorak chaps,true
+10374,Zamorak coif,true
+10376,Guthix bracers,true
+10378,Guthix d'hide body,true
+10380,Guthix chaps,true
+10382,Guthix coif,true
+10384,Saradomin bracers,true
+10386,Saradomin d'hide body,true
+10388,Saradomin chaps,true
+10390,Saradomin coif,true
+10392,A powdered wig,true
+10394,Flared trousers,true
+10396,Pantaloons,true
+10398,Sleeping cap,true
+10400,Black elegant shirt,true
+10402,Black elegant legs,true
+10404,Red elegant shirt,true
+10406,Red elegant legs,true
+10408,Blue elegant shirt,true
+10410,Blue elegant legs,true
+10412,Green elegant shirt,true
+10414,Green elegant legs,true
+10416,Purple elegant shirt,true
+10418,Purple elegant legs,true
+10420,White elegant blouse,true
+10422,White elegant skirt,true
+10424,Red elegant blouse,true
+10426,Red elegant skirt,true
+10428,Blue elegant blouse,true
+10430,Blue elegant skirt,true
+10432,Green elegant blouse,true
+10434,Green elegant skirt,true
+10436,Purple elegant blouse,true
+10438,Purple elegant skirt,true
+10440,Saradomin crozier,true
+10442,Guthix crozier,true
+10444,Zamorak crozier,true
+10446,Saradomin cloak,true
+10448,Guthix cloak,true
+10450,Zamorak cloak,true
+10452,Saradomin mitre,true
+10454,Guthix mitre,true
+10456,Zamorak mitre,true
+10458,Saradomin robe top,true
+10460,Zamorak robe top,true
+10462,Guthix robe top,true
+10464,Saradomin robe legs,true
+10466,Guthix robe legs,true
+10468,Zamorak robe legs,true
+10470,Saradomin stole,true
+10472,Guthix stole,true
+10474,Zamorak stole,true
+10476,Purple sweets,true
+10496,Polished buttons,true
+10564,Granite body,true
+10589,Granite helm,true
+10808,Arctic pyre logs,true
+10810,Arctic pine logs,true
+10812,Split log,true
+10814,Hair,true
+10816,Raw yak meat,true
+10818,Yak-hide,true
+10820,Cured yak-hide,true
+10822,Yak-hide armour,true
+10824,Yak-hide armour,true
+10826,Neitiznot shield,true
+10828,Helm of neitiznot,true
+10891,Wooden cat,true
+10925,Sanfew serum(4),true
+10927,Sanfew serum(3),true
+10929,Sanfew serum(2),true
+10931,Sanfew serum(1),true
+10937,Nail beast nails,true
+10952,Slayer bell,true
+10954,Frog-leather body,true
+10956,Frog-leather chaps,true
+10958,Frog-leather boots,true
+10973,Light orb,true
+10978,Swamp weed,true
+10981,Cave goblin wire,true
+10999,Goblin book,true
+11037,Brine sabre,true
+11061,Ancient mace,true
+11065,Bracelet mould,true
+11069,Gold bracelet,true
+11072,Sapphire bracelet,true
+11074,Bracelet of clay,true
+11076,Emerald bracelet,true
+11079,Castle wars bracelet(3),true
+11085,Ruby bracelet,true
+11088,Inoculation bracelet,true
+11090,Phoenix necklace,true
+11092,Diamond bracelet,true
+11095,Abyssal bracelet(5),true
+11105,Skills necklace(4),true
+11113,Skills necklace,true
+11115,Dragonstone bracelet,true
+11118,Combat bracelet(4),true
+11126,Combat bracelet,true
+11128,Berserker necklace,true
+11130,Onyx bracelet,true
+11133,Regen bracelet,true
+11200,Dwarven helmet,true
+11205,Shrunk ogleroot,true
+11212,Dragon arrow,true
+11227,Dragon arrow(p),true
+11228,Dragon arrow(p+),true
+11229,Dragon arrow(p++),true
+11230,Dragon dart,true
+11231,Dragon dart(p),true
+11232,Dragon dart tip,true
+11233,Dragon dart(p+),true
+11234,Dragon dart(p++),true
+11235,Dark bow,true
+11237,Dragon arrowtips,true
+11238,Baby impling jar,true
+11240,Young impling jar,true
+11242,Gourmet impling jar,true
+11244,Earth impling jar,true
+11246,Essence impling jar,true
+11248,Eclectic impling jar,true
+11250,Nature impling jar,true
+11252,Magpie impling jar,true
+11254,Ninja impling jar,true
+11256,Dragon impling jar,true
+11260,Impling jar,true
+11280,Cavalier mask,true
+11284,Dragonfire shield,true
+11286,Draconic visage,true
+11324,Roe,true
+11326,Caviar,true
+11328,Leaping trout,true
+11330,Leaping salmon,true
+11332,Leaping sturgeon,true
+11334,Fish offcuts,true
+11335,Dragon full helm,true
+11367,Bronze hasta,true
+11369,Iron hasta,true
+11371,Steel hasta,true
+11373,Mithril hasta,true
+11375,Adamant hasta,true
+11377,Rune hasta,true
+11379,Bronze hasta(p),true
+11382,Bronze hasta(p+),true
+11384,Bronze hasta(p++),true
+11386,Iron hasta(p),true
+11389,Iron hasta(p+),true
+11391,Iron hasta(p++),true
+11393,Steel hasta(p),true
+11396,Steel hasta(p+),true
+11398,Steel hasta(p++),true
+11400,Mithril hasta(p),true
+11403,Mithril hasta(p+),true
+11405,Mithril hasta(p++),true
+11407,Adamant hasta(p),true
+11410,Adamant hasta(p+),true
+11412,Adamant hasta(p++),true
+11414,Rune hasta(p),true
+11417,Rune hasta(p+),true
+11419,Rune hasta(p++),true
+11429,Attack mix(2),true
+11431,Attack mix(1),true
+11433,Antipoison mix(2),true
+11435,Antipoison mix(1),true
+11437,Relicym's mix(2),true
+11439,Relicym's mix(1),true
+11441,Strength mix(1),true
+11443,Strength mix(2),true
+11445,Combat mix(2),true
+11447,Combat mix(1),true
+11449,Restore mix(2),true
+11451,Restore mix(1),true
+11453,Energy mix(2),true
+11455,Energy mix(1),true
+11457,Defence mix(2),true
+11459,Defence mix(1),true
+11461,Agility mix(2),true
+11463,Agility mix(1),true
+11465,Prayer mix(2),true
+11467,Prayer mix(1),true
+11469,Superattack mix(2),true
+11471,Superattack mix(1),true
+11473,Anti-poison supermix(2),true
+11475,Anti-poison supermix(1),true
+11477,Fishing mix(2),true
+11479,Fishing mix(1),true
+11481,Super energy mix(2),true
+11483,Super energy mix(1),true
+11485,Super str. mix(2),true
+11487,Super str. mix(1),true
+11489,Magic essence mix(2),true
+11491,Magic essence mix(1),true
+11493,Super restore mix(2),true
+11495,Super restore mix(1),true
+11497,Super def. mix(2),true
+11499,Super def. mix(1),true
+11501,Antidote+ mix(2),true
+11503,Antidote+ mix(1),true
+11505,Antifire mix(2),true
+11507,Antifire mix(1),true
+11509,Ranging mix(2),true
+11511,Ranging mix(1),true
+11513,Magic mix(2),true
+11515,Magic mix(1),true
+11517,Hunting mix(2),true
+11519,Hunting mix(1),true
+11521,Zamorak mix(2),true
+11523,Zamorak mix(1),true
+11785,Armadyl crossbow,true
+11787,Steam battlestaff,true
+11789,Mystic steam staff,true
+11791,Staff of the dead,true
+11798,Godsword blade,true
+11802,Armadyl godsword,true
+11804,Bandos godsword,true
+11806,Saradomin godsword,true
+11808,Zamorak godsword,true
+11810,Armadyl hilt,true
+11812,Bandos hilt,true
+11814,Saradomin hilt,true
+11816,Zamorak hilt,true
+11818,Godsword shard 1,true
+11820,Godsword shard 2,true
+11822,Godsword shard 3,true
+11824,Zamorakian spear,true
+11826,Armadyl helmet,true
+11828,Armadyl chestplate,true
+11830,Armadyl chainskirt,true
+11832,Bandos chestplate,true
+11834,Bandos tassets,true
+11836,Bandos boots,true
+11838,Saradomin sword,true
+11840,Dragon boots,true
+11874,Broad arrowheads,true
+11875,Broad bolts,true
+11876,Unfinished broad bolts,true
+11889,Zamorakian hasta,true
+11902,Leaf-bladed sword,true
+11905,Trident of the seas (full),true
+11908,Uncharged trident,true
+11920,Dragon pickaxe,true
+11924,Malediction ward,true
+11926,Odium ward,true
+11928,Odium shard 1,true
+11929,Odium shard 2,true
+11930,Odium shard 3,true
+11931,Malediction shard 1,true
+11932,Malediction shard 2,true
+11933,Malediction shard 3,true
+11934,Raw dark crab,true
+11936,Dark crab,true
+11940,Dark fishing bait,true
+11943,Lava dragon bones,true
+11951,Extended antifire(4),true
+11953,Extended antifire(3),true
+11955,Extended antifire(2),true
+11957,Extended antifire(1),true
+11959,Black chinchompa,true
+11960,Extended antifire mix(2),true
+11962,Extended antifire mix(1),true
+11964,Amulet of glory (t6),true
+11968,Skills necklace(6),true
+11972,Combat bracelet(6),true
+11978,Amulet of glory(6),true
+11980,Ring of wealth (5),true
+11990,Fedora,true
+11992,Lava scale,true
+11994,Lava scale shard,true
+11998,Smoke battlestaff,true
+12000,Mystic smoke staff,true
+12002,Occult necklace,true
+12004,Kraken tentacle,true
+12007,Jar of dirt,true
+12193,Ancient robe top,true
+12195,Ancient robe legs,true
+12197,Ancient cloak,true
+12199,Ancient crozier,true
+12201,Ancient stole,true
+12203,Ancient mitre,true
+12205,Bronze platebody (g),true
+12207,Bronze platelegs (g),true
+12209,Bronze plateskirt (g),true
+12211,Bronze full helm (g),true
+12213,Bronze kiteshield (g),true
+12215,Bronze platebody (t),true
+12217,Bronze platelegs (t),true
+12219,Bronze plateskirt (t),true
+12221,Bronze full helm (t),true
+12223,Bronze kiteshield (t),true
+12225,Iron platebody (t),true
+12227,Iron platelegs (t),true
+12229,Iron plateskirt (t),true
+12231,Iron full helm (t),true
+12233,Iron kiteshield (t),true
+12235,Iron platebody (g),true
+12237,Iron platelegs (g),true
+12239,Iron plateskirt (g),true
+12241,Iron full helm (g),true
+12243,Iron kiteshield (g),true
+12245,Beanie,true
+12247,Red beret,true
+12249,Imp mask,true
+12251,Goblin mask,true
+12253,Armadyl robe top,true
+12255,Armadyl robe legs,true
+12257,Armadyl stole,true
+12259,Armadyl mitre,true
+12261,Armadyl cloak,true
+12263,Armadyl crozier,true
+12265,Bandos robe top,true
+12267,Bandos robe legs,true
+12269,Bandos stole,true
+12271,Bandos mitre,true
+12273,Bandos cloak,true
+12275,Bandos crozier,true
+12277,Mithril platebody (g),true
+12279,Mithril platelegs (g),true
+12281,Mithril kiteshield (g),true
+12283,Mithril full helm (g),true
+12285,Mithril plateskirt (g),true
+12287,Mithril platebody (t),true
+12289,Mithril platelegs (t),true
+12291,Mithril kiteshield (t),true
+12293,Mithril full helm (t),true
+12295,Mithril plateskirt (t),true
+12297,Black pickaxe,true
+12299,White headband,true
+12301,Blue headband,true
+12303,Gold headband,true
+12305,Pink headband,true
+12307,Green headband,true
+12309,Pink boater,true
+12311,Purple boater,true
+12313,White boater,true
+12315,Pink elegant shirt,true
+12317,Pink elegant legs,true
+12319,Crier hat,true
+12321,White cavalier,true
+12323,Red cavalier,true
+12325,Navy cavalier,true
+12327,Red d'hide body (g),true
+12329,Red d'hide chaps (g),true
+12331,Red d'hide body (t),true
+12333,Red d'hide chaps (t),true
+12335,Briefcase,true
+12337,Sagacious spectacles,true
+12339,Pink elegant blouse,true
+12341,Pink elegant skirt,true
+12343,Gold elegant blouse,true
+12345,Gold elegant skirt,true
+12347,Gold elegant shirt,true
+12349,Gold elegant legs,true
+12351,Musketeer hat,true
+12353,Monocle,true
+12355,Big pirate hat,true
+12357,Katana,true
+12359,Leprechaun hat,true
+12361,Cat mask,true
+12363,Bronze dragon mask,true
+12365,Iron dragon mask,true
+12367,Steel dragon mask,true
+12369,Mithril dragon mask,true
+12371,Lava dragon mask,true
+12373,Dragon cane,true
+12375,Black cane,true
+12377,Adamant cane,true
+12379,Rune cane,true
+12381,Black d'hide body (g),true
+12383,Black d'hide chaps (g),true
+12385,Black d'hide body (t),true
+12387,Black d'hide chaps (t),true
+12389,Gilded scimitar,true
+12391,Gilded boots,true
+12393,Royal gown top,true
+12395,Royal gown bottom,true
+12397,Royal crown,true
+12399,Partyhat & specs,true
+12402,Nardah teleport,true
+12403,Digsite teleport,true
+12404,Feldip hills teleport,true
+12405,Lunar isle teleport,true
+12406,Mort'ton teleport,true
+12407,Pest control teleport,true
+12408,Piscatoris teleport,true
+12409,Tai bwo wannai teleport,true
+12410,Iorwerth camp teleport,true
+12411,Mos le'harmless teleport,true
+12412,Pirate hat & patch,true
+12422,3rd age wand,true
+12424,3rd age bow,true
+12426,3rd age longsword,true
+12428,Penguin mask,true
+12430,Afro,true
+12432,Top hat,true
+12434,Top hat & monocle,true
+12437,3rd age cloak,true
+12439,Royal sceptre,true
+12441,Musketeer tabard,true
+12443,Musketeer pants,true
+12445,Black skirt (g),true
+12447,Black skirt (t),true
+12449,Black wizard robe (g),true
+12451,Black wizard robe (t),true
+12453,Black wizard hat (g),true
+12455,Black wizard hat (t),true
+12460,Ancient platebody,true
+12462,Ancient platelegs,true
+12464,Ancient plateskirt,true
+12466,Ancient full helm,true
+12468,Ancient kiteshield,true
+12470,Armadyl platebody,true
+12472,Armadyl platelegs,true
+12474,Armadyl plateskirt,true
+12476,Armadyl full helm,true
+12478,Armadyl kiteshield,true
+12480,Bandos platebody,true
+12482,Bandos platelegs,true
+12484,Bandos plateskirt,true
+12486,Bandos full helm,true
+12488,Bandos kiteshield,true
+12490,Ancient bracers,true
+12492,Ancient d'hide body,true
+12494,Ancient chaps,true
+12496,Ancient coif,true
+12498,Bandos bracers,true
+12500,Bandos d'hide body,true
+12502,Bandos chaps,true
+12504,Bandos coif,true
+12506,Armadyl bracers,true
+12508,Armadyl d'hide body,true
+12510,Armadyl chaps,true
+12512,Armadyl coif,true
+12514,Explorer backpack,true
+12516,Pith helmet,true
+12518,Green dragon mask,true
+12520,Blue dragon mask,true
+12522,Red dragon mask,true
+12524,Black dragon mask,true
+12526,Fury ornament kit,true
+12528,Dark infinity colour kit,true
+12530,Light infinity colour kit,true
+12532,Dragon sq shield ornament kit,true
+12534,Dragon chainbody ornament kit,true
+12536,Dragon legs/skirt ornament kit,true
+12538,Dragon full helm ornament kit,true
+12540,Deerstalker,true
+12596,Rangers' tunic,true
+12598,Holy sandals,true
+12601,Ring of the gods,true
+12603,Tyrannical ring,true
+12605,Treasonous ring,true
+12613,Bandos page 1,true
+12614,Bandos page 2,true
+12615,Bandos page 3,true
+12616,Bandos page 4,true
+12617,Armadyl page 1,true
+12618,Armadyl page 2,true
+12619,Armadyl page 3,true
+12620,Armadyl page 4,true
+12621,Ancient page 1,true
+12622,Ancient page 2,true
+12623,Ancient page 3,true
+12624,Ancient page 4,true
+12625,Stamina potion(4),true
+12627,Stamina potion(3),true
+12629,Stamina potion(2),true
+12631,Stamina potion(1),true
+12633,Stamina mix(2),true
+12635,Stamina mix(1),true
+12640,Amylase crystal,true
+12642,Lumberyard teleport,true
+12695,Super combat potion(4),true
+12697,Super combat potion(3),true
+12699,Super combat potion(2),true
+12701,Super combat potion(1),true
+12757,Blue dark bow paint,true
+12759,Green dark bow paint,true
+12761,Yellow dark bow paint,true
+12763,White dark bow paint,true
+12769,Frozen whip mix,true
+12771,Volcanic whip mix,true
+12775,Annakarl teleport,true
+12776,Carrallanger teleport,true
+12777,Dareeyak teleport,true
+12778,Ghorrock teleport,true
+12779,Kharyrll teleport,true
+12780,Lassar teleport,true
+12781,Paddewwa teleport,true
+12782,Senntisten teleport,true
+12783,Ring of wealth scroll,true
+12786,Magic shortbow scroll,true
+12789,Clue box,true
+12798,Steam staff upgrade kit,true
+12800,Dragon pickaxe upgrade kit,true
+12802,Ward upgrade kit,true
+12804,Saradomin's tear,true
+12817,Elysian spirit shield,true
+12819,Elysian sigil,true
+12821,Spectral spirit shield,true
+12823,Spectral sigil,true
+12825,Arcane spirit shield,true
+12827,Arcane sigil,true
+12829,Spirit shield,true
+12831,Blessed spirit shield,true
+12833,Holy elixir,true
+12846,Target teleport scroll,true
+12849,Granite clamp,true
+12851,Amulet of the damned (full),true
+12863,Dwarf cannon set,true
+12865,Green dragonhide set,true
+12867,Blue dragonhide set,true
+12869,Red dragonhide set,true
+12871,Black dragonhide set,true
+12873,Guthan's armour set,true
+12875,Verac's armour set,true
+12877,Dharok's armour set,true
+12879,Torag's armour set,true
+12881,Ahrim's armour set,true
+12883,Karil's armour set,true
+12885,Jar of sand,true
+12900,Uncharged toxic trident,true
+12902,Toxic staff (uncharged),true
+12905,Anti-venom(4),true
+12907,Anti-venom(3),true
+12909,Anti-venom(2),true
+12911,Anti-venom(1),true
+12913,Anti-venom+(4),true
+12915,Anti-venom+(3),true
+12917,Anti-venom+(2),true
+12919,Anti-venom+(1),true
+12922,Tanzanite fang,true
+12924,Toxic blowpipe (empty),true
+12927,Serpentine visage,true
+12929,Serpentine helm (uncharged),true
+12932,Magic fang,true
+12934,Zulrah's scales,true
+12936,Jar of swamp,true
+12938,Zul-andra teleport,true
+12960,Bronze set (lg),true
+12962,Bronze set (sk),true
+12964,Bronze trimmed set (lg),true
+12966,Bronze trimmed set (sk),true
+12968,Bronze gold-trimmed set (lg),true
+12970,Bronze gold-trimmed set (sk),true
+12972,Iron set (lg),true
+12974,Iron set (sk),true
+12976,Iron trimmed set (lg),true
+12978,Iron trimmed set (sk),true
+12980,Iron gold-trimmed set (lg),true
+12982,Iron gold-trimmed set (sk),true
+12984,Steel set (lg),true
+12986,Steel set (sk),true
+12988,Black set (lg),true
+12990,Black set (sk),true
+12992,Black trimmed set (lg),true
+12994,Black trimmed set (sk),true
+12996,Black gold-trimmed set (lg),true
+12998,Black gold-trimmed set (sk),true
+13000,Mithril set (lg),true
+13002,Mithril set (sk),true
+13004,Mithril trimmed set (lg),true
+13006,Mithril trimmed set (sk),true
+13008,Mithril gold-trimmed set (lg),true
+13010,Mithril gold-trimmed set (sk),true
+13012,Adamant set (lg),true
+13014,Adamant set (sk),true
+13016,Adamant trimmed set (lg),true
+13018,Adamant trimmed set (sk),true
+13020,Adamant gold-trimmed set (lg),true
+13022,Adamant gold-trimmed set (sk),true
+13024,Rune armour set (lg),true
+13026,Rune armour set (sk),true
+13028,Rune trimmed set (lg),true
+13030,Rune trimmed set (sk),true
+13032,Rune gold-trimmed set (lg),true
+13034,Rune gold-trimmed set (sk),true
+13036,Gilded armour set (lg),true
+13038,Gilded armour set (sk),true
+13040,Saradomin armour set (lg),true
+13042,Saradomin armour set (sk),true
+13044,Zamorak armour set (lg),true
+13046,Zamorak armour set (sk),true
+13048,Guthix armour set (lg),true
+13050,Guthix armour set (sk),true
+13052,Armadyl rune armour set (lg),true
+13054,Armadyl rune armour set (sk),true
+13056,Bandos rune armour set (lg),true
+13058,Bandos rune armour set (sk),true
+13060,Ancient rune armour set (lg),true
+13062,Ancient rune armour set (sk),true
+13064,Combat potion set,true
+13066,Super potion set,true
+13149,Holy book page set,true
+13151,Unholy book page set,true
+13153,Book of balance page set,true
+13155,Book of war page set,true
+13157,Book of law page set,true
+13159,Book of darkness page set,true
+13161,Zamorak dragonhide set,true
+13163,Saradomin dragonhide set,true
+13165,Guthix dragonhide set,true
+13167,Bandos dragonhide set,true
+13169,Armadyl dragonhide set,true
+13171,Ancient dragonhide set,true
+13173,Partyhat set,true
+13175,Halloween mask set,true
+13190,Old school bond,true
+13227,Eternal crystal,true
+13229,Pegasian crystal,true
+13231,Primordial crystal,true
+13233,Smouldering stone,true
+13235,Eternal boots,true
+13237,Pegasian boots,true
+13239,Primordial boots,true
+13245,Jar of souls,true
+13256,Saradomin's light,true
+13263,Abyssal bludgeon,true
+13265,Abyssal dagger,true
+13267,Abyssal dagger (p),true
+13269,Abyssal dagger (p+),true
+13271,Abyssal dagger (p++),true
+13277,Jar of miasma,true
+13383,Xerician fabric,true
+13385,Xerician hat,true
+13387,Xerician top,true
+13389,Xerician robe,true
+13391,Lizardman fang,true
+13421,Saltpetre,true
+13431,Sandworms,true
+13439,Raw anglerfish,true
+13441,Anglerfish,true
+13448,Ensouled goblin head,true
+13451,Ensouled monkey head,true
+13454,Ensouled imp head,true
+13457,Ensouled minotaur head,true
+13460,Ensouled scorpion head,true
+13463,Ensouled bear head,true
+13466,Ensouled unicorn head,true
+13469,Ensouled dog head,true
+13472,Ensouled chaos druid head,true
+13475,Ensouled giant head,true
+13478,Ensouled ogre head,true
+13481,Ensouled elf head,true
+13484,Ensouled troll head,true
+13487,Ensouled horror head,true
+13490,Ensouled kalphite head,true
+13493,Ensouled dagannoth head,true
+13496,Ensouled bloodveld head,true
+13499,Ensouled tzhaar head,true
+13502,Ensouled demon head,true
+13505,Ensouled aviansie head,true
+13508,Ensouled abyssal head,true
+13511,Ensouled dragon head,true
+13573,Dynamite,true
+13576,Dragon warhammer,true
+13652,Dragon claws,true
+13657,Grape seed,true
+13658,Teleport card,true
+19478,Light ballista,true
+19481,Heavy ballista,true
+19484,Dragon javelin,true
+19486,Dragon javelin(p),true
+19488,Dragon javelin(p+),true
+19490,Dragon javelin(p++),true
+19493,Zenyte,true
+19496,Uncut zenyte,true
+19501,Zenyte amulet (u),true
+19529,Zenyte shard,true
+19532,Zenyte bracelet,true
+19535,Zenyte necklace,true
+19538,Zenyte ring,true
+19541,Zenyte amulet,true
+19544,Tormented bracelet,true
+19547,Necklace of anguish,true
+19550,Ring of suffering,true
+19553,Amulet of torture,true
+19570,Bronze javelin heads,true
+19572,Iron javelin heads,true
+19574,Steel javelin heads,true
+19576,Mithril javelin heads,true
+19578,Adamant javelin heads,true
+19580,Rune javelin heads,true
+19582,Dragon javelin heads,true
+19584,Javelin shaft,true
+19586,Light frame,true
+19589,Heavy frame,true
+19592,Ballista limbs,true
+19595,Incomplete light ballista,true
+19598,Incomplete heavy ballista,true
+19601,Ballista spring,true
+19604,Unstrung light ballista,true
+19607,Unstrung heavy ballista,true
+19610,Monkey tail,true
+19613,Arceuus library teleport,true
+19615,Draynor manor teleport,true
+19617,Mind altar teleport,true
+19619,Salve graveyard teleport,true
+19621,Fenkenstrain's castle teleport,true
+19623,West ardougne teleport,true
+19625,Harmony island teleport,true
+19627,Cemetery teleport,true
+19629,Barrows teleport,true
+19631,Ape atoll teleport,true
+19653,Golovanova fruit top,true
+19656,Uncooked botanical pie,true
+19662,Botanical pie,true
+19665,Damaged monkey tail,true
+19669,Redwood logs,true
+19672,Redwood pyre logs,true
+19701,Jar of darkness,true
+19707,Amulet of eternal glory,true
+19724,Left eye patch,true
+19727,Double eye patch,true
+19912,Zombie head,true
+19915,Cyclops head,true
+19918,Nunchaku,true
+19921,Ancient d'hide boots,true
+19924,Bandos d'hide boots,true
+19927,Guthix d'hide boots,true
+19930,Armadyl d'hide boots,true
+19933,Saradomin d'hide boots,true
+19936,Zamorak d'hide boots,true
+19943,Arceuus scarf,true
+19946,Hosidius scarf,true
+19949,Lovakengj scarf,true
+19952,Piscarilius scarf,true
+19955,Shayzien scarf,true
+19958,Dark tuxedo jacket,true
+19961,Dark tuxedo cuffs,true
+19964,Dark trousers,true
+19967,Dark tuxedo shoes,true
+19970,Dark bow tie,true
+19973,Light tuxedo jacket,true
+19976,Light tuxedo cuffs,true
+19979,Light trousers,true
+19982,Light tuxedo shoes,true
+19985,Light bow tie,true
+19988,Blacksmith's helm,true
+19991,Bucket helm,true
+19994,Ranger gloves,true
+19997,Holy wraps,true
+20002,Dragon scimitar ornament kit,true
+20005,Ring of nature,true
+20008,Fancy tiara,true
+20011,3rd age axe,true
+20014,3rd age pickaxe,true
+20017,Ring of coins,true
+20020,Lesser demon mask,true
+20023,Greater demon mask,true
+20026,Black demon mask,true
+20029,Old demon mask,true
+20032,Jungle demon mask,true
+20035,Samurai kasa,true
+20038,Samurai shirt,true
+20041,Samurai gloves,true
+20044,Samurai greaves,true
+20047,Samurai boots,true
+20050,Obsidian cape (r),true
+20053,Half moon spectacles,true
+20056,Ale of the gods,true
+20059,Bucket helm (g),true
+20062,Torture ornament kit,true
+20065,Occult ornament kit,true
+20068,Armadyl godsword ornament kit,true
+20071,Bandos godsword ornament kit,true
+20074,Saradomin godsword ornament kit,true
+20077,Zamorak godsword ornament kit,true
+20080,Mummy's head,true
+20083,Mummy's body,true
+20086,Mummy's hands,true
+20089,Mummy's legs,true
+20092,Mummy's feet,true
+20095,Ankou mask,true
+20098,Ankou top,true
+20101,Ankou gloves,true
+20104,Ankou's leggings,true
+20107,Ankou socks,true
+20110,Bowl wig,true
+20113,Arceuus hood,true
+20116,Hosidius hood,true
+20119,Lovakengj hood,true
+20122,Piscarilius hood,true
+20125,Shayzien hood,true
+20128,Hood of darkness,true
+20131,Robe top of darkness,true
+20134,Gloves of darkness,true
+20137,Robe bottom of darkness,true
+20140,Boots of darkness,true
+20143,Dragon defender ornament kit,true
+20146,Gilded med helm,true
+20149,Gilded chainbody,true
+20152,Gilded sq shield,true
+20155,Gilded 2h sword,true
+20158,Gilded spear,true
+20161,Gilded hasta,true
+20166,Wooden shield (g),true
+20169,Steel platebody (g),true
+20172,Steel platelegs (g),true
+20175,Steel plateskirt (g),true
+20178,Steel full helm (g),true
+20181,Steel kiteshield (g),true
+20184,Steel platebody (t),true
+20187,Steel platelegs (t),true
+20190,Steel plateskirt (t),true
+20193,Steel full helm (t),true
+20196,Steel kiteshield (t),true
+20199,Monk's robe top (g),true
+20202,Monk's robe (g),true
+20205,Golden chef's hat,true
+20208,Golden apron,true
+20211,Team cape zero,true
+20214,Team cape x,true
+20217,Team cape i,true
+20220,Holy blessing,true
+20223,Unholy blessing,true
+20226,Peaceful blessing,true
+20229,Honourable blessing,true
+20232,War blessing,true
+20235,Ancient blessing,true
+20238,Charge dragonstone jewellery scroll,true
+20240,Crier coat,true
+20243,Crier bell,true
+20246,Black leprechaun hat,true
+20251,Arceuus banner,true
+20254,Hosidius banner,true
+20257,Lovakengj banner,true
+20260,Piscarilius banner,true
+20263,Shayzien banner,true
+20266,Black unicorn mask,true
+20269,White unicorn mask,true
+20272,Cabbage round shield,true
+20275,Gnomish firelighter,true
+20376,Steel trimmed set (lg),true
+20379,Steel trimmed set (sk),true
+20382,Steel gold-trimmed set (lg),true
+20385,Steel gold-trimmed set (sk),true
+20433,Evil chicken feet,true
+20436,Evil chicken wings,true
+20439,Evil chicken head,true
+20442,Evil chicken legs,true
+20517,Elder chaos top,true
+20520,Elder chaos robe,true
+20590,Stale baguette,true
+20595,Elder chaos hood,true
+20716,Tome of fire (empty),true
+20718,Burnt page,true
+20724,Imbued heart,true
+20727,Leaf-bladed battleaxe,true
+20730,Mist battlestaff,true
+20733,Mystic mist staff,true
+20736,Dust battlestaff,true
+20739,Mystic dust staff,true
+20749,Zamorak's grapes,true
+20756,Hill giant club,true
+20849,Dragon thrownaxe,true
+20997,Twisted bow,true
+21000,Twisted buckler,true
+21003,Elder maul,true
+21006,Kodai wand,true
+21009,Dragon sword,true
+21012,Dragon hunter crossbow,true
+21015,Dinh's bulwark,true
+21018,Ancestral hat,true
+21021,Ancestral robe top,true
+21024,Ancestral robe bottom,true
+21028,Dragon harpoon,true
+21034,Dexterous prayer scroll,true
+21043,Kodai insignia,true
+21047,Torn prayer scroll,true
+21049,Ancestral robes set,true
+21079,Arcane prayer scroll,true
+21081,Opal ring,true
+21084,Jade ring,true
+21087,Topaz ring,true
+21090,Opal necklace,true
+21093,Jade necklace,true
+21096,Topaz necklace,true
+21099,Opal amulet (u),true
+21102,Jade amulet (u),true
+21105,Topaz amulet (u),true
+21108,Opal amulet,true
+21111,Jade amulet,true
+21114,Topaz amulet,true
+21117,Opal bracelet,true
+21120,Jade bracelet,true
+21123,Topaz bracelet,true
+21126,Ring of pursuit,true
+21129,Ring of returning(5),true
+21140,Efaritay's aid,true
+21143,Dodgy necklace,true
+21146,Necklace of passage(5),true
+21157,Necklace of faith,true
+21160,Amulet of bounty,true
+21163,Amulet of chemistry,true
+21166,Burning amulet(5),true
+21177,Expeditious bracelet,true
+21180,Flamtaer bracelet,true
+21183,Bracelet of slaughter,true
+21202,Lava staff upgrade kit,true
+21257,Slayer's enchantment,true
+21270,Eternal gem,true
+21279,Obsidian armour set,true
+21298,Obsidian helmet,true
+21301,Obsidian platebody,true
+21304,Obsidian platelegs,true
+21316,Amethyst broad bolts,true
+21318,Amethyst javelin,true
+21320,Amethyst javelin(p),true
+21322,Amethyst javelin(p+),true
+21324,Amethyst javelin(p++),true
+21326,Amethyst arrow,true
+21332,Amethyst arrow(p),true
+21334,Amethyst arrow(p+),true
+21336,Amethyst arrow(p++),true
+21338,Amethyst bolt tips,true
+21347,Amethyst,true
+21350,Amethyst arrowtips,true
+21352,Amethyst javelin heads,true
+21387,Master scroll book (empty),true
+21477,Teak sapling,true
+21480,Mahogany sapling,true
+21483,Ultracompost,true
+21486,Teak seed,true
+21488,Mahogany seed,true
+21490,Seaweed spore,true
+21504,Giant seaweed,true
+21512,Bird house,true
+21515,Oak bird house,true
+21518,Willow bird house,true
+21521,Teak bird house,true
+21543,Calcite,true
+21545,Pyrophosphite,true
+21555,Numulite,true
+21622,Volcanic ash,true
+21626,Sulliuscep cap,true
+21634,Ancient wyvern shield,true
+21637,Wyvern visage,true
+21643,Granite boots,true
+21646,Granite longsword,true
+21649,Merfolk trident,true
+21652,Drift net,true
+21684,Uncooked mushroom pie,true
+21690,Mushroom pie,true
+21730,Black tourmaline core,true
+21733,Guardian boots,true
+21736,Granite gloves,true
+21739,Granite ring,true
+21742,Granite hammer,true
+21745,Jar of stone,true
+21754,Rock thrownhammer,true
+21802,Revenant cave teleport,true
+21804,Ancient crystal,true
+21807,Ancient emblem,true
+21810,Ancient totem,true
+21813,Ancient statuette,true
+21817,Bracelet of ethereum (uncharged),true
+21820,Revenant ether,true
+21838,Shaman mask,true
+21880,Wrath rune,true
+21882,Dragon armour set (lg),true
+21885,Dragon armour set (sk),true
+21892,Dragon platebody,true
+21895,Dragon kiteshield,true
+21902,Dragon crossbow,true
+21905,Dragon bolts,true
+21918,Dragon limbs,true
+21921,Dragon crossbow (u),true
+21924,Dragon bolts (p),true
+21926,Dragon bolts (p+),true
+21928,Dragon bolts (p++),true
+21930,Dragon bolts (unf),true
+21932,Opal dragon bolts (e),true
+21934,Jade dragon bolts (e),true
+21936,Pearl dragon bolts (e),true
+21938,Topaz dragon bolts (e),true
+21940,Sapphire dragon bolts (e),true
+21942,Emerald dragon bolts (e),true
+21944,Ruby dragon bolts (e),true
+21946,Diamond dragon bolts (e),true
+21948,Dragonstone dragon bolts (e),true
+21950,Onyx dragon bolts (e),true
+21952,Magic stock,true
+21955,Opal dragon bolts,true
+21957,Jade dragon bolts,true
+21959,Pearl dragon bolts,true
+21961,Topaz dragon bolts,true
+21963,Sapphire dragon bolts,true
+21965,Emerald dragon bolts,true
+21967,Ruby dragon bolts,true
+21969,Diamond dragon bolts,true
+21971,Dragonstone dragon bolts,true
+21973,Onyx dragon bolts,true
+21975,Crushed superior dragon bones,true
+21978,Super antifire potion(4),true
+21981,Super antifire potion(3),true
+21984,Super antifire potion(2),true
+21987,Super antifire potion(1),true
+21994,Super antifire mix(2),true
+21997,Super antifire mix(1),true
+22003,Dragonfire ward,true
+22006,Skeletal visage,true
+22097,Dragon metal shard,true
+22100,Dragon metal slice,true
+22103,Dragon metal lump,true
+22106,Jar of decay,true
+22111,Dragonbone necklace,true
+22118,Wrath talisman,true
+22121,Wrath tiara,true
+22124,Superior dragon bones,true
+22192,Maple bird house,true
+22195,Mahogany bird house,true
+22198,Yew bird house,true
+22201,Magic bird house,true
+22204,Redwood bird house,true
+22209,Extended super antifire(4),true
+22212,Extended super antifire(3),true
+22215,Extended super antifire(2),true
+22218,Extended super antifire(1),true
+22221,Extended super antifire mix(2),true
+22224,Extended super antifire mix(1),true
+22231,Dragon boots ornament kit,true
+22236,Dragon platebody ornament kit,true
+22239,Dragon kiteshield ornament kit,true
+22246,Anguish ornament kit,true
+22251,Oak shield,true
+22254,Willow shield,true
+22257,Maple shield,true
+22260,Yew shield,true
+22263,Magic shield,true
+22266,Redwood shield,true
+22269,Hard leather shield,true
+22272,Snakeskin shield,true
+22275,Green d'hide shield,true
+22278,Blue d'hide shield,true
+22281,Red d'hide shield,true
+22284,Black d'hide shield,true
+22290,Uncharged trident (e),true
+22294,Uncharged toxic trident (e),true
+22296,Staff of light,true
+22299,Ancient medallion,true
+22302,Ancient effigy,true
+22305,Ancient relic,true
+22324,Ghrazi rapier,true
+22326,Justiciar faceguard,true
+22327,Justiciar chestguard,true
+22328,Justiciar legguards,true
+22368,Bryophyta's staff (uncharged),true
+22372,Bryophyta's essence,true
+22430,Bloody bracer,true
+22438,Justiciar armour set,true
+22443,Cadantine blood potion (unf),true
+22446,Vial of blood,true
+22449,Battlemage potion(4),true
+22452,Battlemage potion(3),true
+22455,Battlemage potion(2),true
+22458,Battlemage potion(1),true
+22461,Bastion potion(4),true
+22464,Bastion potion(3),true
+22467,Bastion potion(2),true
+22470,Bastion potion(1),true
+22477,Avernic defender hilt,true
+22481,Sanguinesti staff (uncharged),true
+22486,Scythe of vitur (uncharged),true
+22542,Viggora's chainmace (u),true
+22547,Craw's bow (u),true
+22552,Thammaron's sceptre (u),true
+22557,Amulet of avarice,true
+22593,Te salt,true
+22595,Efh salt,true
+22597,Urt salt,true
+22599,Icy basalt,true
+22601,Stony basalt,true
+22603,Basalt,true
+22610,Vesta's spear,true
+22613,Vesta's longsword,true
+22622,Statius's warhammer,true
+22634,Morrigan's throwing axe,true
+22636,Morrigan's javelin,true
+22647,Zuriel's staff,true
+22731,Dragon hasta,true
+22734,Dragon hasta(p),true
+22737,Dragon hasta(p+),true
+22740,Dragon hasta(p++),true
+22780,Wyrm bones,true
+22783,Drake bones,true
+22786,Hydra bones,true
+22789,Uncooked dragonfruit pie,true
+22795,Dragonfruit pie,true
+22804,Dragon knife,true
+22806,Dragon knife(p),true
+22808,Dragon knife(p+),true
+22810,Dragon knife(p++),true
+22818,Fish chunks,true
+22826,Bluegill,true
+22829,Common tench,true
+22832,Mottled eel,true
+22835,Greater siren,true
+22856,Celastrus sapling,true
+22859,Redwood sapling,true
+22866,Dragonfruit sapling,true
+22869,Celastrus seed,true
+22871,Redwood tree seed,true
+22873,Potato cactus seed,true
+22877,Dragonfruit tree seed,true
+22879,Snape grass seed,true
+22887,White lily seed,true
+22929,Dragonfruit,true
+22932,White lily,true
+22935,Celastrus bark,true
+22949,Battlefront teleport,true
+22951,Boots of brimstone,true
+22954,Devout boots,true
+22957,Drake's claw,true
+22960,Drake's tooth,true
+22963,Broken dragon hasta,true
+22966,Hydra's claw,true
+22975,Brimstone ring,true
+22978,Dragon hunter lance,true
+22983,Hydra leather,true
+22988,Hydra tail,true
+22994,Bottomless compost bucket,true
+22999,Bottled dragonbreath (unpowered),true
+23002,Bottled dragonbreath,true
+23037,Boots of stone,true
+23047,Mystic hat (dusk),true
+23050,Mystic robe top (dusk),true
+23053,Mystic robe bottom (dusk),true
+23056,Mystic gloves (dusk),true
+23059,Mystic boots (dusk),true
+23064,Jar of chemicals,true
+23110,Mystic set (light),true
+23113,Mystic set (blue),true
+23116,Mystic set (dark),true
+23119,Mystic set (dusk),true
+23124,Gilded dragonhide set,true
+23185,Ring of 3rd age,true
+23188,Guthix d'hide shield,true
+23191,Saradomin d'hide shield,true
+23194,Zamorak d'hide shield,true
+23197,Ancient d'hide shield,true
+23200,Armadyl d'hide shield,true
+23203,Bandos d'hide shield,true
+23206,Dual sai,true
+23209,Rune platebody (h1),true
+23212,Rune platebody (h2),true
+23215,Rune platebody (h3),true
+23218,Rune platebody (h4),true
+23221,Rune platebody (h5),true
+23224,Thieving bag,true
+23227,Rune defender ornament kit,true
+23232,Tzhaar-ket-om ornament kit,true
+23237,Berserker necklace ornament kit,true
+23242,3rd age plateskirt,true
+23246,Fremennik kilt,true
+23249,Rangers' tights,true
+23252,Giant boot,true
+23255,Uri's hat,true
+23258,Gilded coif,true
+23261,Gilded d'hide vambraces,true
+23264,Gilded d'hide body,true
+23267,Gilded d'hide chaps,true
+23270,Adamant dragon mask,true
+23273,Rune dragon mask,true
+23276,Gilded pickaxe,true
+23279,Gilded axe,true
+23282,Gilded spade,true
+23285,Mole slippers,true
+23288,Frog slippers,true
+23291,Bear feet,true
+23294,Demon feet,true
+23297,Jester cape,true
+23300,Shoulder parrot,true
+23303,Monk's robe top (t),true
+23306,Monk's robe (t),true
+23309,Amulet of defence (t),true
+23312,Sandwich lady hat,true
+23315,Sandwich lady top,true
+23318,Sandwich lady bottom,true
+23321,Rune scimitar ornament kit (guthix),true
+23324,Rune scimitar ornament kit (saradomin),true
+23327,Rune scimitar ornament kit (zamorak),true
+23336,3rd age druidic robe top,true
+23339,3rd age druidic robe bottoms,true
+23342,3rd age druidic staff,true
+23345,3rd age druidic cloak,true
+23348,Tormented ornament kit,true
+23351,Cape of skulls,true
+23354,Amulet of power (t),true
+23357,Rain bow,true
+23360,Ham joint,true
+23363,Staff of bob the cat,true
+23366,Black platebody (h1),true
+23369,Black platebody (h2),true
+23372,Black platebody (h3),true
+23375,Black platebody (h4),true
+23378,Black platebody (h5),true
+23381,Leather body (g),true
+23384,Leather chaps (g),true
+23387,Watson teleport,true
+23389,Spiked manacles,true
+23392,Adamant platebody (h1),true
+23395,Adamant platebody (h2),true
+23398,Adamant platebody (h3),true
+23401,Adamant platebody (h4),true
+23404,Adamant platebody (h5),true
+23407,Wolf mask,true
+23410,Wolf cloak,true
+23413,Climbing boots (g),true
+23490,Larran's key,true
+23499,Grubby key,true
+23517,Giant egg sac(full),true
+23522,Mask of ranul,true
+23525,Jar of eyes,true
+23528,Sarachnis cudgel,true
+23667,Dragonstone armour set,true
+23685,Divine super combat potion(4),true
+23688,Divine super combat potion(3),true
+23691,Divine super combat potion(2),true
+23694,Divine super combat potion(1),true
+23697,Divine super attack potion(4),true
+23700,Divine super attack potion(3),true
+23703,Divine super attack potion(2),true
+23706,Divine super attack potion(1),true
+23709,Divine super strength potion(4),true
+23712,Divine super strength potion(3),true
+23715,Divine super strength potion(2),true
+23718,Divine super strength potion(1),true
+23721,Divine super defence potion(4),true
+23724,Divine super defence potion(3),true
+23727,Divine super defence potion(2),true
+23730,Divine super defence potion(1),true
+23733,Divine ranging potion(4),true
+23736,Divine ranging potion(3),true
+23739,Divine ranging potion(2),true
+23742,Divine ranging potion(1),true
+23745,Divine magic potion(4),true
+23748,Divine magic potion(3),true
+23751,Divine magic potion(2),true
+23754,Divine magic potion(1),true
+23908,Zalcano shard,true
+23943,Elven signet,true
+23948,Elven dawn,true
+23953,Crystal tool seed,true
+23956,Crystal armour seed,true
+23959,Enhanced crystal teleport seed,true
+23997,Blade of saeldor (inactive),true
+24000,Crystal grail,true
+24003,Elven boots,true
+24006,Elven gloves,true
+24009,Elven top,true
+24012,Elven skirt,true
+24015,Elven top,true
+24018,Elven skirt,true
+24021,Elven top,true
+24024,Elven legwear,true
+24027,Elven top,true
+24034,Dragonstone full helm,true
+24037,Dragonstone platebody,true
+24040,Dragonstone platelegs,true
+24043,Dragonstone boots,true
+24046,Dragonstone gauntlets,true
+24144,Staff of balance,true
+24187,Trouver parchment,true
+24219,Swift blade,true
+24229,Ornate maul handle,true
+24251,Wilderness crabs teleport,true
+24268,Basilisk jaw,true
+24288,Dagon'hai hat,true
+24291,Dagon'hai robe top,true
+24294,Dagon'hai robe bottom,true
+24333,Dagon'hai robes set,true
+24336,Target teleport,true
+24387,Twisted hat (t3),true
+24389,Twisted coat (t3),true
+24391,Twisted trousers (t3),true
+24393,Twisted boots (t3),true
+24395,Twisted cane,true
+24397,Twisted hat (t2),true
+24399,Twisted coat (t2),true
+24401,Twisted trousers (t2),true
+24403,Twisted boots (t2),true
+24405,Twisted hat (t1),true
+24407,Twisted coat (t1),true
+24409,Twisted trousers (t1),true
+24411,Twisted boots (t1),true
+24413,Twisted banner,true
+24417,Inquisitor's mace,true
+24419,Inquisitor's great helm,true
+24420,Inquisitor's hauberk,true
+24421,Inquisitor's plateskirt,true
+24422,Nightmare staff,true
+24460,Twisted teleport scroll,true
+24463,Twisted blueprints,true
+24466,Twisted horns,true
+24469,Twisted relic hunter (t1) armour set,true
+24472,Twisted relic hunter (t2) armour set,true
+24475,Twisted relic hunter (t3) armour set,true
+24488,Inquisitor's armour set,true
+24495,Jar of dreams,true
+24511,Harmonised orb,true
+24514,Volatile orb,true
+24517,Eldritch orb,true
+24585,Looting bag note,true
+24587,Rune pouch note,true
+24589,Blighted manta ray,true
+24592,Blighted anglerfish,true
+24595,Blighted karambwan,true
+24598,Blighted super restore(4),true
+24607,Blighted ancient ice sack,true
+24613,Blighted entangle sack,true
+24615,Blighted teleport spell sack,true
+24621,Blighted vengeance sack,true
+24623,Divine battlemage potion(4),true
+24626,Divine battlemage potion(3),true
+24629,Divine battlemage potion(2),true
+24632,Divine battlemage potion(1),true
+24635,Divine bastion potion(4),true
+24638,Divine bastion potion(3),true
+24641,Divine bastion potion(2),true
+24644,Divine bastion potion(1),true
+24740,Strange old lockpick (full),true
+24774,Blood pint,true
+24777,Blood shard,true
+24782,Raw mystery meat,true
+24785,Cooked mystery meat,true
+24844,Ring of endurance (uncharged),true
+24949,Moonclan teleport,true
+24951,Ourania teleport,true
+24953,Waterbirth teleport,true
+24955,Barbarian teleport,true
+24957,Khazard teleport,true
+24959,Fishing guild teleport,true
+24961,Catherby teleport,true
+24963,Ice plateau teleport,true
+25001,Trailblazer hood (t3),true
+25004,Trailblazer top (t3),true
+25007,Trailblazer trousers (t3),true
+25010,Trailblazer boots (t3),true
+25013,Trailblazer cane,true
+25016,Trailblazer hood (t2),true
+25019,Trailblazer top (t2),true
+25022,Trailblazer trousers (t2),true
+25025,Trailblazer boots (t2),true
+25028,Trailblazer hood (t1),true
+25031,Trailblazer top (t1),true
+25034,Trailblazer trousers (t1),true
+25037,Trailblazer boots (t1),true
+25056,Trailblazer banner,true
+25087,Trailblazer teleport scroll,true
+25090,Trailblazer tool ornament kit,true
+25093,Trailblazer globe,true
+25096,Trailblazer rug,true
+25099,Trailblazer graceful ornament kit,true
+25139,Bone fragments,true
+25380,Trailblazer relic hunter (t1) armour set,true
+25383,Trailblazer relic hunter (t2) armour set,true
+25386,Trailblazer relic hunter (t3) armour set,true
+25389,Swampbark body,true
+25392,Swampbark gauntlets,true
+25395,Swampbark boots,true
+25398,Swampbark helm,true
+25401,Swampbark legs,true
+25404,Bloodbark body,true
+25407,Bloodbark gauntlets,true
+25410,Bloodbark boots,true
+25413,Bloodbark helm,true
+25416,Bloodbark legs,true
+25419,Urium remains,true
+25442,Bronze locks,true
+25445,Steel locks,true
+25448,Black locks,true
+25451,Silver locks,true
+25454,Gold locks,true
+25478,Runescroll of swampbark,true
+25481,Runescroll of bloodbark,true
+25521,Jar of spirits,true
+25524,Jar of smoke,true
+25576,Tome of water (empty),true
+25578,Soaked page,true
+25766,Fiendish ashes,true
+25769,Vile ashes,true
+25772,Malicious ashes,true
+25775,Abyssal ashes,true
+25778,Infernal ashes,true
+25826,Lizardkicker,true
+25833,Raw boar meat,true
+25849,Amethyst dart,true
+25851,Amethyst dart(p),true
+25853,Amethyst dart tip,true
+25855,Amethyst dart(p+),true
+25857,Amethyst dart(p++),true
+25859,Enhanced crystal weapon seed,true
+25862,Bow of faerdhinen (inactive),true
+25975,Lightbearer,true
+25985,Elidinis' ward,true
+25991,Sigil of resilience,true
+25994,Sigil of consistency,true
+25997,Sigil of the formidable fighter,true
+26000,Sigil of the rigorous ranger,true
+26003,Sigil of the meticulous mage,true
+26006,Sigil of fortification,true
+26009,Sigil of barrows,true
+26012,Sigil of deft strikes,true
+26015,Sigil of freedom,true
+26018,Sigil of enhanced harvest,true
+26021,Sigil of storage,true
+26024,Sigil of the smith,true
+26027,Sigil of the alchemist,true
+26030,Sigil of the fletcher,true
+26033,Sigil of the chef,true
+26036,Sigil of the craftsman,true
+26039,Sigil of the abyss,true
+26042,Sigil of stamina,true
+26045,Sigil of the potion master,true
+26048,Sigil of the eternal jeweller,true
+26051,Sigil of the treasure hunter,true
+26054,Sigil of mobility,true
+26057,Sigil of exaggeration,true
+26060,Sigil of specialised strikes,true
+26063,Sigil of the porcupine,true
+26066,Sigil of binding,true
+26069,Sigil of escaping,true
+26072,Sigil of the ruthless ranger,true
+26075,Sigil of the feral fighter,true
+26078,Sigil of the menacing mage,true
+26081,Sigil of prosperity,true
+26084,Sigil of the dwarves,true
+26087,Sigil of the elves,true
+26090,Sigil of the barbarians,true
+26093,Sigil of the gnomes,true
+26096,Sigil of nature,true
+26099,Sigil of devotion,true
+26102,Sigil of the forager,true
+26105,Sigil of garments,true
+26108,Sigil of slaughter,true
+26111,Sigil of the fortune farmer,true
+26114,Sigil of versatility,true
+26117,Sigil of the serpent,true
+26120,Sigil of supreme stamina,true
+26123,Sigil of preservation,true
+26126,Sigil of finality,true
+26129,Sigil of pious protection,true
+26132,Sigil of aggression,true
+26135,Sigil of rampage,true
+26138,Sigil of the skiller,true
+26141,Sigil of remote storage,true
+26144,Sigil of last recall,true
+26147,Sigil of the guardian angel,true
+26219,Osmumten's fang,true
+26221,Ancient ceremonial top,true
+26223,Ancient ceremonial legs,true
+26225,Ancient ceremonial mask,true
+26227,Ancient ceremonial gloves,true
+26229,Ancient ceremonial boots,true
+26231,Nihil shard,true
+26233,Ancient godsword,true
+26235,Zaryte vambraces,true
+26241,Virtus mask,true
+26243,Virtus robe top,true
+26245,Virtus robe bottom,true
+26266,Condensed gold,true
+26340,Ancient brew(4),true
+26342,Ancient brew(3),true
+26344,Ancient brew(2),true
+26346,Ancient brew(1),true
+26350,Ancient mix(2),true
+26353,Ancient mix(1),true
+26368,Nihil dust,true
+26370,Ancient hilt,true
+26372,Nihil horn,true
+26374,Zaryte crossbow,true
+26376,Torva full helm (damaged),true
+26378,Torva platebody (damaged),true
+26380,Torva platelegs (damaged),true
+26382,Torva full helm,true
+26384,Torva platebody,true
+26386,Torva platelegs,true
+26390,Blood essence,true
+26394,Bandosian components,true
+26421,Shattered relics variety ornament kit,true
+26424,Shattered banner,true
+26427,Shattered hood (t1),true
+26430,Shattered top (t1),true
+26433,Shattered trousers (t1),true
+26436,Shattered boots (t1),true
+26439,Shattered hood (t2),true
+26442,Shattered top (t2),true
+26445,Shattered trousers (t2),true
+26448,Shattered boots (t2),true
+26451,Shattered hood (t3),true
+26454,Shattered top (t3),true
+26457,Shattered trousers (t3),true
+26460,Shattered boots (t3),true
+26479,Shattered relics void ornament kit,true
+26500,Shattered teleport scroll,true
+26517,Shattered cane,true
+26528,Shattered cannon ornament kit,true
+26541,Shattered relics mystic ornament kit,true
+26554,Shattered relic hunter (t1) armour set,true
+26557,Shattered relic hunter (t2) armour set,true
+26560,Shattered relic hunter (t3) armour set,true
+26602,Osman's report,true
+26788,Gold tiara,true
+26798,Catalytic talisman,true
+26801,Catalytic tiara,true
+26804,Elemental tiara,true
+26815,Ring of the elements,true
+26945,Pharaoh's sceptre (uncharged),true
+26997,Ensouled hellhound head,true
+27014,Kovac's grog,true
+27202,Menaphite remedy(4),true
+27205,Menaphite remedy(3),true
+27208,Menaphite remedy(2),true
+27211,Menaphite remedy(1),true
+27226,Masori mask,true
+27229,Masori body,true
+27232,Masori chaps,true
+27235,Masori mask (f),true
+27238,Masori body (f),true
+27241,Masori chaps (f),true
+27269,Armadylean plate,true
+27272,Lily of the sands,true
+27277,Tumeken's shadow (uncharged),true
+27355,Masori armour set (f),true
+27612,Venator bow (uncharged),true
+27614,Venator shard,true
+27616,Ancient essence,true
+27629,Forgotten brew(4),true
+27632,Forgotten brew(3),true
+27635,Forgotten brew(2),true
+27638,Forgotten brew(1),true
+27641,Saturated heart,true
+27652,Webweaver bow (u),true
+27657,Ursine chainmace (u),true
+27662,Accursed sceptre (u),true
+27667,Claws of callisto,true
+27670,Fangs of venenatis,true
+27673,Skull of vet'ion,true
+27676,Accursed sceptre (au),true
+27681,Voidwaker hilt,true
+27684,Voidwaker blade,true
+27687,Voidwaker gem,true
+27690,Voidwaker,true
+27785,Thammaron's sceptre (au),true
+27897,Scaly blue dragonhide,true
+28146,Log brace,true
+28149,Sturdy harness,true
+28152,Nature offerings,true
+28154,Ritual mulch,true
+28157,Forester's ration,true
+28159,Secateurs blade,true
+28161,Secateurs attachment,true
+28163,Clothes pouch,true
+28166,Clothes pouch blueprint,true
+28177,Felling axe handle,true
+28193,Unfired cup,true
+28196,Bronze felling axe,true
+28199,Iron felling axe,true
+28202,Steel felling axe,true
+28205,Black felling axe,true
+28208,Mithril felling axe,true
+28211,Adamant felling axe,true
+28214,Rune felling axe,true
+28217,Dragon felling axe,true
+28226,3rd age felling axe,true
+28276,Chromium ingot,true
+28295,Berserker icon,true
+28298,Archer icon,true
+28301,Warrior icon,true
+28304,Seers icon,true
+28307,Ultor ring,true
+28310,Venator ring,true
+28313,Magus ring,true
+28316,Bellator ring,true
+28334,Awakener's orb,true
+28338,Soulreaper axe,true
+28478,Sigil of sustenance,true
+28481,Sigil of hoarding,true
+28484,Sigil of the alchemaniac,true
+28487,Sigil of the hunter,true
+28490,Sigil of resistance,true
+28493,Sigil of agile fortune,true
+28496,Sigil of the food master,true
+28499,Sigil of the well-fed,true
+28502,Sigil of the infernal chef,true
+28505,Sigil of the infernal smith,true
+28508,Sigil of the lightbearer,true
+28511,Sigil of the bloodhound,true
+28514,Sigil of precision,true
+28517,Sigil of the augmented thrall,true
+28520,Sigil of faith,true
+28523,Sigil of titanium,true
+28526,Sigil of the ninja,true
+28529,Sigil of woodcraft,true
+28531,Corrupted voidwaker,true
+28534,Corrupted dragon claws,true
+28537,Corrupted armadyl godsword,true
+28540,Corrupted twisted bow,true
+28545,Corrupted scythe of vitur (uncharged),true
+28549,Corrupted tumeken's shadow (uncharged),true
+28561,Trinket of vengeance,true
+28564,Trinket of fairies,true
+28567,Trinket of advanced weaponry,true
+28570,Trinket of undead,true
+28583,Warped sceptre (uncharged),true
+28628,Sawmill voucher,true
+28684,Trailblazer reloaded bulwark ornament kit,true
+28690,Trailblazer reloaded blowpipe ornament kit,true
+28693,Trailblazer reloaded alchemy scroll,true
+28696,Trailblazer reloaded vengeance scroll,true
+28699,Trailblazer reloaded death scroll,true
+28702,Trailblazer reloaded banner,true
+28705,Trailblazer reloaded home teleport scroll,true
+28708,Trailblazer reloaded rejuvenation pool scroll,true
+28712,Trailblazer reloaded headband (t1),true
+28715,Trailblazer reloaded top (t1),true
+28718,Trailblazer reloaded trousers (t1),true
+28721,Trailblazer reloaded boots (t1),true
+28724,Trailblazer reloaded headband (t2),true
+28727,Trailblazer reloaded top (t2),true
+28730,Trailblazer reloaded trousers (t2),true
+28733,Trailblazer reloaded boots (t2),true
+28736,Trailblazer reloaded headband (t3),true
+28739,Trailblazer reloaded top (t3),true
+28742,Trailblazer reloaded trousers (t3),true
+28745,Trailblazer reloaded boots (t3),true
+28748,Trailblazer reloaded torch,true
+28777,Trailblazer reloaded relic hunter (t1) armour set,true
+28780,Trailblazer reloaded relic hunter (t2) armour set,true
+28783,Trailblazer reloaded relic hunter (t3) armour set,true
+28790,Kourend castle teleport,true
+28810,Zombie axe,true
+28813,Broken zombie axe,true
+28824,Civitas illa fortis teleport,true
+28831,Immature tecu salamander,true
+28834,Tecu salamander,true
+28837,Irit tar,true
+28869,Hunters' sunlight crossbow,true
+28872,Sunlight antler bolts,true
+28878,Moonlight antler bolts,true
+28890,Sunlight moth,true
+28893,Moonlight moth,true
+28896,Rum,true
+28899,Wyrmling bones,true
+28919,Tonalztics of ralos (uncharged),true
+28924,Sunfire splinters,true
+28929,Sunfire rune,true
+28931,Searing page,true
+28933,Sunfire fanatic helm,true
+28936,Sunfire fanatic cuirass,true
+28939,Sunfire fanatic chausses,true
+28942,Echo crystal,true
+28988,Blue moon spear,true
+28991,Atlatl dart,true
+28997,Dual macuahuitl,true
+29000,Eclipse atlatl,true
+29004,Eclipse moon chestplate,true
+29007,Eclipse moon tassets,true
+29010,Eclipse moon helm,true
+29013,Blue moon chestplate,true
+29016,Blue moon tassets,true
+29019,Blue moon helm,true
+29022,Blood moon chestplate,true
+29025,Blood moon tassets,true
+29028,Blood moon helm,true
+29049,Eclipse moon chestplate (broken),true
+29052,Eclipse moon tassets (broken),true
+29055,Eclipse moon helm (broken),true
+29058,Blue moon chestplate (broken),true
+29061,Blue moon tassets (broken),true
+29064,Blue moon helm (broken),true
+29067,Blood moon chestplate (broken),true
+29070,Blood moon tassets (broken),true
+29073,Blood moon helm (broken),true
+29084,Sulphur blades,true
+29090,Calcified moth,true
+29101,Raw barb-tailed kebbit,true
+29104,Raw wild kebbit,true
+29107,Raw dashing kebbit,true
+29110,Raw pyre fox,true
+29113,Raw moonlight antelope,true
+29116,Raw sunlight antelope,true
+29119,Raw graahk,true
+29122,Raw larupia,true
+29125,Raw kyatt,true
+29128,Cooked wild kebbit,true
+29131,Cooked barb-tailed kebbit,true
+29134,Cooked dashing kebbit,true
+29137,Cooked pyre fox,true
+29140,Cooked sunlight antelope,true
+29143,Cooked moonlight antelope,true
+29146,Cooked larupia,true
+29149,Cooked graahk,true
+29152,Cooked kyatt,true
+29163,Fox fur,true
+29166,Jerboa tail,true
+29168,Sunlight antelope antler,true
+29171,Moonlight antelope antler,true
+29174,Moonlight antelope fur,true
+29177,Sunlight antelope fur,true
+29180,Sapphire glacialis mix (2),true
+29183,Snowy knight mix (2),true
+29186,Ruby harvest mix (2),true
+29189,Black warlock mix (2),true
+29192,Sunlight moth mix (2),true
+29195,Moonlight moth mix (2),true
+29198,Sapphire glacialis mix (1),true
+29201,Snowy knight mix (1),true
+29204,Ruby harvest mix (1),true
+29207,Black warlock mix (1),true
+29210,Sunlight moth mix (1),true
+29213,Moonlight moth mix (1),true
+29218,Jaguar fur,true
+29253,Enhanced quetzal whistle blueprint,true
+29256,Perfected quetzal whistle blueprint,true
+29277,Trapper's tipple,true
+29280,Mixed hide top,true
+29283,Mixed hide legs,true
+29286,Mixed hide boots,true
+29289,Mixed hide cape,true
+29292,Mixed hide base,true
+29305,Hunter's spear,true
+29307,Quetzal feed,true
+29311,Hunter spear tips,true
+29409,Sunbeam ale,true
+29412,Steamforge brew,true
+29415,Eclipse red,true
+29418,Moon-lite,true
+29421,Sun-shine,true
+29424,Sunfire fanatic armour set,true
+29449,Zombie pirate key,true
+29455,Teleport anchoring scroll,true
+29458,Adamant seeds,true
+29486,Cursed amulet of magic,true
+29574,Burning claw,true
+29577,Burning claws,true
+29580,Tormented synapse,true
+29599,Corrupted dark bow,true
+29602,Corrupted volatile nightmare staff,true
+29619,Armageddon rug,true
+29622,Armageddon teleport scroll,true
+29625,Armageddon weapon scroll,true
+29628,Armageddon cape fabric,true
+29631,Blighted overload (4),true
+29634,Blighted overload (3),true
+29637,Blighted overload (2),true
+29640,Blighted overload (1),true
+29643,Chitin,true
+29649,Sigil of meticulousness,true
+29652,Sigil of revoked limitation,true
+29655,Sigil of rampart,true
+29658,Sigil of deception,true
+29661,Sigil of lithe,true
+29664,Sigil of adroit,true
+29667,Sigil of onslaught,true
+29670,Sigil of restoration,true
+29673,Sigil of swashbuckler,true
+29676,Sigil of gunslinger,true
+29679,Sigil of arcane swiftness,true
+29684,Guthixian temple teleport,true
+29782,Spider cave teleport,true
+29784,Araxyte venom sack,true
+29796,Noxious halberd,true
+29801,Amulet of rancour,true
+29806,Aranea boots,true
+29824,Extended anti-venom+(4),true
+29827,Extended anti-venom+(3),true
+29830,Extended anti-venom+(2),true
+29833,Extended anti-venom+(1),true
+29889,Glacial temotli,true
+29895,Frozen tear,true
+29900,Varlamorian kebab,true
+29944,Blackbird red,true
+29947,Chilhuac red,true
+29952,Ixcoztic white,true
+29955,Metztonalli white,true
+29958,Tonameyo white,true
+29963,Chichilihui rosé,true
+29966,Imperial rosé,true
+29993,Aldarium,true
+30002,Chugging barrel (disassembled),true
+30040,Colossal wyrm teleport scroll,true
+30066,Tome of earth (empty),true
+30068,Soiled page,true
+30070,Dragon hunter wand,true
+30073,Hueycoatl hide coif,true
+30076,Hueycoatl hide body,true
+30079,Hueycoatl hide chaps,true
+30082,Hueycoatl hide vambraces,true
+30085,Hueycoatl hide,true
+30088,Huasca seed,true
+30094,Grimy huasca,true
+30097,Huasca,true
+30100,Huasca potion (unf),true
+30125,Prayer regeneration potion(4),true
+30128,Prayer regeneration potion(3),true
+30131,Prayer regeneration potion(2),true
+30134,Prayer regeneration potion(1),true
+30137,Goading potion(4),true
+30140,Goading potion(3),true
+30143,Goading potion(2),true
+30146,Goading potion(1),true
+30321,Zombie helmet,true
+30324,Broken zombie helmet,true
+30328,Dust,true
+30331,Raging echoes relic hunter (t1) armour set,true
+30334,Raging echoes relic hunter (t2) armour set,true
+30337,Raging echoes relic hunter (t3) armour set,true
+30404,Raging echoes hat (t1),true
+30406,Raging echoes top (t1),true
+30408,Raging echoes robeskirt (t1),true
+30410,Raging echoes boots (t1),true
+30412,Raging echoes hat (t2),true
+30414,Raging echoes top (t2),true
+30416,Raging echoes robeskirt (t2),true
+30418,Raging echoes boots (t2),true
+30420,Raging echoes hat (t3),true
+30422,Raging echoes top (t3),true
+30424,Raging echoes robeskirt (t3),true
+30426,Raging echoes boots (t3),true
+30428,Raging echoes cane,true
+30430,Raging echoes banner,true
+30432,Echo venator bow ornament kit,true
+30443,Echo virtus ornament kit,true
+30451,Echo ahrim's ornament kit,true
+30453,Echo home teleport scroll,true
+30455,Raging echoes death scroll,true
+30457,Raging echoes npc contact scroll,true
+30459,Raging echoes nexus scroll,true
+30461,Raging echoes portal scroll,true
+30554,Raging echoes rug,true
+30557,Raging echoes curtains,true
+30560,Raging echoes scrying pool scroll,true
+30563,Raging echoes spirit tree scroll,true
+30576,Bounty supply crate,true
+30616,Bounty supply crate (manta ray),true
+30619,Bounty supply crate (anglerfish),true

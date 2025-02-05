@@ -1,0 +1,18 @@
+process_items.py can be used to make filter lists from https://prices.runescape.wiki/osrs
+
+Start by filtering items as you see fit on the price.runescape website. Set the
+interface to show 250 items per page. Save the webpage (ctrl+s) and navigate
+to that directory. There should be a subfolder container the icons of all the
+items from the page you downloaded and therefore your filtered list.
+
+Change the name of the folder with the icons to `items` and run process_items.py
+in the parent directory. Make sure `complete list.csv` is in the same folder as the
+python script. This should make a csv with all the items you want as a whitelist.
+
+The whitelist is made by comparing the list of icons to `complete list.csv`. If there
+are mismatches it will tell you and make a second file containing the mismatches
+
+This method is using icons from the website is kind of jank. If somebody has a
+better idea I'd appreaciate that. Maybe something with the prices api. idk.
+Discord: .tekis
+RSN: buttpee
