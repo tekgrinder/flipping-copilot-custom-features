@@ -230,7 +230,7 @@ public class PreferencesPanel extends JPanel {
     }
 
     private void importFilterFile(String fileName) {
-        if (fileName == null || fileName.equals("Select a filter file...")) {
+        if (fileName == null || fileName.equals("No filter selected")) {
             return;
         }
 
@@ -470,7 +470,7 @@ public class PreferencesPanel extends JPanel {
                 }
                 
                 // Update current filter file and refresh UI
-                currentFilterFile = fileName;
+                currentFilterFile = fileChooser.getSelectedFile().getName();
                 updateFilterFileList();
                 
                 JOptionPane.showMessageDialog(this,
