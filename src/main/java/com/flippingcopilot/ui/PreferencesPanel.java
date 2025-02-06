@@ -219,7 +219,11 @@ public class PreferencesPanel extends JPanel {
                         if (Files.exists(directory) && Files.isDirectory(directory)) {
                             Files.list(directory)
                                 .filter(path -> path.toString().toLowerCase().endsWith(".csv"))
-                                .map(path -> path.getFileName().toString())
+                                .map(path -> {
+                                    String fileName = path.getFileName().toString();
+                                    // Remove .csv extension for display
+                                    return fileName.substring(0, fileName.length() - 4);
+                                })
                                 .sorted()
                                 .forEach(filterFileModel::addElement);
                         }
@@ -259,7 +263,9 @@ public class PreferencesPanel extends JPanel {
             return;
         }
 
-        File file = new File(config.filterDirectory(), fileName);
+        // Add .csv extension if not present
+        String fullFileName = fileName.toLowerCase().endsWith(".csv") ? fileName : fileName + ".csv";
+        File file = new File(config.filterDirectory(), fullFileName);
         if (!file.exists()) {
             if (showPopup) {
                 JOptionPane.showMessageDialog(this,
@@ -316,8 +322,8 @@ public class PreferencesPanel extends JPanel {
                 }
             }
             
-            // Update current filter file and refresh UI
-            currentFilterFile = file.getName();
+            // Update current filter file and refresh UI (without extension)
+            currentFilterFile = file.getName().substring(0, file.getName().length() - 4);
             updateFilterFileList();
             
             if (showPopup) {
