@@ -140,13 +140,21 @@ public class PreferencesPanel extends JPanel {
         dropdownPanel.setOpaque(true);
         dropdownPanel.setBackground(ColorScheme.DARKER_GRAY_COLOR);
         
-        updateFilterFileList();
-        filterFileComboBox.setPreferredSize(new Dimension(filterFileComboBox.getPreferredSize().width, 25));
+        filterFileComboBox.setPreferredSize(new Dimension(300, 25));
         filterFileComboBox.addActionListener(e -> {
+            // Ignore events during model updates
+            if (filterFileComboBox.getSelectedItem() == null) {
+                return;
+            }
             String selectedFile = (String) filterFileComboBox.getSelectedItem();
-            importFilterFile(selectedFile);
-            filterFileComboBox.setSelectedIndex(0); // Reset selection
+            if (!selectedFile.equals("Select a filter file...")) {
+                importFilterFile(selectedFile);
+                SwingUtilities.invokeLater(() -> {
+                    filterFileModel.setSelectedItem("Select a filter file...");
+                });
+            }
         });
+        updateFilterFileList();
         dropdownPanel.add(filterFileComboBox, BorderLayout.CENTER);
         contentPanel.add(dropdownPanel);
         contentPanel.add(Box.createRigidArea(new Dimension(0, 15)));
@@ -193,21 +201,34 @@ public class PreferencesPanel extends JPanel {
     }
 
     private void updateFilterFileList() {
-        filterFileModel.removeAllElements();
-        filterFileModel.addElement("Select a filter file...");
-        
-        try {
-            Path directory = Paths.get(config.filterDirectory());
-            if (Files.exists(directory) && Files.isDirectory(directory)) {
-                Files.list(directory)
-                    .filter(path -> path.toString().toLowerCase().endsWith(".csv"))
-                    .map(path -> path.getFileName().toString())
-                    .sorted()
-                    .forEach(filterFileModel::addElement);
+        SwingUtilities.invokeLater(() -> {
+            String currentSelection = (String) filterFileComboBox.getSelectedItem();
+            filterFileModel.removeAllElements();
+            filterFileModel.addElement("Select a filter file...");
+            
+            try {
+                String dirPath = config.filterDirectory();
+                if (dirPath != null && !dirPath.isEmpty()) {
+                    Path directory = Paths.get(dirPath);
+                    if (Files.exists(directory) && Files.isDirectory(directory)) {
+                        Files.list(directory)
+                            .filter(path -> path.toString().toLowerCase().endsWith(".csv"))
+                            .map(path -> path.getFileName().toString())
+                            .sorted()
+                            .forEach(filterFileModel::addElement);
+                    }
+                }
+            } catch (IOException e) {
+                log.error("Error scanning filter directory", e);
             }
-        } catch (IOException e) {
-            log.error("Error scanning filter directory", e);
-        }
+
+            // Restore selection or default to first item
+            if (currentSelection != null && filterFileModel.getIndexOf(currentSelection) >= 0) {
+                filterFileModel.setSelectedItem(currentSelection);
+            } else {
+                filterFileModel.setSelectedItem("Select a filter file...");
+            }
+        });
     }
 
     private void importFilterFile(String fileName) {
