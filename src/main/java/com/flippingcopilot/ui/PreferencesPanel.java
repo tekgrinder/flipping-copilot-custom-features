@@ -464,6 +464,10 @@ public class PreferencesPanel extends JPanel {
         }
     }
 
+    public void refresh() {
+        updateFilterFileList();
+    }
+
     private void invertFilteredList() {
         if (osrsLoginManager.getPlayerDisplayName() == null || client.getGameState() != GameState.LOGGED_IN) {
             JOptionPane.showMessageDialog(this,
