@@ -18,6 +18,8 @@ import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.io.*;
+import java.nio.file.*;
+import java.util.stream.Collectors;
 import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -46,6 +48,8 @@ public class PreferencesPanel extends JPanel {
     private final JPanel buttonPanel;
     private final JLabel messageText = new JLabel();
     private final FlippingCopilotConfig config;
+    private final JComboBox<String> filterFileComboBox;
+    private final DefaultComboBoxModel<String> filterFileModel;
 
     @Inject
     public PreferencesPanel(
@@ -66,6 +70,9 @@ public class PreferencesPanel extends JPanel {
         this.preferencesManager = preferencesManager;
         this.blacklistDropdownPanel = blocklistDropdownPanel;
         this.config = config;
+        this.filterFileModel = new DefaultComboBoxModel<>();
+        this.filterFileComboBox = new JComboBox<>(filterFileModel);
+        
         setLayout(new BorderLayout());
         setBackground(ColorScheme.DARKER_GRAY_COLOR);
         setBounds(0, 0, 300, 400);
@@ -93,6 +100,7 @@ public class PreferencesPanel extends JPanel {
         preferencesTitle.setHorizontalAlignment(SwingConstants.CENTER);
         contentPanel.add(preferencesTitle);
         contentPanel.add(Box.createRigidArea(new Dimension(0, 20)));
+        
         sellOnlyModeToggleButton = new PreferencesToggleButton();
         sellOnlyButton = new JPanel();
         sellOnlyButton.setLayout(new BorderLayout());
@@ -124,6 +132,23 @@ public class PreferencesPanel extends JPanel {
         contentPanel.add(Box.createRigidArea(new Dimension(0, 15)));
 
         contentPanel.add(this.blacklistDropdownPanel);
+        contentPanel.add(Box.createRigidArea(new Dimension(0, 5)));
+
+        // Add filter file dropdown
+        JPanel dropdownPanel = new JPanel(new BorderLayout(5, 0));
+        dropdownPanel.setBorder(BorderFactory.createEmptyBorder(5, 0, 5, 0));
+        dropdownPanel.setOpaque(true);
+        dropdownPanel.setBackground(ColorScheme.DARKER_GRAY_COLOR);
+        
+        updateFilterFileList();
+        filterFileComboBox.setPreferredSize(new Dimension(filterFileComboBox.getPreferredSize().width, 25));
+        filterFileComboBox.addActionListener(e -> {
+            String selectedFile = (String) filterFileComboBox.getSelectedItem();
+            importFilterFile(selectedFile);
+            filterFileComboBox.setSelectedIndex(0); // Reset selection
+        });
+        dropdownPanel.add(filterFileComboBox, BorderLayout.CENTER);
+        contentPanel.add(dropdownPanel);
         contentPanel.add(Box.createRigidArea(new Dimension(0, 15)));
         
         // Add export/import buttons panel
@@ -143,10 +168,16 @@ public class PreferencesPanel extends JPanel {
 
         // Create export/import buttons
         JButton exportButton = new JButton("Export List");
-        exportButton.addActionListener(e -> exportPreferences());
+        exportButton.addActionListener(e -> {
+            exportPreferences();
+            updateFilterFileList(); // Update dropdown after export
+        });
         
         JButton importButton = new JButton("Import List");
-        importButton.addActionListener(e -> importPreferences());
+        importButton.addActionListener(e -> {
+            importPreferences();
+            updateFilterFileList(); // Update dropdown after import
+        });
 
         buttonPanel.add(exportButton);
         buttonPanel.add(Box.createRigidArea(new Dimension(10, 0)));
@@ -159,6 +190,101 @@ public class PreferencesPanel extends JPanel {
         messageText.setVisible(false);
         messageText.setAlignmentX(Component.CENTER_ALIGNMENT);
         messageText.setHorizontalAlignment(SwingConstants.CENTER);
+    }
+
+    private void updateFilterFileList() {
+        filterFileModel.removeAllElements();
+        filterFileModel.addElement("Select a filter file...");
+        
+        try {
+            Path directory = Paths.get(config.filterDirectory());
+            if (Files.exists(directory) && Files.isDirectory(directory)) {
+                Files.list(directory)
+                    .filter(path -> path.toString().toLowerCase().endsWith(".csv"))
+                    .map(path -> path.getFileName().toString())
+                    .sorted()
+                    .forEach(filterFileModel::addElement);
+            }
+        } catch (IOException e) {
+            log.error("Error scanning filter directory", e);
+        }
+    }
+
+    private void importFilterFile(String fileName) {
+        if (fileName == null || fileName.equals("Select a filter file...")) {
+            return;
+        }
+
+        if (osrsLoginManager.getPlayerDisplayName() == null || client.getGameState() != GameState.LOGGED_IN) {
+            JOptionPane.showMessageDialog(this,
+                "You must be logged in to import preferences.",
+                "Import Error",
+                JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        File file = new File(config.filterDirectory(), fileName);
+        if (!file.exists()) {
+            JOptionPane.showMessageDialog(this,
+                "Filter file not found: " + fileName,
+                "Import Error",
+                JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8))) {
+            // Read mode from header
+            String modeHeader = reader.readLine();
+            if (!modeHeader.startsWith("# Mode:")) {
+                throw new IOException("Invalid file format: missing mode header");
+            }
+            
+            boolean isWhitelistMode = modeHeader.toLowerCase().contains("whitelist");
+            if (isWhitelistMode != preferencesManager.isWhitelistMode()) {
+                int choice = JOptionPane.showConfirmDialog(this,
+                    "The imported list uses a different mode (whitelist/blacklist) than your current settings.\n" +
+                    "Would you like to switch modes to match the imported list?",
+                    "Mode Mismatch",
+                    JOptionPane.YES_NO_CANCEL_OPTION);
+                    
+                if (choice == JOptionPane.CANCEL_OPTION) {
+                    return;
+                } else if (choice == JOptionPane.YES_OPTION) {
+                    preferencesManager.setWhitelistMode(isWhitelistMode);
+                    blacklistDropdownPanel.updateModeToggleButton();
+                }
+            }
+            
+            // Skip CSV header
+            reader.readLine();
+            
+            // Clear current list
+            preferencesManager.resetCurrentList();
+            
+            // Read and process items
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.split(",");
+                if (parts.length >= 3) {
+                    int itemId = Integer.parseInt(parts[0]);
+                    boolean isFiltered = Boolean.parseBoolean(parts[2]);
+                    if (isFiltered) {
+                        preferencesManager.toggleItem(itemId);
+                    }
+                }
+            }
+            
+            JOptionPane.showMessageDialog(this,
+                "Filter list imported successfully!",
+                "Import Complete",
+                JOptionPane.INFORMATION_MESSAGE);
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this,
+                "Error importing filter list: " + e.getMessage(),
+                "Import Error",
+                JOptionPane.ERROR_MESSAGE);
+        }
     }
 
     // For testing purposes
@@ -366,55 +492,18 @@ public class PreferencesPanel extends JPanel {
                 preferencesManager.getPreferences().getWhitelistedItemIds() :
                 preferencesManager.getPreferences().getBlockedItemIds();
 
-            if (currentFiltered == null) {
-                currentFiltered = new ArrayList<>();
-            }
+            // Create a set of currently filtered items for faster lookup
+            java.util.Set<Integer> currentFilteredSet = new java.util.HashSet<>(currentFiltered);
 
-            // Create new list with inverted selections
-            java.util.List<Integer> newFiltered = new ArrayList<>();
+            // Clear current list
+            preferencesManager.resetCurrentList();
+
+            // Add all items that were not in the original list
             for (Integer itemId : allTradeableItems) {
-                if (!currentFiltered.contains(itemId)) {
-                    newFiltered.add(itemId);
+                if (!currentFilteredSet.contains(itemId)) {
+                    preferencesManager.toggleItem(itemId);
                 }
             }
-
-            // Update the preferences
-            if (preferencesManager.isWhitelistMode()) {
-                preferencesManager.getPreferences().setWhitelistedItemIds(newFiltered);
-            } else {
-                preferencesManager.getPreferences().setBlockedItemIds(newFiltered);
-            }
-
-            // Refresh the UI
-            SwingUtilities.invokeLater(this::refresh);
-
-            JOptionPane.showMessageDialog(this,
-                "List has been inverted successfully!",
-                "Invert Complete",
-                JOptionPane.INFORMATION_MESSAGE);
         });
-    }
-
-    public void refresh() {
-        if(!SwingUtilities.isEventDispatchThread()) {
-            // we always execute this in the Swing EDT thread
-            SwingUtilities.invokeLater(this::refresh);
-            return;
-        }
-        if(osrsLoginManager.getPlayerDisplayName() != null && client.getGameState() == GameState.LOGGED_IN) {
-            sellOnlyModeToggleButton.setSelected(preferencesManager.getPreferences().isSellOnlyMode());
-            sellOnlyButton.setVisible(true);
-            f2pOnlyModeToggleButton.setSelected(preferencesManager.getPreferences().isF2pOnlyMode());
-            f2pOnlyButton.setVisible(true);
-            blacklistDropdownPanel.setVisible(true);
-            buttonPanel.setVisible(true);
-            messageText.setVisible(false);
-        } else {
-            sellOnlyButton.setVisible(false);
-            f2pOnlyButton.setVisible(false);
-            blacklistDropdownPanel.setVisible(false);
-            buttonPanel.setVisible(false);
-            messageText.setVisible(true);
-        }
     }
 }
