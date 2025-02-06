@@ -297,6 +297,7 @@ public class PreferencesPanel extends JPanel {
                         return;
                     } else if (choice == JOptionPane.YES_OPTION) {
                         preferencesManager.setWhitelistMode(isWhitelistMode);
+                        blacklistDropdownPanel.updateModeToggleButton();
                     }
                 }
                 

@@ -205,8 +205,9 @@ public class BlacklistDropdownPanel extends JPanel {
         });
     }
 
-    private void updateModeToggleButton() {
-        boolean isWhitelistMode = modeToggleButton.isSelected();
+    public void updateModeToggleButton() {
+        boolean isWhitelistMode = preferencesManager.isWhitelistMode();
+        modeToggleButton.setSelected(isWhitelistMode);
         modeToggleButton.setText(isWhitelistMode ? "Whitelist" : "Blacklist");
         modeToggleButton.setToolTipText(isWhitelistMode ? 
             "Only show suggestions for whitelisted items" : 
