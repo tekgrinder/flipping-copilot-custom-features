@@ -180,13 +180,13 @@ public class PreferencesPanel extends JPanel {
         JButton exportButton = new JButton("Export List");
         exportButton.addActionListener(e -> {
             exportPreferences();
-            updateFilterFileList(); // Update dropdown after export
+            updateFilterFileList();
         });
         
         JButton importButton = new JButton("Import List");
         importButton.addActionListener(e -> {
             importPreferences();
-            updateFilterFileList(); // Update dropdown after import
+            updateFilterFileList();
         });
 
         buttonPanel.add(exportButton);
@@ -239,22 +239,30 @@ public class PreferencesPanel extends JPanel {
         }
 
         if (osrsLoginManager.getPlayerDisplayName() == null || client.getGameState() != GameState.LOGGED_IN) {
-            JOptionPane.showMessageDialog(this,
-                "You must be logged in to import preferences.",
-                "Import Error",
-                JOptionPane.ERROR_MESSAGE);
+            if (showPopup) {
+                JOptionPane.showMessageDialog(this,
+                    "You must be logged in to import preferences.",
+                    "Import Error",
+                    JOptionPane.ERROR_MESSAGE);
+            }
             return;
         }
 
         File file = new File(config.filterDirectory(), fileName);
         if (!file.exists()) {
-            JOptionPane.showMessageDialog(this,
-                "Filter file not found: " + fileName,
-                "Import Error",
-                JOptionPane.ERROR_MESSAGE);
+            if (showPopup) {
+                JOptionPane.showMessageDialog(this,
+                    "Filter file not found: " + fileName,
+                    "Import Error",
+                    JOptionPane.ERROR_MESSAGE);
+            }
             return;
         }
 
+        importFileContents(file, showPopup);
+    }
+
+    private void importFileContents(File file, boolean showPopup) {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8))) {
             // Read mode from header
             String modeHeader = reader.readLine();
@@ -297,74 +305,26 @@ public class PreferencesPanel extends JPanel {
                 }
             }
             
-            JOptionPane.showMessageDialog(this,
-                "Filter list imported successfully!",
-                "Import Complete",
-                JOptionPane.INFORMATION_MESSAGE);
+            // Update current filter file and refresh UI
+            currentFilterFile = file.getName();
+            updateFilterFileList();
+            
+            if (showPopup) {
+                JOptionPane.showMessageDialog(this,
+                    "Filter list imported successfully!",
+                    "Import Complete",
+                    JOptionPane.INFORMATION_MESSAGE);
+            }
             
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(this,
-                "Error importing filter list: " + e.getMessage(),
-                "Import Error",
-                JOptionPane.ERROR_MESSAGE);
-        }
-    }
-
-    // For testing purposes
-    protected void exportToFile(File file) throws IOException {
-        // Get the current list based on mode
-        boolean isWhitelistMode = preferencesManager.isWhitelistMode();
-        java.util.List<Integer> tempItems = isWhitelistMode ? 
-            preferencesManager.getPreferences().getWhitelistedItemIds() : 
-            preferencesManager.getPreferences().getBlockedItemIds();
-
-        // Create a final copy of the list
-        final java.util.List<Integer> filteredItems = tempItems != null ? 
-            new ArrayList<>(tempItems) : new ArrayList<>();
-
-        // Get item names on client thread
-        Map<Integer, String> itemNames = new HashMap<>();
-        CountDownLatch latch = new CountDownLatch(1);
-
-        clientThread.invoke(() -> {
-            try {
-                for (Integer itemId : filteredItems) {
-                    try {
-                        String name = itemManager.getItemComposition(itemId).getName();
-                        itemNames.put(itemId, name);
-                    } catch (Exception e) {
-                        log.warn("Error getting item name for ID: " + itemId, e);
-                        itemNames.put(itemId, "Unknown Item " + itemId);
-                    }
-                }
-            } finally {
-                latch.countDown();
-            }
-        });
-
-        try {
-            // Wait for item names to be collected (timeout after 5 seconds)
-            if (!latch.await(5, TimeUnit.SECONDS)) {
-                throw new IOException("Timeout while getting item names");
-            }
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-            throw new IOException("Interrupted while getting item names", e);
-        }
-
-        // Write to file
-        try (BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), StandardCharsets.UTF_8))) {
-            // Write header with mode information
-            writer.write("# Mode: " + (isWhitelistMode ? "whitelist" : "blacklist"));
-            writer.newLine();
-            writer.write("item_id,name,is_filtered");
-            writer.newLine();
+            currentFilterFile = null;
+            updateFilterFileList();
             
-            // Write items
-            for (Integer itemId : filteredItems) {
-                String itemName = itemNames.getOrDefault(itemId, "Unknown Item " + itemId);
-                writer.write(String.format("%d,%s,true", itemId, itemName));
-                writer.newLine();
+            if (showPopup) {
+                JOptionPane.showMessageDialog(this,
+                    "Error importing filter list: " + e.getMessage(),
+                    "Import Error",
+                    JOptionPane.ERROR_MESSAGE);
             }
         }
     }
@@ -431,75 +391,68 @@ public class PreferencesPanel extends JPanel {
 
         int result = fileChooser.showOpenDialog(this);
         if (result == JFileChooser.APPROVE_OPTION) {
-            try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(fileChooser.getSelectedFile()), StandardCharsets.UTF_8))) {
-                // Read mode from header
-                String modeHeader = reader.readLine();
-                if (!modeHeader.startsWith("# Mode:")) {
-                    throw new IOException("Invalid file format: missing mode header");
-                }
-                
-                boolean isWhitelistMode = modeHeader.toLowerCase().contains("whitelist");
-                if (isWhitelistMode != preferencesManager.isWhitelistMode()) {
-                    int choice = JOptionPane.showConfirmDialog(this,
-                        "The imported list uses a different mode (whitelist/blacklist) than your current settings.\n" +
-                        "Would you like to switch modes to match the imported list?",
-                        "Mode Mismatch",
-                        JOptionPane.YES_NO_CANCEL_OPTION);
-                        
-                    if (choice == JOptionPane.CANCEL_OPTION) {
-                        return;
-                    } else if (choice == JOptionPane.YES_OPTION) {
-                        preferencesManager.setWhitelistMode(isWhitelistMode);
-                        blacklistDropdownPanel.updateModeToggleButton();
-                    }
-                }
-                
-                // Skip CSV header
-                reader.readLine();
-                
-                // Clear current list
-                preferencesManager.resetCurrentList();
-                
-                // Read and process items
-                String line;
-                while ((line = reader.readLine()) != null) {
-                    String[] parts = line.split(",");
-                    if (parts.length >= 3) {
-                        int itemId = Integer.parseInt(parts[0]);
-                        boolean isFiltered = Boolean.parseBoolean(parts[2]);
-                        if (isFiltered) {
-                            preferencesManager.toggleItem(itemId);
-                        }
-                    }
-                }
-                
-                // Update current filter file and refresh UI
-                currentFilterFile = fileChooser.getSelectedFile().getName();
-                updateFilterFileList();
-                
-                if (showPopup) {
-                    JOptionPane.showMessageDialog(this,
-                        "Filter list imported successfully!",
-                        "Import Complete",
-                        JOptionPane.INFORMATION_MESSAGE);
-                }
-                
-            } catch (Exception e) {
-                currentFilterFile = null;
-                updateFilterFileList();
-                
-                if (showPopup) {
-                    JOptionPane.showMessageDialog(this,
-                        "Error importing filter list: " + e.getMessage(),
-                        "Import Error",
-                        JOptionPane.ERROR_MESSAGE);
-                }
-            }
+            File selectedFile = fileChooser.getSelectedFile();
+            importFilterFile(selectedFile.getName(), true);
         }
     }
 
-    public void refresh() {
-        updateFilterFileList();
+    // For testing purposes
+    protected void exportToFile(File file) throws IOException {
+        // Get the current list based on mode
+        boolean isWhitelistMode = preferencesManager.isWhitelistMode();
+        java.util.List<Integer> tempItems = isWhitelistMode ? 
+            preferencesManager.getPreferences().getWhitelistedItemIds() : 
+            preferencesManager.getPreferences().getBlockedItemIds();
+
+        // Create a final copy of the list
+        final java.util.List<Integer> filteredItems = tempItems != null ? 
+            new ArrayList<>(tempItems) : new ArrayList<>();
+
+        // Get item names on client thread
+        Map<Integer, String> itemNames = new HashMap<>();
+        CountDownLatch latch = new CountDownLatch(1);
+
+        clientThread.invoke(() -> {
+            try {
+                for (Integer itemId : filteredItems) {
+                    try {
+                        String name = itemManager.getItemComposition(itemId).getName();
+                        itemNames.put(itemId, name);
+                    } catch (Exception e) {
+                        log.warn("Error getting item name for ID: " + itemId, e);
+                        itemNames.put(itemId, "Unknown Item " + itemId);
+                    }
+                }
+            } finally {
+                latch.countDown();
+            }
+        });
+
+        try {
+            // Wait for item names to be collected (timeout after 5 seconds)
+            if (!latch.await(5, TimeUnit.SECONDS)) {
+                throw new IOException("Timeout while getting item names");
+            }
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            throw new IOException("Interrupted while getting item names", e);
+        }
+
+        // Write to file
+        try (BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), StandardCharsets.UTF_8))) {
+            // Write header with mode information
+            writer.write("# Mode: " + (isWhitelistMode ? "whitelist" : "blacklist"));
+            writer.newLine();
+            writer.write("item_id,name,is_filtered");
+            writer.newLine();
+            
+            // Write items
+            for (Integer itemId : filteredItems) {
+                String itemName = itemNames.getOrDefault(itemId, "Unknown Item " + itemId);
+                writer.write(String.format("%d,%s,true", itemId, itemName));
+                writer.newLine();
+            }
+        }
     }
 
     private void invertFilteredList() {
@@ -543,5 +496,9 @@ public class PreferencesPanel extends JPanel {
                 }
             }
         });
+    }
+
+    public void refresh() {
+        updateFilterFileList();
     }
 }
