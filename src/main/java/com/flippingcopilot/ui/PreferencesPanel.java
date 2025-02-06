@@ -75,7 +75,7 @@ public class PreferencesPanel extends JPanel {
         
         setLayout(new BorderLayout());
         setBackground(ColorScheme.DARKER_GRAY_COLOR);
-        setBounds(0, 0, 300, 400);
+        setBounds(0, 0, 225, 400);
 
         // Create a panel for the content
         JPanel contentPanel = new JPanel();
@@ -95,8 +95,8 @@ public class PreferencesPanel extends JPanel {
         preferencesTitle.setForeground(Color.WHITE);
         preferencesTitle.setFont(preferencesTitle.getFont().deriveFont(Font.BOLD));
         preferencesTitle.setAlignmentX(Component.CENTER_ALIGNMENT);
-        preferencesTitle.setMinimumSize(new Dimension(300, preferencesTitle.getPreferredSize().height));
-        preferencesTitle.setMaximumSize(new Dimension(300, preferencesTitle.getPreferredSize().height));
+        preferencesTitle.setMinimumSize(new Dimension(225, preferencesTitle.getPreferredSize().height));
+        preferencesTitle.setMaximumSize(new Dimension(225, preferencesTitle.getPreferredSize().height));
         preferencesTitle.setHorizontalAlignment(SwingConstants.CENTER);
         contentPanel.add(preferencesTitle);
         contentPanel.add(Box.createRigidArea(new Dimension(0, 20)));
@@ -140,7 +140,7 @@ public class PreferencesPanel extends JPanel {
         dropdownPanel.setOpaque(true);
         dropdownPanel.setBackground(ColorScheme.DARKER_GRAY_COLOR);
         
-        filterFileComboBox.setPreferredSize(new Dimension(300, 25));
+        filterFileComboBox.setPreferredSize(new Dimension(200, 25));
         filterFileComboBox.addActionListener(e -> {
             // Ignore events during model updates
             if (filterFileComboBox.getSelectedItem() == null) {
