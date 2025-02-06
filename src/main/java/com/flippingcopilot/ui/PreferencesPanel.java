@@ -50,6 +50,7 @@ public class PreferencesPanel extends JPanel {
     private final FlippingCopilotConfig config;
     private final JComboBox<String> filterFileComboBox;
     private final DefaultComboBoxModel<String> filterFileModel;
+    private String currentFilterFile = null;
 
     @Inject
     public PreferencesPanel(
@@ -147,11 +148,8 @@ public class PreferencesPanel extends JPanel {
                 return;
             }
             String selectedFile = (String) filterFileComboBox.getSelectedItem();
-            if (!selectedFile.equals("Select a filter file...")) {
+            if (selectedFile != null && !selectedFile.equals(currentFilterFile)) {
                 importFilterFile(selectedFile);
-                SwingUtilities.invokeLater(() -> {
-                    filterFileModel.setSelectedItem("Select a filter file...");
-                });
             }
         });
         updateFilterFileList();
@@ -202,9 +200,7 @@ public class PreferencesPanel extends JPanel {
 
     private void updateFilterFileList() {
         SwingUtilities.invokeLater(() -> {
-            String currentSelection = (String) filterFileComboBox.getSelectedItem();
             filterFileModel.removeAllElements();
-            filterFileModel.addElement("Select a filter file...");
             
             try {
                 String dirPath = config.filterDirectory();
@@ -222,11 +218,13 @@ public class PreferencesPanel extends JPanel {
                 log.error("Error scanning filter directory", e);
             }
 
-            // Restore selection or default to first item
-            if (currentSelection != null && filterFileModel.getIndexOf(currentSelection) >= 0) {
-                filterFileModel.setSelectedItem(currentSelection);
+            // If we have a current filter file and it exists in the list, select it
+            if (currentFilterFile != null && filterFileModel.getIndexOf(currentFilterFile) >= 0) {
+                filterFileModel.setSelectedItem(currentFilterFile);
             } else {
-                filterFileModel.setSelectedItem("Select a filter file...");
+                // If no current filter or it's not in the list, add a placeholder
+                filterFileModel.insertElementAt("No filter selected", 0);
+                filterFileModel.setSelectedItem("No filter selected");
             }
         });
     }
@@ -471,12 +469,19 @@ public class PreferencesPanel extends JPanel {
                     }
                 }
                 
+                // Update current filter file and refresh UI
+                currentFilterFile = fileName;
+                updateFilterFileList();
+                
                 JOptionPane.showMessageDialog(this,
                     "Filter list imported successfully!",
                     "Import Complete",
                     JOptionPane.INFORMATION_MESSAGE);
                 
             } catch (Exception e) {
+                currentFilterFile = null;
+                updateFilterFileList();
+                
                 JOptionPane.showMessageDialog(this,
                     "Error importing filter list: " + e.getMessage(),
                     "Import Error",
