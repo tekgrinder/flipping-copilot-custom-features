@@ -151,6 +151,10 @@ public class PreferencesPanel extends JPanel {
             if (!e.getSource().equals(filterFileComboBox) || e.getModifiers() != 0) {
                 return;
             }
+            // Only process if logged in
+            if (osrsLoginManager.getPlayerDisplayName() == null || client.getGameState() != GameState.LOGGED_IN) {
+                return;
+            }
             String selectedFile = (String) filterFileComboBox.getSelectedItem();
             if (selectedFile != null && !selectedFile.equals(currentFilterFile)) {
                 importFilterFile(selectedFile, true);
@@ -206,28 +210,35 @@ public class PreferencesPanel extends JPanel {
         SwingUtilities.invokeLater(() -> {
             filterFileModel.removeAllElements();
             
-            try {
-                String dirPath = config.filterDirectory();
-                if (dirPath != null && !dirPath.isEmpty()) {
-                    Path directory = Paths.get(dirPath);
-                    if (Files.exists(directory) && Files.isDirectory(directory)) {
-                        Files.list(directory)
-                            .filter(path -> path.toString().toLowerCase().endsWith(".csv"))
-                            .map(path -> path.getFileName().toString())
-                            .sorted()
-                            .forEach(filterFileModel::addElement);
+            // Only show files if logged in
+            if (osrsLoginManager.getPlayerDisplayName() != null && client.getGameState() == GameState.LOGGED_IN) {
+                try {
+                    String dirPath = config.filterDirectory();
+                    if (dirPath != null && !dirPath.isEmpty()) {
+                        Path directory = Paths.get(dirPath);
+                        if (Files.exists(directory) && Files.isDirectory(directory)) {
+                            Files.list(directory)
+                                .filter(path -> path.toString().toLowerCase().endsWith(".csv"))
+                                .map(path -> path.getFileName().toString())
+                                .sorted()
+                                .forEach(filterFileModel::addElement);
+                        }
                     }
+                } catch (IOException e) {
+                    log.error("Error scanning filter directory", e);
                 }
-            } catch (IOException e) {
-                log.error("Error scanning filter directory", e);
-            }
 
-            // If we have a current filter file and it exists in the list, select it
-            if (currentFilterFile != null && filterFileModel.getIndexOf(currentFilterFile) >= 0) {
-                filterFileModel.setSelectedItem(currentFilterFile);
+                // If we have a current filter file and it exists in the list, select it
+                if (currentFilterFile != null && filterFileModel.getIndexOf(currentFilterFile) >= 0) {
+                    filterFileModel.setSelectedItem(currentFilterFile);
+                } else {
+                    // If no current filter or it's not in the list, add a placeholder
+                    filterFileModel.insertElementAt("No filter selected", 0);
+                    filterFileModel.setSelectedItem("No filter selected");
+                }
             } else {
-                // If no current filter or it's not in the list, add a placeholder
-                filterFileModel.insertElementAt("No filter selected", 0);
+                // Not logged in, just show placeholder
+                filterFileModel.addElement("No filter selected");
                 filterFileModel.setSelectedItem("No filter selected");
             }
         });
