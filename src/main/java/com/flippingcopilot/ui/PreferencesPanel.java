@@ -147,9 +147,13 @@ public class PreferencesPanel extends JPanel {
             if (filterFileComboBox.getSelectedItem() == null) {
                 return;
             }
+            // Only process user selections, not programmatic updates
+            if (!e.getSource().equals(filterFileComboBox) || e.getModifiers() != 0) {
+                return;
+            }
             String selectedFile = (String) filterFileComboBox.getSelectedItem();
             if (selectedFile != null && !selectedFile.equals(currentFilterFile)) {
-                importFilterFile(selectedFile);
+                importFilterFile(selectedFile, true);
             }
         });
         updateFilterFileList();
@@ -229,7 +233,7 @@ public class PreferencesPanel extends JPanel {
         });
     }
 
-    private void importFilterFile(String fileName) {
+    private void importFilterFile(String fileName, boolean showPopup) {
         if (fileName == null || fileName.equals("No filter selected")) {
             return;
         }
@@ -473,19 +477,23 @@ public class PreferencesPanel extends JPanel {
                 currentFilterFile = fileChooser.getSelectedFile().getName();
                 updateFilterFileList();
                 
-                JOptionPane.showMessageDialog(this,
-                    "Filter list imported successfully!",
-                    "Import Complete",
-                    JOptionPane.INFORMATION_MESSAGE);
+                if (showPopup) {
+                    JOptionPane.showMessageDialog(this,
+                        "Filter list imported successfully!",
+                        "Import Complete",
+                        JOptionPane.INFORMATION_MESSAGE);
+                }
                 
             } catch (Exception e) {
                 currentFilterFile = null;
                 updateFilterFileList();
                 
-                JOptionPane.showMessageDialog(this,
-                    "Error importing filter list: " + e.getMessage(),
-                    "Import Error",
-                    JOptionPane.ERROR_MESSAGE);
+                if (showPopup) {
+                    JOptionPane.showMessageDialog(this,
+                        "Error importing filter list: " + e.getMessage(),
+                        "Import Error",
+                        JOptionPane.ERROR_MESSAGE);
+                }
             }
         }
     }
