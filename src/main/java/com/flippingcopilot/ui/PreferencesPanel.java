@@ -44,6 +44,7 @@ public class PreferencesPanel extends JPanel {
     private final BlacklistDropdownPanel blacklistDropdownPanel;
     private final JPanel buttonPanel;
     private final JLabel messageText = new JLabel();
+    private final FlippingCopilotConfig config;
 
     @Inject
     public PreferencesPanel(
@@ -54,7 +55,8 @@ public class PreferencesPanel extends JPanel {
             ItemManager itemManager,
             ClientThread clientThread,
             SuggestionPreferencesManager preferencesManager,
-            BlacklistDropdownPanel blocklistDropdownPanel) {
+            BlacklistDropdownPanel blocklistDropdownPanel,
+            FlippingCopilotConfig config) {
         super();
         this.osrsLoginManager = osrsLoginManager;
         this.client = client;
@@ -62,6 +64,7 @@ public class PreferencesPanel extends JPanel {
         this.clientThread = clientThread;
         this.preferencesManager = preferencesManager;
         this.blacklistDropdownPanel = blocklistDropdownPanel;
+        this.config = config;
         setLayout(new BorderLayout());
         setBackground(ColorScheme.DARKER_GRAY_COLOR);
         setBounds(0, 0, 300, 400);
@@ -225,7 +228,7 @@ public class PreferencesPanel extends JPanel {
             return;
         }
 
-        JFileChooser fileChooser = new JFileChooser();
+        JFileChooser fileChooser = new JFileChooser(config.filterDirectory());
         fileChooser.setDialogTitle("Export Filter List");
         
         // Set default filename with timestamp
@@ -271,7 +274,7 @@ public class PreferencesPanel extends JPanel {
             return;
         }
 
-        JFileChooser fileChooser = new JFileChooser();
+        JFileChooser fileChooser = new JFileChooser(config.filterDirectory());
         fileChooser.setDialogTitle("Import Filter List");
         FileNameExtensionFilter filter = new FileNameExtensionFilter("CSV Files", "csv");
         fileChooser.setFileFilter(filter);

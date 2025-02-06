@@ -148,4 +148,15 @@ public interface FlippingCopilotConfig extends Config
     {
         return new Keybind(KeyEvent.VK_E, 0);
     }
+
+    @ConfigItem(
+            keyName = "filterDirectory",
+            name = "Filter Directory",
+            description = "Directory for storing and loading filter lists",
+            position = 99
+    )
+    default String filterDirectory()
+    {
+        return System.getProperty("user.home");
+    }
 }
