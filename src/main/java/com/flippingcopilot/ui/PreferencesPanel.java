@@ -51,6 +51,7 @@ public class PreferencesPanel extends JPanel {
     private final JComboBox<String> filterFileComboBox;
     private final DefaultComboBoxModel<String> filterFileModel;
     private String currentFilterFile = null;
+    private boolean isUpdatingModel = false;
 
     @Inject
     public PreferencesPanel(
@@ -143,21 +144,13 @@ public class PreferencesPanel extends JPanel {
         
         filterFileComboBox.setPreferredSize(new Dimension(200, 25));
         filterFileComboBox.addActionListener(e -> {
-            // Ignore events during model updates
-            if (filterFileComboBox.getSelectedItem() == null) {
-                return;
-            }
-            // Only process user selections, not programmatic updates
-            if (!e.getSource().equals(filterFileComboBox) || e.getModifiers() != 0) {
-                return;
-            }
-            // Only process if logged in
-            if (osrsLoginManager.getPlayerDisplayName() == null || client.getGameState() != GameState.LOGGED_IN) {
-                return;
-            }
-            String selectedFile = (String) filterFileComboBox.getSelectedItem();
-            if (selectedFile != null && !selectedFile.equals(currentFilterFile)) {
-                importFilterFile(selectedFile, true);
+            // Only process user selections
+            if (!isUpdatingModel && e.getActionCommand().equals("comboBoxChanged")) {
+                String selectedFile = (String) filterFileComboBox.getSelectedItem();
+                if (selectedFile != null && !selectedFile.equals("No filter selected")) {
+                    log.debug("User selected filter: {}", selectedFile);
+                    importFilterFile(selectedFile, true);
+                }
             }
         });
         updateFilterFileList();
@@ -208,42 +201,47 @@ public class PreferencesPanel extends JPanel {
 
     private void updateFilterFileList() {
         SwingUtilities.invokeLater(() -> {
-            filterFileModel.removeAllElements();
-            
-            // Only show files if logged in
-            if (osrsLoginManager.getPlayerDisplayName() != null && client.getGameState() == GameState.LOGGED_IN) {
-                try {
-                    String dirPath = config.filterDirectory();
-                    if (dirPath != null && !dirPath.isEmpty()) {
-                        Path directory = Paths.get(dirPath);
-                        if (Files.exists(directory) && Files.isDirectory(directory)) {
-                            Files.list(directory)
-                                .filter(path -> path.toString().toLowerCase().endsWith(".csv"))
-                                .map(path -> {
-                                    String fileName = path.getFileName().toString();
-                                    // Remove .csv extension for display
-                                    return fileName.substring(0, fileName.length() - 4);
-                                })
-                                .sorted()
-                                .forEach(filterFileModel::addElement);
+            try {
+                isUpdatingModel = true;
+                filterFileModel.removeAllElements();
+                
+                // Only show files if logged in
+                if (osrsLoginManager.getPlayerDisplayName() != null && client.getGameState() == GameState.LOGGED_IN) {
+                    try {
+                        String dirPath = config.filterDirectory();
+                        if (dirPath != null && !dirPath.isEmpty()) {
+                            Path directory = Paths.get(dirPath);
+                            if (Files.exists(directory) && Files.isDirectory(directory)) {
+                                Files.list(directory)
+                                    .filter(path -> path.toString().toLowerCase().endsWith(".csv"))
+                                    .map(path -> {
+                                        String fileName = path.getFileName().toString();
+                                        // Remove .csv extension for display
+                                        return fileName.substring(0, fileName.length() - 4);
+                                    })
+                                    .sorted()
+                                    .forEach(filterFileModel::addElement);
+                            }
                         }
+                    } catch (IOException e) {
+                        log.error("Error scanning filter directory", e);
                     }
-                } catch (IOException e) {
-                    log.error("Error scanning filter directory", e);
-                }
 
-                // If we have a current filter file and it exists in the list, select it
-                if (currentFilterFile != null && filterFileModel.getIndexOf(currentFilterFile) >= 0) {
-                    filterFileModel.setSelectedItem(currentFilterFile);
+                    // If we have a current filter file and it exists in the list, select it
+                    if (currentFilterFile != null && filterFileModel.getIndexOf(currentFilterFile) >= 0) {
+                        filterFileModel.setSelectedItem(currentFilterFile);
+                    } else {
+                        // If no current filter or it's not in the list, add a placeholder
+                        filterFileModel.insertElementAt("No filter selected", 0);
+                        filterFileModel.setSelectedItem("No filter selected");
+                    }
                 } else {
-                    // If no current filter or it's not in the list, add a placeholder
-                    filterFileModel.insertElementAt("No filter selected", 0);
+                    // Not logged in, just show placeholder
+                    filterFileModel.addElement("No filter selected");
                     filterFileModel.setSelectedItem("No filter selected");
                 }
-            } else {
-                // Not logged in, just show placeholder
-                filterFileModel.addElement("No filter selected");
-                filterFileModel.setSelectedItem("No filter selected");
+            } finally {
+                isUpdatingModel = false;
             }
         });
     }
@@ -324,7 +322,6 @@ public class PreferencesPanel extends JPanel {
             
             // Update current filter file and refresh UI (without extension)
             currentFilterFile = file.getName().substring(0, file.getName().length() - 4);
-            updateFilterFileList();
             
             if (showPopup) {
                 JOptionPane.showMessageDialog(this,
@@ -333,9 +330,12 @@ public class PreferencesPanel extends JPanel {
                     JOptionPane.INFORMATION_MESSAGE);
             }
             
+            // Update UI after successful import
+            SwingUtilities.invokeLater(this::updateFilterFileList);
+            
         } catch (Exception e) {
             currentFilterFile = null;
-            updateFilterFileList();
+            SwingUtilities.invokeLater(this::updateFilterFileList);
             
             if (showPopup) {
                 JOptionPane.showMessageDialog(this,
@@ -413,7 +413,6 @@ public class PreferencesPanel extends JPanel {
         }
     }
 
-    // For testing purposes
     protected void exportToFile(File file) throws IOException {
         // Get the current list based on mode
         boolean isWhitelistMode = preferencesManager.isWhitelistMode();
