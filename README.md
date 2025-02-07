@@ -6,7 +6,7 @@
 ## THIS IS A JANKY FORK
 This fork is a mod of the Flipping Copilot OSRS client plugin. I made this fork because there were features I wanted and because I wanted a project for testing LLM coding capabilities. All changes to this project were made using Anthropic Claude-Sonnet 3.5 along with [Open Hands](https://github.com/All-Hands-AI/OpenHands). I HAVE NO IDEA WHAT I AM DOING. I WILL NOT HELP YOU. I WILL ALMOST CERTAINLY NOT FIX ANY BUGS YOU ENCOUNTER. Discord: .tekis RSN: buttpee
 
-USE AT YOUR OWN RISK. THIS VERSION OF THE CLIENT IS NOT ENDORESED BY THE COPILOT DEVS. DO NOT ASK THE DEVS OF THE FLIPPING COPILOT PLUGIN FOR HELP IF YOU CHOOSE TO USE THIS FORK.
+USE AT YOUR OWN RISK. THIS VERSION OF THE CLIENT IS NOT ENDORSED BY THE COPILOT DEVS. DO NOT ASK THE DEVS OF THE FLIPPING COPILOT PLUGIN FOR HELP IF YOU CHOOSE TO USE THIS FORK.
 ----------------------------------------------------------------------------------
 
 Flipping Copilot is an AI-powered assistant designed to enhance your trading experience in Old School RuneScape. With its advanced algorithms and market analysis, Flipping Copilot provides intelligent suggestions on which items to flip, optimal prices and quantities for buying and selling, and when to cancel existing offers to maximize your profit per hour.
