@@ -225,10 +225,22 @@ public class SuggestionPreferencesManager {
     private void saveAsync(Long accountHash) {
         executorService.submit(() -> {
             File file = getFile(accountHash);
-            synchronized (file) {
+            synchronized (cached) {
                 SuggestionPreferences p = cached.computeIfAbsent(accountHash, this::load);
+                // Create a deep copy of the preferences for serialization
+                SuggestionPreferences copy = new SuggestionPreferences();
+                copy.setF2pOnlyMode(p.isF2pOnlyMode());
+                copy.setSellOnlyMode(p.isSellOnlyMode());
+                copy.setWhitelistMode(p.isWhitelistMode());
+                synchronized (p.getBlockedItemIds()) {
+                    copy.setBlockedItemIds(new ArrayList<>(p.getBlockedItemIds()));
+                }
+                synchronized (p.getWhitelistedItemIds()) {
+                    copy.setWhitelistedItemIds(new ArrayList<>(p.getWhitelistedItemIds()));
+                }
+                
                 try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, false))) {
-                    String json = gson.toJson(p);
+                    String json = gson.toJson(copy);
                     writer.write(json);
                     writer.newLine();
                 } catch (IOException e) {
