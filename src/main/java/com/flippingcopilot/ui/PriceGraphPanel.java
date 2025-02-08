@@ -175,12 +175,6 @@ public class PriceGraphPanel extends JPanel {
 
             // Position the dialog within the RuneLite window
             try {
-                Frame parentFrame = (Frame) SwingUtilities.getWindowAncestor(parent);
-                if (parentFrame == null) {
-                    log.error("Could not find parent frame for positioning");
-                    dialog.setLocationRelativeTo(parent);
-                    return;
-                }
                 Point parentLocation = parentFrame.getLocationOnScreen();
                 Dimension parentSize = parentFrame.getSize();
                 Dimension dialogSize = dialog.getSize();
