@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 @Singleton
 public class PriceHistoryService {
-    private static final String API_BASE_URL = "https://prices.runescape.wiki/api/v1/osrs";
+    private static final String API_BASE_URL = "https://prices.runescape.wiki/api/v1/osrs/timeseries";
     private static final int CACHE_DURATION_MINUTES = 5;
     
     private final OkHttpClient httpClient;
@@ -68,7 +68,7 @@ public class PriceHistoryService {
 
     private List<PriceDataPoint> fetchPriceHistory(int itemId) throws IOException {
         // Get 6-hour data for the last week
-        String url = API_BASE_URL + "/timeseries?timestep=6h&id=" + itemId;
+        String url = API_BASE_URL + "?timestep=5m&id=" + itemId;
         log.debug("Fetching price data from URL: {}", url);
 
         Request request = new Request.Builder()
@@ -82,21 +82,53 @@ public class PriceHistoryService {
             }
 
             String jsonStr = response.body().string();
+            log.debug("Received JSON response: {}", jsonStr);
+            
             JsonElement element = JsonParser.parseString(jsonStr);
             JsonObject json = element.getAsJsonObject();
-            JsonObject data = json.getAsJsonObject("data");
-
+            
+            // Check if we have data
+            if (!json.has("data") || json.get("data").isJsonNull()) {
+                log.debug("No data found in response for item {}", itemId);
+                return new ArrayList<>();
+            }
+            
             List<PriceDataPoint> priceHistory = new ArrayList<>();
-            data.entrySet().forEach(entry -> {
-                JsonObject point = entry.getValue().getAsJsonObject();
-                priceHistory.add(new PriceDataPoint(
-                    Instant.ofEpochSecond(Long.parseLong(entry.getKey())),
-                    point.get("avgHighPrice").getAsLong(),
-                    point.get("avgLowPrice").getAsLong(),
-                    point.get("highPriceVolume").getAsLong(),
-                    point.get("lowPriceVolume").getAsLong()
-                ));
-            });
+            JsonElement dataElement = json.get("data");
+            
+            if (dataElement.isJsonObject()) {
+                JsonObject data = dataElement.getAsJsonObject();
+                data.entrySet().forEach(entry -> {
+                    try {
+                        JsonObject point = entry.getValue().getAsJsonObject();
+                        priceHistory.add(new PriceDataPoint(
+                            Instant.ofEpochSecond(Long.parseLong(entry.getKey())),
+                            point.get("avgHighPrice").getAsLong(),
+                            point.get("avgLowPrice").getAsLong(),
+                            point.get("highPriceVolume").getAsLong(),
+                            point.get("lowPriceVolume").getAsLong()
+                        ));
+                    } catch (Exception e) {
+                        log.error("Error parsing price point: {}", entry, e);
+                    }
+                });
+            } else if (dataElement.isJsonArray()) {
+                JsonArray dataArray = dataElement.getAsJsonArray();
+                dataArray.forEach(pointElement -> {
+                    try {
+                        JsonObject point = pointElement.getAsJsonObject();
+                        priceHistory.add(new PriceDataPoint(
+                            Instant.ofEpochSecond(point.get("timestamp").getAsLong()),
+                            point.get("avgHighPrice").getAsLong(),
+                            point.get("avgLowPrice").getAsLong(),
+                            point.get("highPriceVolume").getAsLong(),
+                            point.get("lowPriceVolume").getAsLong()
+                        ));
+                    } catch (Exception e) {
+                        log.error("Error parsing price point from array: {}", pointElement, e);
+                    }
+                });
+            }
 
             return priceHistory;
         }
