@@ -180,11 +180,22 @@ public class PriceGraphPanel extends JPanel {
                 Dimension dialogSize = dialog.getSize();
                 Point buttonLocation = parent.getLocationOnScreen();
 
-                // Calculate initial position (centered above the button)
-                int x = buttonLocation.x - (dialogSize.width - parent.getWidth()) / 2;
-                int y = buttonLocation.y - dialogSize.height - 5; // 5px gap
+                // First try to position to the right of the button
+                int x = buttonLocation.x + parent.getWidth() + 5; // 5px gap
+                int y = buttonLocation.y;
 
-                // Ensure the dialog stays within the RuneLite window bounds
+                // If it would go off the right edge, try positioning it to the left of the button
+                if (x + dialogSize.width > parentLocation.x + parentSize.width) {
+                    x = buttonLocation.x - dialogSize.width - 5;
+                }
+
+                // If it's still outside the bounds (too far left), center it in the window
+                if (x < parentLocation.x) {
+                    x = parentLocation.x + (parentSize.width - dialogSize.width) / 2;
+                    y = parentLocation.y + (parentSize.height - dialogSize.height) / 2;
+                }
+
+                // Final bounds check
                 x = Math.max(parentLocation.x, Math.min(x, parentLocation.x + parentSize.width - dialogSize.width));
                 y = Math.max(parentLocation.y, Math.min(y, parentLocation.y + parentSize.height - dialogSize.height));
 
