@@ -2,6 +2,7 @@ package com.flippingcopilot.ui;
 
 import com.flippingcopilot.controller.FlippingCopilotConfig;
 import com.flippingcopilot.controller.HighlightController;
+import com.flippingcopilot.controller.PriceHistoryService;
 import com.flippingcopilot.model.*;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
