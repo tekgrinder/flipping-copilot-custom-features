@@ -21,7 +21,7 @@ Join our [Discord server](https://discord.gg/UyQxA4QJAq) to engage with fellow u
  - Real-time offer cancellation suggestions
  - Profit and loss tracking
 ## Mod Features
- - expanded blacklisting featus
+ - expanded blacklisting features
   - Blacklist / whitelist toggle
   - Export / Import blacklist and whitelist configurations
   - Invert blacklist selection
