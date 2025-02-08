@@ -173,15 +173,31 @@ public class PriceGraphPanel extends JPanel {
             dialog.add(graphPanel);
             dialog.pack();
 
-            // Position the dialog near the parent component
+            // Position the dialog within the RuneLite window
             try {
-                Point location = parent.getLocationOnScreen();
-                dialog.setLocation(
-                    location.x - dialog.getWidth() / 2,
-                    location.y - dialog.getHeight()
-                );
+                Frame parentFrame = (Frame) SwingUtilities.getWindowAncestor(parent);
+                if (parentFrame == null) {
+                    log.error("Could not find parent frame for positioning");
+                    dialog.setLocationRelativeTo(parent);
+                    return;
+                }
+                Point parentLocation = parentFrame.getLocationOnScreen();
+                Dimension parentSize = parentFrame.getSize();
+                Dimension dialogSize = dialog.getSize();
+                Point buttonLocation = parent.getLocationOnScreen();
+
+                // Calculate initial position (centered above the button)
+                int x = buttonLocation.x - (dialogSize.width - parent.getWidth()) / 2;
+                int y = buttonLocation.y - dialogSize.height - 5; // 5px gap
+
+                // Ensure the dialog stays within the RuneLite window bounds
+                x = Math.max(parentLocation.x, Math.min(x, parentLocation.x + parentSize.width - dialogSize.width));
+                y = Math.max(parentLocation.y, Math.min(y, parentLocation.y + parentSize.height - dialogSize.height));
+
+                dialog.setLocation(x, y);
+                log.debug("Positioned dialog at ({}, {})", x, y);
             } catch (IllegalComponentStateException e) {
-                log.error("Error getting parent location", e);
+                log.error("Error calculating dialog position", e);
                 // Fall back to center of parent frame
                 dialog.setLocationRelativeTo(parent);
             }
