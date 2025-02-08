@@ -1,6 +1,7 @@
 package com.flippingcopilot.controller;
 
 import com.flippingcopilot.model.PriceDataPoint;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import lombok.extern.slf4j.Slf4j;
@@ -71,7 +72,8 @@ public class PriceHistoryService {
             }
 
             String jsonStr = response.body().string();
-            JsonObject json = JsonParser.parseString(jsonStr).getAsJsonObject();
+            JsonElement element = JsonParser.parseString(jsonStr);
+            JsonObject json = element.getAsJsonObject();
             JsonObject data = json.getAsJsonObject("data");
 
             List<PriceDataPoint> priceHistory = new ArrayList<>();
