@@ -96,7 +96,10 @@ public class PriceGraphPanel extends JPanel {
 
         // Customize the axes
         DateAxis dateAxis = (DateAxis) plot.getDomainAxis();
-        dateAxis.setDateFormatOverride(new SimpleDateFormat("MMM dd HH:mm"));
+        dateAxis.setDateFormatOverride(new SimpleDateFormat("HH:mm"));
+        // Set the time range to show exactly 18 hours
+        long now = System.currentTimeMillis();
+        dateAxis.setRange(now - (18 * 60 * 60 * 1000), now);
         dateAxis.setLabelPaint(Color.WHITE);
         dateAxis.setTickLabelPaint(Color.WHITE);
 

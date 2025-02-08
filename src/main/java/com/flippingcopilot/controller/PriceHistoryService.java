@@ -68,7 +68,8 @@ public class PriceHistoryService {
     }
 
     private List<PriceDataPoint> fetchPriceHistory(int itemId) throws IOException {
-        // Get 6-hour data for the last week
+        // Get 5-minute data for the past 18 hours
+        long eighteenHoursAgo = System.currentTimeMillis() / 1000 - (18 * 60 * 60);
         String url = API_BASE_URL + "?timestep=5m&id=" + itemId;
         log.debug("Fetching price data from URL: {}", url);
 
@@ -101,14 +102,17 @@ public class PriceHistoryService {
                 JsonObject data = dataElement.getAsJsonObject();
                 data.entrySet().forEach(entry -> {
                     try {
-                        JsonObject point = entry.getValue().getAsJsonObject();
-                        priceHistory.add(new PriceDataPoint(
-                            Instant.ofEpochSecond(Long.parseLong(entry.getKey())),
-                            point.get("avgHighPrice").getAsLong(),
-                            point.get("avgLowPrice").getAsLong(),
-                            point.get("highPriceVolume").getAsLong(),
-                            point.get("lowPriceVolume").getAsLong()
-                        ));
+                        long timestamp = Long.parseLong(entry.getKey());
+                        if (timestamp >= eighteenHoursAgo) {
+                            JsonObject point = entry.getValue().getAsJsonObject();
+                            priceHistory.add(new PriceDataPoint(
+                                Instant.ofEpochSecond(timestamp),
+                                point.get("avgHighPrice").getAsLong(),
+                                point.get("avgLowPrice").getAsLong(),
+                                point.get("highPriceVolume").getAsLong(),
+                                point.get("lowPriceVolume").getAsLong()
+                            ));
+                        }
                     } catch (Exception e) {
                         log.error("Error parsing price point: {}", entry, e);
                     }
@@ -118,13 +122,16 @@ public class PriceHistoryService {
                 dataArray.forEach(pointElement -> {
                     try {
                         JsonObject point = pointElement.getAsJsonObject();
-                        priceHistory.add(new PriceDataPoint(
-                            Instant.ofEpochSecond(point.get("timestamp").getAsLong()),
-                            point.get("avgHighPrice").getAsLong(),
-                            point.get("avgLowPrice").getAsLong(),
-                            point.get("highPriceVolume").getAsLong(),
-                            point.get("lowPriceVolume").getAsLong()
-                        ));
+                        long timestamp = point.get("timestamp").getAsLong();
+                        if (timestamp >= eighteenHoursAgo) {
+                            priceHistory.add(new PriceDataPoint(
+                                Instant.ofEpochSecond(timestamp),
+                                point.get("avgHighPrice").getAsLong(),
+                                point.get("avgLowPrice").getAsLong(),
+                                point.get("highPriceVolume").getAsLong(),
+                                point.get("lowPriceVolume").getAsLong()
+                            ));
+                        }
                     } catch (Exception e) {
                         log.error("Error parsing price point from array: {}", pointElement, e);
                     }
