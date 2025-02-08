@@ -41,6 +41,7 @@ public class SuggestionPanel extends JPanel {
     private final GrandExchangeUncollectedManager uncollectedManager;
     private final ClientThread clientThread;
     private final HighlightController highlightController;
+    private final PriceHistoryService priceHistoryService;
 
     private final JLabel suggestionText = new JLabel();
     public final Spinner spinner = new Spinner();
@@ -68,7 +69,8 @@ public class SuggestionPanel extends JPanel {
                            Client client, PausedManager pausedManager,
                            GrandExchangeUncollectedManager uncollectedManager,
                            ClientThread clientThread,
-                           HighlightController highlightController) {
+                           HighlightController highlightController,
+                           PriceHistoryService priceHistoryService) {
         this.preferencesPanel = preferencesPanel;
         this.config = config;
         this.suggestionManager = suggestionManager;
@@ -80,6 +82,7 @@ public class SuggestionPanel extends JPanel {
         this.uncollectedManager = uncollectedManager;
         this.clientThread = clientThread;
         this.highlightController = highlightController;
+        this.priceHistoryService = priceHistoryService;
 
 
         // Create the layered pane first
@@ -205,7 +208,8 @@ public class SuggestionPanel extends JPanel {
         graphButton = buildButton(graphIcon, "Price graph", () -> {
             Suggestion suggestion = suggestionManager.getSuggestion();
             if (suggestion != null) {
-                PriceGraphPanel.showPanel(graphButton, suggestion.getItemId(), suggestion.getName());
+                PriceGraphPanel graphPanel = new PriceGraphPanel(suggestion.getItemId(), suggestion.getName(), priceHistoryService);
+                PriceGraphPanel.showPanel(graphButton, graphPanel);
             }
         });
         buttonContainer.add(graphButton, BorderLayout.WEST);
