@@ -13,6 +13,7 @@ import org.jfree.data.time.Second;
 import org.jfree.data.time.TimeSeries;
 import org.jfree.data.time.TimeSeriesCollection;
 
+import lombok.extern.slf4j.Slf4j;
 import javax.inject.Inject;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -23,6 +24,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
+@Slf4j
 public class PriceGraphPanel extends JPanel {
     private static JDialog currentDialog = null;
     private final ChartPanel chartPanel;
@@ -114,61 +116,86 @@ public class PriceGraphPanel extends JPanel {
     }
 
     private void updateChartData() {
-        List<PriceDataPoint> priceHistory = priceHistoryService.getPriceHistory(itemId);
-        
-        TimeSeries highPriceSeries = new TimeSeries("High Price");
-        TimeSeries lowPriceSeries = new TimeSeries("Low Price");
+        try {
+            log.debug("Updating chart data for item {}", itemId);
+            List<PriceDataPoint> priceHistory = priceHistoryService.getPriceHistory(itemId);
+            log.debug("Received {} price points for item {}", priceHistory.size(), itemId);
+            
+            TimeSeries highPriceSeries = new TimeSeries("High Price");
+            TimeSeries lowPriceSeries = new TimeSeries("Low Price");
 
-        for (PriceDataPoint point : priceHistory) {
-            Second second = new Second(Date.from(point.getTimestamp()));
-            highPriceSeries.add(second, point.getAvgHighPrice());
-            lowPriceSeries.add(second, point.getAvgLowPrice());
+            for (PriceDataPoint point : priceHistory) {
+                Second second = new Second(Date.from(point.getTimestamp()));
+                highPriceSeries.add(second, point.getAvgHighPrice());
+                lowPriceSeries.add(second, point.getAvgLowPrice());
+            }
+
+            dataset.removeAllSeries();
+            dataset.addSeries(highPriceSeries);
+            dataset.addSeries(lowPriceSeries);
+            log.debug("Chart data updated successfully");
+        } catch (Exception e) {
+            log.error("Error updating chart data for item " + itemId, e);
         }
-
-        dataset.removeAllSeries();
-        dataset.addSeries(highPriceSeries);
-        dataset.addSeries(lowPriceSeries);
     }
 
     public static void showPanel(Component parent, PriceGraphPanel graphPanel) {
-        // If there's already a dialog showing, dispose it
-        if (currentDialog != null) {
-            currentDialog.dispose();
-        }
-
-        // Create new dialog
-        JDialog dialog = new JDialog((Frame) SwingUtilities.getWindowAncestor(parent));
-        dialog.setUndecorated(true); // Remove window decorations
-        dialog.setBackground(new Color(0, 0, 0, 0)); // Make dialog background transparent
-
-        // Use the provided graph panel
-        
-        // Add a border to make it look like a floating panel
-        graphPanel.setBorder(BorderFactory.createCompoundBorder(
-            BorderFactory.createLineBorder(ColorScheme.DARKER_GRAY_COLOR.darker(), 1),
-            graphPanel.getBorder()
-        ));
-
-        dialog.add(graphPanel);
-        dialog.pack();
-
-        // Position the dialog near the parent component
-        Point location = parent.getLocationOnScreen();
-        dialog.setLocation(
-            location.x - dialog.getWidth() / 2,
-            location.y - dialog.getHeight()
-        );
-
-        // Add window listener to handle dialog disposal
-        dialog.addWindowListener(new WindowAdapter() {
-            @Override
-            public void windowDeactivated(WindowEvent e) {
-                dialog.dispose();
-                currentDialog = null;
+        try {
+            log.debug("Showing price graph panel for item: {}", graphPanel.itemName);
+            
+            // If there's already a dialog showing, dispose it
+            if (currentDialog != null) {
+                log.debug("Disposing existing dialog");
+                currentDialog.dispose();
             }
-        });
 
-        currentDialog = dialog;
-        dialog.setVisible(true);
+            // Create new dialog
+            Frame parentFrame = (Frame) SwingUtilities.getWindowAncestor(parent);
+            if (parentFrame == null) {
+                log.error("Could not find parent frame");
+                return;
+            }
+
+            JDialog dialog = new JDialog(parentFrame);
+            dialog.setUndecorated(true); // Remove window decorations
+            dialog.setBackground(new Color(0, 0, 0, 0)); // Make dialog background transparent
+
+            // Add a border to make it look like a floating panel
+            graphPanel.setBorder(BorderFactory.createCompoundBorder(
+                BorderFactory.createLineBorder(ColorScheme.DARKER_GRAY_COLOR.darker(), 1),
+                graphPanel.getBorder()
+            ));
+
+            dialog.add(graphPanel);
+            dialog.pack();
+
+            // Position the dialog near the parent component
+            try {
+                Point location = parent.getLocationOnScreen();
+                dialog.setLocation(
+                    location.x - dialog.getWidth() / 2,
+                    location.y - dialog.getHeight()
+                );
+            } catch (IllegalComponentStateException e) {
+                log.error("Error getting parent location", e);
+                // Fall back to center of parent frame
+                dialog.setLocationRelativeTo(parent);
+            }
+
+            // Add window listener to handle dialog disposal
+            dialog.addWindowListener(new WindowAdapter() {
+                @Override
+                public void windowDeactivated(WindowEvent e) {
+                    dialog.dispose();
+                    currentDialog = null;
+                }
+            });
+
+            currentDialog = dialog;
+            dialog.setVisible(true);
+            log.debug("Price graph panel shown successfully");
+        } catch (Exception e) {
+            log.error("Error showing price graph panel", e);
+        }
     }
 }

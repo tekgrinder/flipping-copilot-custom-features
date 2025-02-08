@@ -39,27 +39,37 @@ public class PriceHistoryService {
     }
 
     public List<PriceDataPoint> getPriceHistory(int itemId) {
+        log.debug("Getting price history for item {}", itemId);
+        
         // Check cache first
         CachedPriceData cachedData = priceCache.get(itemId);
         if (cachedData != null && !cachedData.isExpired()) {
+            log.debug("Returning cached data for item {}", itemId);
             return cachedData.getData();
         }
 
         // Fetch new data
         try {
+            log.debug("Fetching new price data for item {}", itemId);
             List<PriceDataPoint> data = fetchPriceHistory(itemId);
+            log.debug("Fetched {} price points for item {}", data.size(), itemId);
             priceCache.put(itemId, new CachedPriceData(data));
             return data;
         } catch (IOException e) {
             log.error("Failed to fetch price history for item " + itemId, e);
-            // Return cached data even if expired, or empty list if no cache
-            return cachedData != null ? cachedData.getData() : new ArrayList<>();
+            if (cachedData != null) {
+                log.debug("Returning expired cached data for item {}", itemId);
+                return cachedData.getData();
+            }
+            log.debug("No cached data available for item {}", itemId);
+            return new ArrayList<>();
         }
     }
 
     private List<PriceDataPoint> fetchPriceHistory(int itemId) throws IOException {
         // Get 6-hour data for the last week
         String url = API_BASE_URL + "/timeseries?timestep=6h&id=" + itemId;
+        log.debug("Fetching price data from URL: {}", url);
 
         Request request = new Request.Builder()
             .url(url)

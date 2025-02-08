@@ -207,10 +207,18 @@ public class SuggestionPanel extends JPanel {
     private void setupGraphButton() {
         BufferedImage graphIcon = ImageUtil.loadImageResource(getClass(), "/graph.png");
         graphButton = buildButton(graphIcon, "Price graph", () -> {
-            Suggestion suggestion = suggestionManager.getSuggestion();
-            if (suggestion != null) {
-                PriceGraphPanel graphPanel = new PriceGraphPanel(suggestion.getItemId(), suggestion.getName(), priceHistoryService);
-                PriceGraphPanel.showPanel(graphButton, graphPanel);
+            try {
+                log.debug("Graph button clicked");
+                Suggestion suggestion = suggestionManager.getSuggestion();
+                if (suggestion != null) {
+                    log.debug("Creating price graph panel for item: {} ({})", suggestion.getName(), suggestion.getItemId());
+                    PriceGraphPanel graphPanel = new PriceGraphPanel(suggestion.getItemId(), suggestion.getName(), priceHistoryService);
+                    PriceGraphPanel.showPanel(graphButton, graphPanel);
+                } else {
+                    log.debug("No suggestion available");
+                }
+            } catch (Exception e) {
+                log.error("Error showing price graph", e);
             }
         });
         buttonContainer.add(graphButton, BorderLayout.WEST);
