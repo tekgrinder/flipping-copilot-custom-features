@@ -62,7 +62,7 @@ public class PriceGraphPanel extends JPanel {
         
         // Create and configure chart panel
         chartPanel = new ChartPanel(chart);
-        chartPanel.setPreferredSize(new Dimension(300, 200));
+        chartPanel.setPreferredSize(new Dimension(600, 400));
         chartPanel.setBackground(ColorScheme.DARKER_GRAY_COLOR);
         chartPanel.setBorder(BorderFactory.createLineBorder(ColorScheme.DARK_GRAY_COLOR));
         
@@ -109,8 +109,9 @@ public class PriceGraphPanel extends JPanel {
         renderer.setSeriesPaint(1, Color.RED);    // Low price
         renderer.setSeriesStroke(0, new BasicStroke(2.0f));
         renderer.setSeriesStroke(1, new BasicStroke(2.0f));
-        renderer.setDefaultShapesVisible(true);
-        renderer.setDefaultShapesFilled(true);
+        renderer.setDefaultShapesVisible(false);  // No data point markers
+        renderer.setDrawOutlines(false);
+        renderer.setUseFillPaint(false);
 
         return chart;
     }
