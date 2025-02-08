@@ -204,8 +204,9 @@ public class SuggestionPanel extends JPanel {
         BufferedImage graphIcon = ImageUtil.loadImageResource(getClass(), "/graph.png");
         graphButton = buildButton(graphIcon, "Price graph", () -> {
             Suggestion suggestion = suggestionManager.getSuggestion();
-            String url = config.priceGraphWebsite().getUrl(suggestion.getName(), suggestion.getItemId());
-            LinkBrowser.browse(url);
+            if (suggestion != null) {
+                PriceGraphPanel.showPanel(graphButton, suggestion.getItemId(), suggestion.getName());
+            }
         });
         buttonContainer.add(graphButton, BorderLayout.WEST);
     }
