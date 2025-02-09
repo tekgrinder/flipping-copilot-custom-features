@@ -42,3 +42,29 @@ Some code was used from Runelite Plugins (BSD 2-Clause License):
 - [Flipping Utilities](https://github.com/Flipping-Utilities/rl-plugin?tab=readme-ov-file)
 - [Flipper](https://github.com/OkayestDev/OSRS-Flipper)
 - [Discord Level Notifications](https://github.com/ATremonte/Discord-Level-Notifications)
+
+## Third-Party Libraries
+
+This project uses the following open-source libraries:
+
+- JFreeChart (LGPL 2.1+)
+  - Copyright (c) 2000-2021 by Object Refinery Limited and Contributors
+  - https://www.jfree.org/jfreechart/
+
+- Gson (Apache License 2.0)
+  - Copyright 2008 Google Inc.
+  - https://github.com/google/gson
+
+- OkHttp (Apache License 2.0)
+  - Copyright 2019 Square, Inc.
+  - https://square.github.io/okhttp/
+
+- Project Lombok (MIT License)
+  - Copyright (C) 2009-2021 The Project Lombok Authors
+  - https://projectlombok.org/
+
+- RuneLite Client (BSD 2-Clause License)
+  - Copyright (c) 2016-2018, Adam <Adam@sigterm.info>
+  - https://github.com/runelite/runelite
+
+For full license texts, see the `/licenses` directory.
