@@ -26,6 +26,7 @@ Join our [Discord server](https://discord.gg/UyQxA4QJAq) to engage with fellow u
   - Export / Import blacklist and whitelist configurations
   - Invert blacklist selection
   - Pre-made selection of high volume or resource specific white lists
+  - Open an integrated graph instead of a opening a web page. 
 ----------------------------------------------------------------------------------
 
 ![image info](./images/buy.png)
