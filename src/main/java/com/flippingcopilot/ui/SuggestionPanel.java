@@ -206,21 +206,45 @@ public class SuggestionPanel extends JPanel {
 
     private void setupGraphButton() {
         BufferedImage graphIcon = ImageUtil.loadImageResource(getClass(), "/graph.png");
-        graphButton = buildButton(graphIcon, "Price graph", () -> {
-            try {
-                log.debug("Graph button clicked");
+        graphButton = new JLabel(new ImageIcon(graphIcon));
+        graphButton.setToolTipText("Left-click: Show price graph | Right-click: Open in browser");
+        
+        graphButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
                 Suggestion suggestion = suggestionManager.getSuggestion();
-                if (suggestion != null) {
-                    log.debug("Creating price graph panel for item: {} ({})", suggestion.getName(), suggestion.getItemId());
-                    PriceGraphPanel graphPanel = new PriceGraphPanel(suggestion.getItemId(), suggestion.getName(), priceHistoryService);
-                    PriceGraphPanel.showPanel(graphButton, graphPanel);
-                } else {
+                if (suggestion == null) {
                     log.debug("No suggestion available");
+                    return;
                 }
-            } catch (Exception e) {
-                log.error("Error showing price graph", e);
+
+                if (SwingUtilities.isLeftMouseButton(e)) {
+                    try {
+                        log.debug("Graph button left-clicked");
+                        log.debug("Creating price graph panel for item: {} ({})", suggestion.getName(), suggestion.getItemId());
+                        PriceGraphPanel graphPanel = new PriceGraphPanel(suggestion.getItemId(), suggestion.getName(), priceHistoryService);
+                        PriceGraphPanel.showPanel(graphButton, graphPanel);
+                    } catch (Exception ex) {
+                        log.error("Error showing price graph", ex);
+                    }
+                } else if (SwingUtilities.isRightMouseButton(e)) {
+                    log.debug("Graph button right-clicked, opening browser");
+                    String url = config.priceGraphWebsite().getUrl(suggestion.getName(), suggestion.getItemId());
+                    LinkBrowser.browse(url);
+                }
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                graphButton.setIcon(new ImageIcon(ImageUtil.luminanceScale(graphIcon, BUTTON_HOVER_LUMINANCE)));
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                graphButton.setIcon(new ImageIcon(graphIcon));
             }
         });
+
         buttonContainer.add(graphButton, BorderLayout.WEST);
     }
 
