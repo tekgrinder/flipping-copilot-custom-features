@@ -43,3 +43,5 @@ Some code was used from Runelite Plugins (BSD 2-Clause License):
 - [Flipping Utilities](https://github.com/Flipping-Utilities/rl-plugin?tab=readme-ov-file)
 - [Flipper](https://github.com/OkayestDev/OSRS-Flipper)
 - [Discord Level Notifications](https://github.com/ATremonte/Discord-Level-Notifications)
+
+-[JFreeCharts](https://github.com/jfree/jfreechart) (LGPL-2.1 license)
