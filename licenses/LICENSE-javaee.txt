@@ -1,0 +1,13 @@
+The Java EE JSON Processing API is dual licensed and available under:
+
+COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL - Version 1.1)
+and
+GNU GENERAL PUBLIC LICENSE (GPL - Version 2, June 1991) with Classpath Exception
+
+CDDL-1.1:
+https://opensource.org/licenses/CDDL-1.1
+
+GPL v2 with Classpath Exception:
+https://www.gnu.org/software/classpath/license.html
+
+As a standard Java component, this is compatible with the RuneLite plugin system.

@@ -46,26 +46,20 @@ Some code was used from Runelite Plugins (BSD 2-Clause License):
 
 ## Third-Party Libraries
 
-This project uses the following open-source libraries:
-
-- JFreeChart (LGPL 2.1+)
-  - Copyright (c) 2000-2021 by Object Refinery Limited and Contributors
-  - https://www.jfree.org/jfreechart/
-
-- Gson (Apache License 2.0)
-  - Copyright 2008 Google Inc.
-  - https://github.com/google/gson
-
-- OkHttp (Apache License 2.0)
-  - Copyright 2019 Square, Inc.
-  - https://square.github.io/okhttp/
+This project uses the following libraries:
 
 - Project Lombok (MIT License)
   - Copyright (C) 2009-2021 The Project Lombok Authors
   - https://projectlombok.org/
+  - Used for compile-time annotations only
 
 - RuneLite Client (BSD 2-Clause License)
   - Copyright (c) 2016-2018, Adam <Adam@sigterm.info>
   - https://github.com/runelite/runelite
+
+- Java EE JSON Processing API (CDDL + GPLv2 with classpath exception)
+  - Part of the Java Enterprise Edition
+  - Implementation: org.glassfish:javax.json
+  - Standard Java component
 
 For full license texts, see the `/licenses` directory.
