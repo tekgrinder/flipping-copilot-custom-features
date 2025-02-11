@@ -26,8 +26,12 @@ public class JsonUtil {
 
     public static long getLong(JsonObject obj, String key, long defaultValue) {
         try {
-            return obj.getJsonNumber(key).longValue();
-        } catch (NullPointerException | ClassCastException e) {
+            JsonValue value = obj.get(key);
+            if (value == null || value.getValueType() == JsonValue.ValueType.NULL) {
+                return defaultValue;
+            }
+            return ((JsonNumber) value).longValue();
+        } catch (Exception e) {
             return defaultValue;
         }
     }

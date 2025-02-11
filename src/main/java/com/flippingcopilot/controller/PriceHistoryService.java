@@ -13,10 +13,8 @@ import javax.json.JsonValue;
 import java.io.IOException;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Singleton
@@ -45,6 +43,10 @@ public class PriceHistoryService {
         try {
             log.debug("Fetching new price data for item {}", itemId);
             List<PriceDataPoint> data = fetchPriceHistory(itemId);
+            
+            // Sort by timestamp and filter out any anomalies
+            data = filterAndSortData(data);
+            
             log.debug("Fetched {} price points for item {}", data.size(), itemId);
             priceCache.put(itemId, new CachedPriceData(data));
             return data;
@@ -59,17 +61,71 @@ public class PriceHistoryService {
         }
     }
 
+    private List<PriceDataPoint> filterAndSortData(List<PriceDataPoint> data) {
+        if (data.isEmpty()) {
+            return data;
+        }
+
+        // Sort by timestamp
+        data.sort(Comparator.comparing(PriceDataPoint::getTimestamp));
+
+        // Calculate median prices to help identify outliers
+        List<Long> highPrices = data.stream()
+            .map(PriceDataPoint::getAvgHighPrice)
+            .filter(price -> price > 0)
+            .sorted()
+            .collect(Collectors.toList());
+        
+        List<Long> lowPrices = data.stream()
+            .map(PriceDataPoint::getAvgLowPrice)
+            .filter(price -> price > 0)
+            .sorted()
+            .collect(Collectors.toList());
+
+        if (highPrices.isEmpty() || lowPrices.isEmpty()) {
+            return data;
+        }
+
+        long medianHigh = highPrices.get(highPrices.size() / 2);
+        long medianLow = lowPrices.get(lowPrices.size() / 2);
+
+        // Filter out points with extreme price variations or zero prices
+        return data.stream()
+            .filter(point -> isValidPricePoint(point, medianHigh, medianLow))
+            .collect(Collectors.toList());
+    }
+
+    private boolean isValidPricePoint(PriceDataPoint point, long medianHigh, long medianLow) {
+        long highPrice = point.getAvgHighPrice();
+        long lowPrice = point.getAvgLowPrice();
+
+        // Filter out points where prices are zero or negative
+        if (highPrice <= 0 || lowPrice <= 0) {
+            return false;
+        }
+
+        // Filter out points where low price is higher than high price
+        if (lowPrice > highPrice) {
+            return false;
+        }
+
+        // Filter out extreme variations (more than 50% from median)
+        double highVariation = Math.abs(highPrice - medianHigh) / (double) medianHigh;
+        double lowVariation = Math.abs(lowPrice - medianLow) / (double) medianLow;
+        if (highVariation > 0.5 || lowVariation > 0.5) {
+            return false;
+        }
+
+        return true;
+    }
+
     private List<PriceDataPoint> fetchPriceHistory(int itemId) throws IOException, InterruptedException {
-        // Get price data with 5-minute intervals
         String url = API_BASE_URL + "?timestep=5m&id=" + itemId;
         log.debug("Fetching price data from URL: {}", url);
 
         String jsonStr = HttpUtil.get(url);
-        log.debug("Received JSON response: {}", jsonStr);
-        
         JsonObject json = JsonUtil.parseObject(jsonStr);
         
-        // Check if we have data
         JsonValue dataValue = json.get("data");
         if (dataValue == null || dataValue.getValueType() == JsonValue.ValueType.NULL) {
             log.debug("No data found in response for item {}", itemId);
@@ -86,13 +142,18 @@ public class PriceHistoryService {
                     long timestamp = Long.parseLong(entry.getKey());
                     if (timestamp >= eighteenHoursAgo) {
                         JsonObject point = entry.getValue().asJsonObject();
-                        priceHistory.add(new PriceDataPoint(
-                            Instant.ofEpochSecond(timestamp),
-                            JsonUtil.getLong(point, "avgHighPrice", 0),
-                            JsonUtil.getLong(point, "avgLowPrice", 0),
-                            JsonUtil.getLong(point, "highPriceVolume", 0),
-                            JsonUtil.getLong(point, "lowPriceVolume", 0)
-                        ));
+                        long highPrice = JsonUtil.getLong(point, "avgHighPrice", -1);
+                        long lowPrice = JsonUtil.getLong(point, "avgLowPrice", -1);
+                        
+                        if (highPrice > 0 && lowPrice > 0) {
+                            priceHistory.add(new PriceDataPoint(
+                                Instant.ofEpochSecond(timestamp),
+                                highPrice,
+                                lowPrice,
+                                JsonUtil.getLong(point, "highPriceVolume", 0),
+                                JsonUtil.getLong(point, "lowPriceVolume", 0)
+                            ));
+                        }
                     }
                 } catch (Exception e) {
                     log.error("Error parsing price point: {}", entry, e);
@@ -105,13 +166,18 @@ public class PriceHistoryService {
                     JsonObject point = element.asJsonObject();
                     long timestamp = JsonUtil.getLong(point, "timestamp", 0);
                     if (timestamp >= eighteenHoursAgo) {
-                        priceHistory.add(new PriceDataPoint(
-                            Instant.ofEpochSecond(timestamp),
-                            JsonUtil.getLong(point, "avgHighPrice", 0),
-                            JsonUtil.getLong(point, "avgLowPrice", 0),
-                            JsonUtil.getLong(point, "highPriceVolume", 0),
-                            JsonUtil.getLong(point, "lowPriceVolume", 0)
-                        ));
+                        long highPrice = JsonUtil.getLong(point, "avgHighPrice", -1);
+                        long lowPrice = JsonUtil.getLong(point, "avgLowPrice", -1);
+                        
+                        if (highPrice > 0 && lowPrice > 0) {
+                            priceHistory.add(new PriceDataPoint(
+                                Instant.ofEpochSecond(timestamp),
+                                highPrice,
+                                lowPrice,
+                                JsonUtil.getLong(point, "highPriceVolume", 0),
+                                JsonUtil.getLong(point, "lowPriceVolume", 0)
+                            ));
+                        }
                     }
                 } catch (Exception e) {
                     log.error("Error parsing price point from array: {}", element, e);
