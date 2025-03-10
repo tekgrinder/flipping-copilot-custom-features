@@ -1,6 +1,7 @@
 package com.flippingcopilot.ui;
 
 import com.flippingcopilot.controller.FlippingCopilotConfig;
+import com.flippingcopilot.controller.GrandExchange;
 import com.flippingcopilot.controller.HighlightController;
 import com.flippingcopilot.controller.PriceHistoryService;
 import com.flippingcopilot.model.*;
@@ -43,6 +44,8 @@ public class SuggestionPanel extends JPanel {
     private final ClientThread clientThread;
     private final HighlightController highlightController;
     private final PriceHistoryService priceHistoryService;
+    private final ItemManager itemManager;
+    private final GrandExchange grandExchange;
 
     private final JLabel suggestionText = new JLabel();
     public final Spinner spinner = new Spinner();
@@ -71,7 +74,9 @@ public class SuggestionPanel extends JPanel {
                            GrandExchangeUncollectedManager uncollectedManager,
                            ClientThread clientThread,
                            HighlightController highlightController,
-                           PriceHistoryService priceHistoryService) {
+                           PriceHistoryService priceHistoryService,
+                           ItemManager itemManager,
+                           GrandExchange grandExchange) {
         this.preferencesPanel = preferencesPanel;
         this.config = config;
         this.suggestionManager = suggestionManager;
@@ -84,7 +89,8 @@ public class SuggestionPanel extends JPanel {
         this.clientThread = clientThread;
         this.highlightController = highlightController;
         this.priceHistoryService = priceHistoryService;
-
+        this.itemManager = itemManager;
+        this.grandExchange = grandExchange;
 
         // Create the layered pane first
         layeredPane.setLayout(null);  // LayeredPane needs null layout
@@ -296,9 +302,16 @@ public class SuggestionPanel extends JPanel {
 
     public void suggestAddGp() {
         NumberFormat formatter = NumberFormat.getNumberInstance();
-        setMessage("Add at least <FONT COLOR=yellow>" + formatter.format(MIN_GP_NEEDED_TO_FLIP)
+        setMessage("Add " +
+                "at least <FONT COLOR=yellow>" + formatter.format(MIN_GP_NEEDED_TO_FLIP)
                                + "</FONT> gp<br>to your inventory<br>"
                                + "to get a flip suggestion");
+    }
+
+    public void suggestOpenGe() {
+        setMessage("Open the Grand Exchange<br>"
+                + "to get a flip suggestion");
+        setButtonsVisible(false);
     }
 
     public void setIsPausedMessage() {
@@ -348,6 +361,8 @@ public class SuggestionPanel extends JPanel {
             suggestCollect();
         } else if (suggestion.getType().equals("wait") && accountStatus.moreGpNeeded()) {
             suggestAddGp();
+        } else if(suggestion.getType().equals("wait") && !grandExchange.isOpen() && accountStatus.emptySlotExists()) {
+            suggestOpenGe();
         } else {
             updateSuggestion(suggestion);
         }

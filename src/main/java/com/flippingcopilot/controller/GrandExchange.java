@@ -27,9 +27,6 @@ public class GrandExchange {
         return getOpenSlot() != -1;
     }
 
-    boolean isOpen() {
-        return client.getWidget(465, 7) != null;
-    }
 
     boolean isCollectButtonVisible() {
         Widget w = client.getWidget(465, 6);
@@ -93,6 +90,10 @@ public class GrandExchange {
 
     int getOfferPrice() {
         return client.getVarbitValue(4398);
+    }
+
+    public boolean isOpen() {
+        return client.getWidget(InterfaceID.GRAND_EXCHANGE, 7) != null;
     }
 
     public boolean isPreviousSearchSet() {
